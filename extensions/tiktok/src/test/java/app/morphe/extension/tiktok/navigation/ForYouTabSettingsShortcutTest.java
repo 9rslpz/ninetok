@@ -117,7 +117,7 @@ public class ForYouTabSettingsShortcutTest {
 
     private static void assertOpenedSettings() {
         Intent opened = nextStarted();
-        assertNotNull("a long press on For You didn't open Metra settings", opened);
+        assertNotNull("a long press on For You didn't open NINE’tok settings", opened);
         assertEquals("morphe_settings", opened.getAction());
         assertNull("it opened settings somewhere other than their home page",
                 opened.getStringExtra("morphe_settings_section"));
@@ -261,13 +261,13 @@ public class ForYouTabSettingsShortcutTest {
         assertNotNull("the bind after TikTok's delegate didn't bring the action back", openAction(info));
         assertEquals("TikTok's later delegate was lost", "For You, selected", String.valueOf(info.getContentDescription()));
         long offered = info.getActionList().stream()
-                .filter(action -> "Open Metra settings".equals(String.valueOf(action.getLabel()))).count();
+                .filter(action -> "Open NINE’tok settings".equals(String.valueOf(action.getLabel()))).count();
         assertEquals("binding again stacked the action", 1, offered);
     }
 
     private static AccessibilityNodeInfo.AccessibilityAction openAction(AccessibilityNodeInfo info) {
         for (AccessibilityNodeInfo.AccessibilityAction action : info.getActionList()) {
-            if ("Open Metra settings".equals(String.valueOf(action.getLabel()))) return action;
+            if ("Open NINE’tok settings".equals(String.valueOf(action.getLabel()))) return action;
         }
         return null;
     }

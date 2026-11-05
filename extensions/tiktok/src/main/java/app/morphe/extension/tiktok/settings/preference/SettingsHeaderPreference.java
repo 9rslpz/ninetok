@@ -25,7 +25,7 @@ import app.morphe.extension.shared.settings.preference.AbstractPreferenceFragmen
 @SuppressWarnings("deprecation")
 public final class SettingsHeaderPreference extends Preference {
     /** The product name, which reads the same in every language and is not translated. */
-    private static final String BRAND_MARK = "METRA PATCHES";
+    private static final String BRAND_MARK = "NINE’TOK";
 
     private enum Kind {
         MASTER,
@@ -94,7 +94,7 @@ public final class SettingsHeaderPreference extends Preference {
     private View createMasterHeader() {
         Context context = getContext();
         LinearLayout header = createHeader(context, heading, backAction, true);
-        LinearLayout titleRow = header.findViewWithTag("metra_home_title_row");
+        LinearLayout titleRow = header.findViewWithTag("ninetok_home_title_row");
         statusView = SettingsUi.text(context, "", SettingsUi.TEXT_CAPTION,
                 SettingsUi.textSecondary(), 0);
         statusView.setTag("hushfeed_compact_status");
@@ -138,7 +138,7 @@ public final class SettingsHeaderPreference extends Preference {
         statusView.setCompoundDrawablesRelative(dot, null, null, null);
         statusView.setCompoundDrawablePadding(SettingsUi.dp(getContext(), 6));
         String description = pending ? label
-                : L10n.t(getContext(), paused ? "Metra is paused" : "Metra is active");
+                : L10n.t(getContext(), paused ? "NINE’tok is paused" : "NINE’tok is active");
         // The press scrolls this page down to the status card, so there's no other page to name.
         statusView.setContentDescription(description);
     }
@@ -155,7 +155,7 @@ public final class SettingsHeaderPreference extends Preference {
     private View createSectionHeader() { return createHeader(getContext(), heading, backAction); }
 
     /**
-     * Metra's section toolbar. The arrow retains a 48 dp touch target and visible keyboard
+     * NINE’tok's section toolbar. The arrow retains a 48 dp touch target and visible keyboard
      * focus, while its resting appearance is the original bare back arrow.
      */
     public static LinearLayout createHeader(Context context, String title, Runnable onBack) {
@@ -209,7 +209,7 @@ public final class SettingsHeaderPreference extends Preference {
         }
         if (compact) {
             LinearLayout titleRow = new LinearLayout(context);
-            titleRow.setTag("metra_home_title_row");
+            titleRow.setTag("ninetok_home_title_row");
             titleRow.setGravity(Gravity.CENTER_VERTICAL);
             titleRow.setOrientation(context.getResources().getConfiguration().fontScale >= 1.3f
                     ? LinearLayout.VERTICAL : LinearLayout.HORIZONTAL);
@@ -237,7 +237,7 @@ public final class SettingsHeaderPreference extends Preference {
     /**
      * How large the page title may be at the reader's text scale.
      *
-     * <p>Metra's 32sp home title grows through the first large-text preset, then adapts to keep
+     * <p>NINE’tok's 32sp home title grows through the first large-text preset, then adapts to keep
      * the page below it within reach. The 20sp floor keeps it readable at larger text scales.
      */
     public static int headingSizeSp(Context context) {

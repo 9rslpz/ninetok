@@ -56,7 +56,7 @@ internal val authorRowPatch = bytecodePatch {
 val showAuthorRegionPatch = bytecodePatch(
     name = "Show author region",
     description = "Shows the country a video was posted from next to the creator's name. " +
-        "Starts off. Turn it on in Metra settings > Interface.",
+        "Starts off. Turn it on in NINE’tok settings > Interface.",
 ) {
     category("Feed")
     dependsOn(settingsPatch, sharedExtensionPatch, authorRowPatch)

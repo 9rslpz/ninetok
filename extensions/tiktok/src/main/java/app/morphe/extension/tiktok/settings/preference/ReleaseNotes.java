@@ -123,7 +123,7 @@ public final class ReleaseNotes {
      */
     private static String format(String section) {
         return section
-                .replaceAll("(?m)^## ", "Metra ")
+                .replaceAll("(?m)^## ", "NINE’tok ")
                 .replaceAll("(?m)^\\* (\\*\\*TikTok:\\*\\* )?", "• ")
                 .replace("**", "")
                 .replace("`", "");
@@ -275,7 +275,7 @@ public final class ReleaseNotes {
         return heading.find() ? heading.group(1) : null;
     }
 
-    private static final Pattern SHOWN_HEADING = Pattern.compile("(?m)^Metra (\\d+\\.\\d+\\.\\d+) ");
+    private static final Pattern SHOWN_HEADING = Pattern.compile("(?m)^NINE’tok (\\d+\\.\\d+\\.\\d+) ");
 
     private static int compare(BigInteger[] left, BigInteger[] right) {
         for (int index = 0; index < left.length; index++) {

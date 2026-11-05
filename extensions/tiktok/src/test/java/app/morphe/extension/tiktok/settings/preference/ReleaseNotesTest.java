@@ -208,7 +208,7 @@ public class ReleaseNotesTest {
     @Test
     public void bulletsDropTheChangelogScopeLabel() {
         String shown = ReleaseNotes.text("## 0.60.0 (date)\n\n* **TikTok:** Comments send again.\n", "0.60.0", null);
-        assertEquals("Metra 0.60.0 (date)\n\n• Comments send again.", shown);
+        assertEquals("NINE’tok 0.60.0 (date)\n\n• Comments send again.", shown);
     }
 
     /** A setting name in backticks reads as code on GitHub; the dialog showed the backticks. */
@@ -216,7 +216,7 @@ public class ReleaseNotesTest {
     public void settingNamesLoseTheirBackticks() {
         String shown = ReleaseNotes.text(
                 "## 0.60.0 (date)\n\n* **TikTok:** Turn `Hide series` back on.\n", "0.60.0", null);
-        assertEquals("Metra 0.60.0 (date)\n\n• Turn Hide series back on.", shown);
+        assertEquals("NINE’tok 0.60.0 (date)\n\n• Turn Hide series back on.", shown);
     }
 
     /**
@@ -250,7 +250,7 @@ public class ReleaseNotesTest {
         assertEquals(label, texts.get(0).getText().toString());
         android.widget.TextView body = texts.get(1);
         assertTrue("the notes are missing: " + body.getText(),
-                body.getText().toString().startsWith("Metra 0.1.1"));
+                body.getText().toString().startsWith("NINE’tok 0.1.1"));
         android.text.Spanned notes = (android.text.Spanned) body.getText();
         android.text.style.LocaleSpan[] spans = notes.getSpans(0, notes.length(), android.text.style.LocaleSpan.class);
         assertEquals("the notes are not marked as English for a screen reader", 1, spans.length);
@@ -350,11 +350,11 @@ public class ReleaseNotesTest {
         captureDialog("dialogs/dark/whats-new-german-large.png", true);
     }
 
-    /** Capture the latest published Metra release, even when the local build is a prerelease. */
+    /** Capture the latest published NINE’tok release, even when the local build is a prerelease. */
     private static String sourceVersion() throws Exception {
         java.util.regex.Matcher version = java.util.regex.Pattern.compile("(?m)^## (\\d+\\.\\d+\\.\\d+) ")
                 .matcher(ReleaseNotesData.TEXT);
-        assertTrue("Metra release history has no published version", version.find());
+        assertTrue("NINE’tok release history has no published version", version.find());
         return version.group(1);
     }
 
@@ -418,9 +418,9 @@ public class ReleaseNotesTest {
         String german = "## 0.2.0 (date)\n\n* **TikTok:** Neuer.\n";
         java.util.List<ReleaseNotes.Section> shown = ReleaseNotes.sections(english, german, "0.2.0", "0.1.0");
         assertEquals(2, shown.size());
-        assertEquals("Metra 0.2.0 (date)\n\n• Neuer.\n", shown.get(0).text);
+        assertEquals("NINE’tok 0.2.0 (date)\n\n• Neuer.\n", shown.get(0).text);
         assertFalse(shown.get(0).english);
-        assertTrue(shown.get(1).text, shown.get(1).text.startsWith("Metra 0.1.1 (date)\n\n• Older."));
+        assertTrue(shown.get(1).text, shown.get(1).text.startsWith("NINE’tok 0.1.1 (date)\n\n• Older."));
         assertTrue(shown.get(1).english);
         // The English text the row and the pending check read doesn't change.
         assertTrue(ReleaseNotes.text(english, "0.2.0", "0.1.0").contains("Newer."));
@@ -441,20 +441,20 @@ public class ReleaseNotesTest {
             if (expected == null) expected = versions;
             assertEquals(tag + " translates different releases", expected, versions);
         }
-        assertTrue("Upstream translations must not be labelled as Metra releases", expected.isEmpty());
+        assertTrue("Upstream translations must not be labelled as NINE’tok releases", expected.isEmpty());
         assertEquals(ReleaseNotesData.translated("in"), ReleaseNotesData.translated("id"));
         assertEquals(null, ReleaseNotesData.translated("fr"));
         assertEquals(null, ReleaseNotesData.translated(null));
     }
 
     @Test @Config(manifest = Config.NONE, sdk = 28, qualifiers = "de")
-    public void aGermanPhoneLabelsPublishedMetraNotesAsEnglish() {
+    public void aGermanPhoneLabelsPublishedNineTokNotesAsEnglish() {
         java.util.List<TextView> texts = dialogTexts("0.8.0", null);
-        assertEquals("expected the label, then the Metra notes", 2, texts.size());
+        assertEquals("expected the label, then the NINE’tok notes", 2, texts.size());
         assertEquals("Diese Hinweise sind auf Englisch.", texts.get(0).getText().toString());
         android.text.Spanned notes = (android.text.Spanned) texts.get(1).getText();
-        assertTrue(notes.toString(), notes.toString().startsWith("Metra 0.8.0"));
-        assertTrue("Metra notes must use their actual English history",
+        assertTrue(notes.toString(), notes.toString().startsWith("NINE’tok 0.8.0"));
+        assertTrue("NINE’tok notes must use their actual English history",
                 notes.toString().equals(ReleaseNotes.text("0.8.0", null)));
         android.text.style.LocaleSpan[] spans = notes.getSpans(0, notes.length(), android.text.style.LocaleSpan.class);
         assertEquals(1, spans.length);
@@ -463,14 +463,14 @@ public class ReleaseNotesTest {
     }
 
     @Test @Config(manifest = Config.NONE, sdk = 28, qualifiers = "de")
-    public void olderMetraReleasesRemainReachableAndMarkedAsEnglish() {
+    public void olderNineTokReleasesRemainReachableAndMarkedAsEnglish() {
         java.util.List<TextView> texts = dialogTexts("0.8.0", "0.6.0");
         assertEquals("expected the label, then the notes", 2, texts.size());
         assertEquals("Diese Hinweise sind auf Englisch.", texts.get(0).getText().toString());
         android.text.Spanned notes = (android.text.Spanned) texts.get(1).getText();
-        assertTrue(notes.toString().contains("Metra 0.7.0"));
+        assertTrue(notes.toString().contains("NINE’tok 0.7.0"));
         android.text.style.LocaleSpan[] spans = notes.getSpans(0, notes.length(), android.text.style.LocaleSpan.class);
-        assertEquals("one English run covers Metra notes", 1, spans.length);
+        assertEquals("one English run covers NINE’tok notes", 1, spans.length);
         java.util.Arrays.sort(spans, java.util.Comparator.comparingInt(notes::getSpanStart));
         assertEquals(java.util.Locale.ENGLISH, spans[0].getLocale());
         assertEquals(0, notes.getSpanStart(spans[0]));

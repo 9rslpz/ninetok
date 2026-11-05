@@ -87,7 +87,7 @@ public class GateReportExportTest {
         try (var saturation = app.morphe.extension.shared.BackgroundPoolSaturation.fill()) {
             GateReportExport.save(context, "{\"gates\":[]}");
             String said = awaitToast("Report saved to ");
-            assertTrue(said, said.startsWith("Report saved to Download/Metra/metra-gate-report-"));
+            assertTrue(said, said.startsWith("Report saved to Download/NINE’tok/ninetok-gate-report-"));
         }
         assertTrue(media.published);
         assertEquals("{\"gates\":[]}", new String(Files.readAllBytes(media.file.toPath()), StandardCharsets.UTF_8));
@@ -140,12 +140,12 @@ public class GateReportExportTest {
         Context context = RuntimeEnvironment.getApplication();
         Utils.setContext(context);
         assertTrue(GateReportExport.fileName(), GateReportExport.fileName()
-                .matches("metra-gate-report-\\d{8}-\\d{6}\\.json"));
-        assertEquals("Download/Metra", GateReportExport.FOLDER);
+                .matches("ninetok-gate-report-\\d{8}-\\d{6}\\.json"));
+        assertEquals("Download/NINE’tok", GateReportExport.FOLDER);
         File first = new File(GateReportExport.write(context, "{\"gates\":[]}"));
         File second = new File(GateReportExport.write(context, "{\"gates\":[]}"));
         try {
-            assertTrue(first.getName(), first.getName().startsWith("metra-gate-report-"));
+            assertTrue(first.getName(), first.getName().startsWith("ninetok-gate-report-"));
             assertNotEquals("two reports in one second overwrote each other", first, second);
         } finally {
             assertTrue(first.delete());

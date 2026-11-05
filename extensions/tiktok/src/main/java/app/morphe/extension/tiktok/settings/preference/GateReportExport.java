@@ -55,7 +55,7 @@ final class GateReportExport {
             Utils.showToastShort(L10n.t("The last report is still being saved"));
             return;
         }
-        boolean started = Utils.runOnOwnThread("Metra-gate-report", () -> {
+        boolean started = Utils.runOnOwnThread("NINE’tok-gate-report", () -> {
             try {
                 Utils.showToastLong(L10n.f("Report saved to %1$s", write(app, report)));
             } catch (IOException | RuntimeException error) {
@@ -74,7 +74,7 @@ final class GateReportExport {
     }
 
     /** The folder under Download the report lands in, spelt the way a file manager shows it. */
-    static final String FOLDER = "Download/Metra";
+    static final String FOLDER = "Download/NINE’tok";
 
     /**
      * A name two reports a second apart can be told apart by, the way the settings backup and the
@@ -82,7 +82,7 @@ final class GateReportExport {
      * read a date off.
      */
     static String fileName() {
-        return "metra-gate-report-" + LogBufferManager.fileTimestamp() + ".json";
+        return "ninetok-gate-report-" + LogBufferManager.fileTimestamp() + ".json";
     }
 
     static String write(Context context, String report) throws IOException {

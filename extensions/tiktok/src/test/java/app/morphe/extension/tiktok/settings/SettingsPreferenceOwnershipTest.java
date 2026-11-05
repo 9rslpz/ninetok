@@ -127,7 +127,7 @@ public class SettingsPreferenceOwnershipTest {
                 assertQuality(second.get(), "auto");
                 assertExternalPackage(first.get(), "");
                 assertExternalPackage(second.get(), "");
-                assertEquals("Automatic remains an explicit choice under Metra's Highest default", "auto",
+                assertEquals("Automatic remains an explicit choice under NINE’tok's Highest default", "auto",
                         Setting.preferences.preferences.getString(Settings.DOWNLOAD_VIDEO_QUALITY.key, "highest"));
                 assertFalse(Setting.preferences.preferences.contains(Settings.EXTERNAL_DOWNLOADER_PACKAGE.key));
                 assertFalse(page(first.get()).findPreference(Settings.YTDLNIS_DOWNLOAD_TYPE.key).isEnabled());

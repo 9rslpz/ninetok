@@ -124,7 +124,7 @@ public class SeenHistoryFilePreferenceTest {
         assertEquals("application/json", request.intent.getType());
         assertTrue(request.intent.getCategories().contains(Intent.CATEGORY_OPENABLE));
         String name = request.intent.getStringExtra(Intent.EXTRA_TITLE);
-        assertTrue(name, name.startsWith("metra-seen-history-") && name.endsWith(".json"));
+        assertTrue(name, name.startsWith("ninetok-seen-history-") && name.endsWith(".json"));
         assertFalse("the suggested name gives the account away", name.contains(account));
         assertEquals(SeenHistoryFilePreference.REQUEST_SAVE, request.requestCode & 0xffff);
         assertFalse("a second picker could open over the first", saveRow.isEnabled());
@@ -211,7 +211,7 @@ public class SeenHistoryFilePreferenceTest {
         fragment.onActivityResult(SeenHistoryFilePreference.REQUEST_RESTORE, Activity.RESULT_OK,
                 new Intent().setData(provider.uri));
         finishWorkers();
-        assertEquals("That isn't a seen-history file saved by Metra. "
+        assertEquals("That isn't a seen-history file saved by NINE’tok. "
                 + "For TikTok's own data export, use Import watch history.", bannerMessage());
         assertEquals(0, rowsFor(account));
         assertResting();
@@ -357,9 +357,9 @@ public class SeenHistoryFilePreferenceTest {
                         + "Anyone who opens the file can see that viewing history.",
                 save.getSummary().toString());
         assertEquals(handle != null
-                        ? "Add a seen-history file saved by Metra to the videos @" + handle + " has seen. "
+                        ? "Add a seen-history file saved by NINE’tok to the videos @" + handle + " has seen. "
                         + "A video in both keeps the newer date."
-                        : "Add a seen-history file saved by Metra to this account's seen videos. "
+                        : "Add a seen-history file saved by NINE’tok to this account's seen videos. "
                         + "A video in both keeps the newer date.",
                 restore.getSummary().toString());
         assertFalse(DocumentOperation.busy(DocumentOperation.Kind.SEEN_HISTORY_FILE));

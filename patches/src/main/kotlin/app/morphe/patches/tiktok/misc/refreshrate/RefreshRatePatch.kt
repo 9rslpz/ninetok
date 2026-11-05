@@ -50,7 +50,7 @@ internal object RefreshRateWriteFingerprint : Fingerprint(
 @Suppress("unused")
 val refreshRatePatch = bytecodePatch(
     name = "Keep the screen's refresh rate",
-    description = "Stops TikTok slowing your screen down to the video's frame rate, so scrolling stays smooth on 90 or 120 Hz phones. Starts off. Turn it on in Metra settings > App behavior.",
+    description = "Stops TikTok slowing your screen down to the video's frame rate, so scrolling stays smooth on 90 or 120 Hz phones. Starts off. Turn it on in NINE’tok settings > App behavior.",
 ) {
     category("Playback")
     dependsOn(settingsPatch, sharedExtensionPatch)

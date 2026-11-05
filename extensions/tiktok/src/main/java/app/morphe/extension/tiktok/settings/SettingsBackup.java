@@ -39,7 +39,7 @@ import org.json.JSONObject;
 public final class SettingsBackup {
     public static final int MAX_BYTES = 2 * 1024 * 1024;
     /** The format tag written today, and the one backups made before the rename carry. */
-    public static final String FORMAT = "metra-settings";
+    public static final String FORMAT = "ninetok-settings";
     /** The newest backup shape this build reads; a file declaring more is refused, absent means 1. */
     static final int SCHEMA = 1;
     public static final String LEGACY_FORMAT = "hushfeed-settings";
@@ -596,7 +596,7 @@ public final class SettingsBackup {
     }
 
     private static AtomicFile currentUndoFile(Context context) {
-        return new AtomicFile(new File(context.getFilesDir(), "metra-settings-undo.json"));
+        return new AtomicFile(new File(context.getFilesDir(), "ninetok-settings-undo.json"));
     }
 
     private static AtomicFile legacyUndoFile(Context context) {
@@ -622,7 +622,7 @@ public final class SettingsBackup {
         JSONObject root;
         try {
             String input = text.trim();
-            // Metra's original clipboard export omitted the enclosing braces.
+            // NINE’tok's original clipboard export omitted the enclosing braces.
             root = SettingsJson.parseObject(input.startsWith("\"") ? "{" + input + "}" : input);
         } catch (JSONException | IOException error) {
             // A download that stopped halfway is valid UTF-8 and valid nothing else. Letting it
@@ -632,10 +632,10 @@ public final class SettingsBackup {
             // so both are caught here. Oversized input was already refused as SIZE above.
             throw new RejectedBackup(Reason.DAMAGED, "Settings backup is not readable as JSON");
         }
-        if (!root.has("format")) root = legacyMetraBackup(root);
+        if (!root.has("format")) root = legacyNineTokBackup(root);
         String format = root.optString("format");
         if (!(FORMAT.equals(format) || LEGACY_FORMAT.equals(format))) {
-            throw new RejectedBackup(Reason.FORMAT, "Not a Metra settings backup");
+            throw new RejectedBackup(Reason.FORMAT, "Not a NINE’tok settings backup");
         }
         // Absent is the first schema: a file written before the key existed still reads. Newer
         // is refused by both numbers, since applying a shape this build never saw field by field
@@ -689,20 +689,20 @@ public final class SettingsBackup {
                 throw new RejectedBackup(Reason.INCOMPLETE, "Incomplete settings backup");
             }
         }
-        // Older structured backups can carry Metra's former key names too.
+        // Older structured backups can carry NINE’tok's former key names too.
         Map<String, Object> stored = new LinkedHashMap<>();
         for (java.util.Iterator<String> names = values.keys(); names.hasNext();) {
             String key = names.next();
             stored.put(key, values.get(key));
         }
         try {
-            for (Map.Entry<String, Object> migration : MetraLegacySettings.migratedValues(stored).entrySet()) {
+            for (Map.Entry<String, Object> migration : NineTokLegacySettings.migratedValues(stored).entrySet()) {
                 values.put(migration.getKey(), migration.getValue());
             }
         } catch (IllegalArgumentException malformed) {
             throw new RejectedBackup(Reason.VALUE, malformed.getMessage());
         }
-        keys.removeAll(MetraLegacySettings.legacyKeys());
+        keys.removeAll(NineTokLegacySettings.legacyKeys());
         Map<Setting<?>, Object> updates = new LinkedHashMap<>();
         int absent = 0;
         for (Setting<?> setting : Setting.allLoadedSettings()) {
@@ -758,15 +758,15 @@ public final class SettingsBackup {
     }
 
     /** Upgrade only recognizable old setting exports; all normal validation still follows. */
-    private static JSONObject legacyMetraBackup(JSONObject raw) throws JSONException {
-        java.util.Set<String> allowed = MetraLegacySettings.legacyKeys();
+    private static JSONObject legacyNineTokBackup(JSONObject raw) throws JSONException {
+        java.util.Set<String> allowed = NineTokLegacySettings.legacyKeys();
         for (Setting<?> setting : Setting.allLoadedSettings()) if (included(setting)) allowed.add(setting.key);
         JSONObject values = new JSONObject();
         for (java.util.Iterator<String> names = raw.keys(); names.hasNext();) {
             String name = names.next();
             String key = allowed.contains(name) ? name : "morphe_" + name;
             if (!allowed.contains(key) || values.has(key)) {
-                throw new RejectedBackup(Reason.FORMAT, "Unrecognized legacy Metra settings export");
+                throw new RejectedBackup(Reason.FORMAT, "Unrecognized legacy NINE’tok settings export");
             }
             values.put(key, raw.get(name));
         }

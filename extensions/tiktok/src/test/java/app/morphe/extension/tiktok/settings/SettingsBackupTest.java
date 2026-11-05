@@ -110,7 +110,7 @@ public class SettingsBackupTest {
         // custom folder went with them.
         Settings.DOWNLOAD_PATH.save("Pictures/Saved");
         String legacy = withoutKeys(
-                new JSONObject(SettingsBackup.create(false)).put("format", "metra-settings").toString(),
+                new JSONObject(SettingsBackup.create(false)).put("format", "ninetok-settings").toString(),
                 Settings.DOWNLOAD_VIDEO_PATH.key,
                 Settings.DOWNLOAD_PHOTO_PATH.key,
                 Settings.DOWNLOAD_STICKER_PATH.key);
@@ -326,7 +326,7 @@ public class SettingsBackupTest {
                 assertEquals(key, SettingsBackup.Reason.RULE_LIST,
                         reasonFor(backup.toString()));
                 assertEquals("That settings backup contains a feed rule list larger than "
-                                + "Metra accepts. Nothing was altered.",
+                                + "NINE’tok accepts. Nothing was altered.",
                         sentenceFor(backup.toString()));
                 assertEquals("a rejected " + key + " value changed storage",
                         baseline, SettingsBackup.create(false));
@@ -1321,7 +1321,7 @@ public class SettingsBackupTest {
             Uri uri = provider.uri;
             fragment.onActivityResult(7311, android.app.Activity.RESULT_OK, new Intent().setData(uri));
             waitFor("Settings backup saved");
-            assertEquals("metra-settings", new JSONObject(new String(java.nio.file.Files.readAllBytes(
+            assertEquals("ninetok-settings", new JSONObject(new String(java.nio.file.Files.readAllBytes(
                     provider.file.toPath()), StandardCharsets.UTF_8)).getString("format"));
             Settings.MAX_VIDEO_SECONDS.save(73);
             fragment.onActivityResult(7312, android.app.Activity.RESULT_OK, new Intent().setData(uri));
@@ -1353,7 +1353,7 @@ public class SettingsBackupTest {
             Utils.setContext(activity);
             Settings.MAX_VIDEO_SECONDS.save(73);
             File undoFile = new File(activity.getApplicationContext().getFilesDir(),
-                    "metra-settings-undo.json");
+                    "ninetok-settings-undo.json");
             assertTrue("fixture needs no Undo copy", !undoFile.exists() || undoFile.delete());
 
             var fragment = new TikTokPreferenceFragment();
@@ -1416,7 +1416,7 @@ public class SettingsBackupTest {
             Settings.MAX_VIDEO_SECONDS.save(73);
             String undoCopy = fromUnknownBuild(new JSONObject(SettingsBackup.create(false))).toString();
             File undoFile = new File(activity.getApplicationContext().getFilesDir(),
-                    "metra-settings-undo.json");
+                    "ninetok-settings-undo.json");
             try (FileOutputStream output = new FileOutputStream(undoFile)) {
                 output.write(undoCopy.getBytes(StandardCharsets.UTF_8));
             }
@@ -1534,7 +1534,7 @@ public class SettingsBackupTest {
         String name = app.morphe.extension.tiktok.settings.preference.SettingsBackupPreference
                 .suggestedExportName();
         assertTrue("the picker would show " + name,
-                name.matches("metra-settings-\\d{8}-\\d{6}\\.json"));
+                name.matches("ninetok-settings-\\d{8}-\\d{6}\\.json"));
     }
 
     /**
@@ -1703,7 +1703,7 @@ public class SettingsBackupTest {
             Shadows.shadowOf(Looper.getMainLooper()).idle();
             assertTrue(provider.exists);
             assertEquals(0, provider.deleteCalls);
-            assertEquals("metra-settings", new JSONObject(new String(java.nio.file.Files.readAllBytes(
+            assertEquals("ninetok-settings", new JSONObject(new String(java.nio.file.Files.readAllBytes(
                     provider.file.toPath()), StandardCharsets.UTF_8)).getString("format"));
             Preference undo = fragment.findPreference("settings_backup_7314");
             assertFalse("an export must not create a settings Undo", undo.isEnabled());

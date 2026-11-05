@@ -646,7 +646,7 @@ public class EdgeSwipeLevelsTest {
         Below below = new Below();
         send(gesture, below, MotionEvent.ACTION_DOWN, 5f, 600f);
         send(gesture, below, MotionEvent.ACTION_MOVE, 5f, 300f);
-        assertFalse("paused Metra takes nothing", gesture.taken());
+        assertFalse("paused NINE’tok takes nothing", gesture.taken());
     }
 
     @Test

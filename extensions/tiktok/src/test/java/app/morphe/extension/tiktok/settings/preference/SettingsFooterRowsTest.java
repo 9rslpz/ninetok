@@ -46,7 +46,7 @@ public class SettingsFooterRowsTest {
             Preference support = screen.getPreference(count - 1);
             Preference report = screen.getPreference(count - 2);
             assertEquals(TikTokPreferenceFragment.SUPPORT_KEY, support.getKey());
-            assertEquals("Support Metra", String.valueOf(support.getTitle()));
+            assertEquals("Support NINE’tok", String.valueOf(support.getTitle()));
             assertEquals("the Support row carries its title and nothing under it",
                     "", String.valueOf(support.getSummary()));
             assertEquals(TikTokPreferenceFragment.REPORT_PROBLEM_KEY, report.getKey());

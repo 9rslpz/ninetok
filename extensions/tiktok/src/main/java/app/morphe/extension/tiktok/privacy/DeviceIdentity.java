@@ -58,7 +58,7 @@ public final class DeviceIdentity {
      * The seen-video history's database is the one not named for Hushfeed.
      */
     private static final String[] KEPT_PREFIXES =
-            {"morphe", "hushfeed", "metra", "feature-gate-lab", "seen_videos"};
+            {"morphe", "hushfeed", "ninetok", "feature-gate-lab", "seen_videos"};
     /** The directories of TikTok's data that may hold a Hushfeed file next to TikTok's own. */
     private static final String[] SHARED_DIRECTORIES =
             {"shared_prefs", "files", "cache", "no_backup", "databases"};

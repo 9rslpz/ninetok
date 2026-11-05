@@ -143,7 +143,7 @@ public class FeedLockTest {
 
             PausedProcess.set(false);
             SessionLockOverlay.sync();
-            assertNotNull("the lock did not come back with Metra", overlay());
+            assertNotNull("the lock did not come back with NINE’tok", overlay());
 
             Settings.FEED_LOCK.save(false);
             SessionLockOverlay.onForeground();

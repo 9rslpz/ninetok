@@ -66,7 +66,7 @@ public class PauseLiftsTheHoldTest {
         assertEquals(0L, SessionBudget.lockRemainingMs());
 
         PausedProcess.set(false);
-        assertTrue("the hold did not come back with Metra", SessionBudget.isLocked());
+        assertTrue("the hold did not come back with NINE’tok", SessionBudget.isLocked());
         assertTrue(SessionBudget.lockRemainingMs() > 0);
     }
 
@@ -86,7 +86,7 @@ public class PauseLiftsTheHoldTest {
         assertEquals("a paused video change rewrote the budget record", record, Settings.SESSION_BUDGET_STATE.savedValue());
 
         PausedProcess.set(false);
-        assertTrue("the hold was gone when Metra came back", SessionBudget.isLocked());
+        assertTrue("the hold was gone when NINE’tok came back", SessionBudget.isLocked());
         assertFalse("the notice came back for a budget already spent", SessionBudget.claimNotice());
     }
 

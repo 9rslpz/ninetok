@@ -123,7 +123,7 @@ internal fun proxyInstallIndex(method: Method): Int {
 @Suppress("unused")
 val networkProxyPatch = bytecodePatch(
     name = "Network proxy",
-    description = "Sends TikTok's feed, search and comments through a proxy server you set up. Videos and LIVEs still load directly, and so do Metra's own saves and short-link lookups. Other apps aren't affected. Starts off. Turn it on in Metra settings > Region spoof, then restart TikTok.",
+    description = "Sends TikTok's feed, search and comments through a proxy server you set up. Videos and LIVEs still load directly, and so do NINE’tok's own saves and short-link lookups. Other apps aren't affected. Starts off. Turn it on in NINE’tok settings > Region spoof, then restart TikTok.",
 ) {
     category("Settings")
     dependsOn(settingsPatch, sharedExtensionPatch)

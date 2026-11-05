@@ -180,7 +180,7 @@ internal fun MutableMethod.hookStoryLike() {
 @Suppress("unused")
 val confirmInteractionsPatch = bytecodePatch(
     name = "Confirm feed interactions",
-    description = "Asks for a second tap before Follow, a like, or a quick repost goes through, so a stray tap doesn't count. Starts off. Turn it on in Metra settings > Interface.",
+    description = "Asks for a second tap before Follow, a like, or a quick repost goes through, so a stray tap doesn't count. Starts off. Turn it on in NINE’tok settings > Interface.",
 ) {
     category("Interaction")
     compatibleWith(*AppCompatibilities.tiktok())

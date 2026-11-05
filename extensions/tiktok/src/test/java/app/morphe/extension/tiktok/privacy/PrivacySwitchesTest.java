@@ -871,7 +871,7 @@ public class PrivacySwitchesTest {
             assertNotNull("Tracking heading", privacy.findPreference(Settings.GHOST_MODE.key));
 
             TikTokPreferenceFragment behavior = open(activity, "BEHAVIOR");
-            assertEquals("Metra merges the same privacy controls into App behavior",
+            assertEquals("NINE’tok merges the same privacy controls into App behavior",
                     expected, keysOn(behavior).stream().filter(expected::contains).toList());
             assertNotNull(behavior.findPreference(Settings.GHOST_MODE.key));
             assertNotNull(behavior.findPreference(Settings.DISABLE_ANALYTICS.key));

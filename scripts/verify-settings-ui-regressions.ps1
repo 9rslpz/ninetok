@@ -56,7 +56,7 @@ foreach ($selectorFile in $selectorFiles) {
 }
 
 Require-Match $headerPath 'createSupportPill\s*\(' `
-    'Metra settings headers must expose the shared Support pill.'
+    'NINE’tok settings headers must expose the shared Support pill.'
 Require-Match $supportUiPath 'SUPPORT_URL\s*=\s*"https://ko-fi\.com/P5P5YOUU7"' `
     'The Support pill and support row must share the canonical support destination.'
 

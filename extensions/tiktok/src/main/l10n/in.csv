@@ -21,7 +21,7 @@ Opus didn't work on this phone. Saving the sound as TikTok sent it instead.,Opus
 Playing at %1$sx,Diputar pada %1$sx
 Save cover,Simpan sampul
 Save cover button in the share sheet,Tombol Simpan sampul di menu bagikan
-"Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Metra.","Video yang disimpan menampilkan @nama pengguna dan baris pertama keterangan di pojok kiri bawah. Untuk itu ponsel mengenkode ulang seluruh video, jadi menyimpan jadi lebih lama. Berlaku untuk simpanan yang dibuat Metra."
+"Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by NINE’tok.","Video yang disimpan menampilkan @nama pengguna dan baris pertama keterangan di pojok kiri bawah. Untuk itu ponsel mengenkode ulang seluruh video, jadi menyimpan jadi lebih lama. Berlaku untuk simpanan yang dibuat NINE’tok."
 Sound format,Format suara
 "Speed up this video, double tap again to undo","Percepat video ini, ketuk dua kali lagi untuk membatalkan"
 Translate button in comments,Tombol terjemahkan di komentar
@@ -37,7 +37,7 @@ Writing the caption on the video: %1$s,Menulis keterangan di video: %1$s
 Your TikTok account changed. Choose the file again for this account.,Akun TikTok Anda berubah. Pilih kembali berkas untuk akun ini.
 Reading watch history,Membaca riwayat tontonan
 Importing watch history,Mengimpor riwayat tontonan
-"Reopen Metra settings, then choose the file","Buka kembali pengaturan Metra, lalu pilih berkas"
+"Reopen NINE’tok settings, then choose the file","Buka kembali pengaturan NINE’tok, lalu pilih berkas"
 Couldn't start the import. Try again in a moment.,Impor tidak dapat dimulai. Coba lagi sebentar.
 Your seen history changed before the import finished. Choose the file again.,Riwayat tontonan berubah sebelum impor selesai. Pilih kembali berkas.
 Couldn't import watch history. Your saved history is unchanged.,Riwayat tontonan tidak dapat diimpor. Riwayat tersimpan tidak berubah.
@@ -90,7 +90,7 @@ That watch-history file is damaged. Nothing was imported.,Berkas riwayat tontona
 %1$s videos left,Sisa %1$s video
 %1$s videos were recorded before each account kept its own list. They hide nothing until you add them here.,%1$s video tercatat sebelum setiap akun menyimpan daftarnya sendiri. Video itu tidak menyembunyikan apa pun sampai kamu menambahkannya di sini.
 %1$s was rejected. %2$s,%1$s ditolak. %2$s
-%1$s · Metra's list only,%1$s · hanya di daftar Metra
+%1$s · NINE’tok's list only,%1$s · hanya di daftar NINE’tok
 %1$s · current value only,%1$s · hanya nilai saat ini
 %1$s · declared by TikTok,%1$s · dideklarasikan TikTok
 "%1$s · declared by TikTok, with a current value","%1$s · dideklarasikan TikTok, dengan nilai saat ini"
@@ -168,7 +168,7 @@ Stay on the video in full screen,Tetap di video saat layar penuh
 Stop TikTok's speed tests,Hentikan tes kecepatan TikTok
 "That creator pattern could stall the feed, so it was skipped: %1$s","Pola kreator itu bisa membuat feed macet, jadi dilewati: %1$s"
 "That creator pattern could stall the feed, so it wasn't added: %1$s","Pola kreator itu bisa membuat feed macet, jadi tidak ditambahkan: %1$s"
-"This key isn't in Metra's list, so its type can't be checked. Reset the override.","Kunci ini tidak ada di daftar Metra, jadi jenisnya tidak bisa diperiksa. Setel ulang penggantian."
+"This key isn't in NINE’tok's list, so its type can't be checked. Reset the override.","Kunci ini tidak ada di daftar NINE’tok, jadi jenisnya tidak bisa diperiksa. Setel ulang penggantian."
 "This key touches account safety. Forcing it can change login, region, payment or security checks.","Kunci ini menyangkut keselamatan akun. Memaksanya bisa mengubah pemeriksaan login, wilayah, pembayaran, atau keamanan."
 Activity,Aktivitas
 Activity center (PIA),Pusat aktivitas (PIA)
@@ -288,12 +288,12 @@ Clear all,Hapus semua
 Clear all suggested accounts,Hapus semua akun yang disarankan
 "Clears the recent events, saved crash reports, a recorded screen layout and the Hook status results above.","Menghapus peristiwa terbaru, laporan error tersimpan, tata letak layar yang direkam, dan hasil Hook status di atas."
 Record a screen's layout,Rekam tata letak layar
-"Tap, then go to the screen with what you want hidden. After %1$d seconds Metra records how that screen is built, without any of its text, for the diagnostic report.","Ketuk, lalu buka layar yang berisi hal yang ingin kamu sembunyikan. Setelah %1$d detik Metra merekam susunan layar itu, tanpa teksnya sama sekali, untuk laporan diagnostik."
+"Tap, then go to the screen with what you want hidden. After %1$d seconds NINE’tok records how that screen is built, without any of its text, for the diagnostic report.","Ketuk, lalu buka layar yang berisi hal yang ingin kamu sembunyikan. Setelah %1$d detik NINE’tok merekam susunan layar itu, tanpa teksnya sama sekali, untuk laporan diagnostik."
 Waiting to record. Go to the screen you want recorded.,Menunggu untuk merekam. Buka layar yang ingin kamu rekam.
 "A screen's layout is recorded. Export the diagnostic report to send it, or tap to record another.","Tata letak sebuah layar sudah direkam. Ekspor laporan diagnostik untuk mengirimnya, atau ketuk untuk merekam yang lain."
-Go to the screen now. Metra records its layout in %1$d seconds.,Buka layarnya sekarang. Metra merekam tata letaknya dalam %1$d detik.
+Go to the screen now. NINE’tok records its layout in %1$d seconds.,Buka layarnya sekarang. NINE’tok merekam tata letaknya dalam %1$d detik.
 Screen layout recorded. Export the diagnostic report to send it.,Tata letak layar direkam. Ekspor laporan diagnostik untuk mengirimnya.
-"Nothing was recorded because Metra settings were still open. Start again, then leave settings.","Tidak ada yang direkam karena pengaturan Metra masih terbuka. Mulai lagi, lalu keluar dari pengaturan."
+"Nothing was recorded because NINE’tok settings were still open. Start again, then leave settings.","Tidak ada yang direkam karena pengaturan NINE’tok masih terbuka. Mulai lagi, lalu keluar dari pengaturan."
 Couldn't record the screen's layout. Start again from Diagnostics.,Tata letak layar tidak dapat direkam. Mulai lagi dari Diagnostik.
 Clear diagnostic data,Hapus data diagnostik
 Clear display,Tampilan bersih
@@ -405,7 +405,7 @@ Diagnostic report copied to the clipboard,Laporan diagnostik disalin ke papan kl
 Diagnostics,Diagnostik
 Disable,Matikan
 Stop analytics and tracking,Hentikan analitik dan pelacakan
-Long-press Home for Metra settings,Tekan lama Beranda untuk pengaturan Metra
+Long-press Home for NINE’tok settings,Tekan lama Beranda untuk pengaturan NINE’tok
 Press and hold the Home tab to open these settings. A tap on Home works as before.,Tekan lama tab Beranda untuk membuka pengaturan ini. Mengetuk Beranda tetap berfungsi seperti biasa.
 Keep For You on a Home tap,Pertahankan Untuk Kamu saat mengetuk Beranda
 Keep For You on a pull down,Pertahankan Untuk Kamu saat tarik ke bawah
@@ -426,7 +426,7 @@ Downloads,Unduhan
 Drama and Series,Drama dan Serial
 Shows TikTok's text in your phone's font instead of TikTok Sans. Icons and gift animations keep their own fonts. Restart TikTok to see the change.,"Menampilkan teks TikTok dengan font ponselmu, bukan TikTok Sans. Ikon dan animasi hadiah tetap memakai font sendiri. Mulai ulang TikTok untuk melihat perubahannya."
 "Hide the notification saying somebody new followed you before it reaches the drawer. Every other notification is left alone, and the follower still appears in the Inbox.","Sembunyikan notifikasi yang memberi tahu ada orang baru yang mengikutimu sebelum masuk ke laci notifikasi. Notifikasi lain tidak terpengaruh, dan pengikutnya tetap muncul di Kotak Masuk."
-Each area shows how many of the things Metra looks for were found in this TikTok and how many are missing.,Setiap area menunjukkan berapa banyak hal yang dicari Metra yang ditemukan di TikTok ini dan berapa yang hilang.
+Each area shows how many of the things NINE’tok looks for were found in this TikTok and how many are missing.,Setiap area menunjukkan berapa banyak hal yang dicari NINE’tok yang ditemukan di TikTok ini dan berapa yang hilang.
 Empty,Kosong
 "Empty the menu that opens when you press and hold TikTok's icon on the home screen. Turning this off asks TikTok to build them again. Tapping the icon still opens the app, and a shortcut you pinned yourself stays where you put it.","Kosongkan menu yang terbuka saat ikon TikTok di layar beranda ditekan dan ditahan. Menonaktifkannya akan meminta TikTok membuatnya kembali. Mengetuk ikon tetap membuka aplikasi, dan pintasan yang kamu sematkan sendiri tetap berada di tempatnya."
 Enable,Hidupkan
@@ -635,9 +635,9 @@ Hold the feed after the budget,Tahan feed setelah anggaran habis
 Home,Beranda
 Hook status,Pemeriksaan fitur
 How far each edge press moves the video.,Seberapa jauh setiap tekanan di tepi memindahkan video.
-Metra can't read the creator pattern %1$s,Metra tidak bisa membaca pola kreator %1$s
-Metra hid a TikTok CAPTCHA. Turn off Hide CAPTCHA popups if something stops working.,Metra menyembunyikan satu CAPTCHA TikTok. Matikan Sembunyikan popup CAPTCHA kalau ada yang berhenti berfungsi.
-Metra is active,Metra aktif
+NINE’tok can't read the creator pattern %1$s,NINE’tok tidak bisa membaca pola kreator %1$s
+NINE’tok hid a TikTok CAPTCHA. Turn off Hide CAPTCHA popups if something stops working.,NINE’tok menyembunyikan satu CAPTCHA TikTok. Matikan Sembunyikan popup CAPTCHA kalau ada yang berhenti berfungsi.
+NINE’tok is active,NINE’tok aktif
 Shows the Duet and Stitch options even when the creator turned them off. TikTok may still refuse to accept the result.,Menampilkan opsi Duet dan Stitch meskipun kreator mematikannya. TikTok masih bisa menolak hasilnya.
 Import finished,Impor selesai
 Import loaded values,Impor nilai yang dimuat
@@ -813,8 +813,8 @@ Open profile and story website links in your system browser instead of TikTok's 
 Open the feed anyway,Tetap buka feed
 "Open the feed anyway, %1$d left today","Tetap buka feed, sisa %1$d hari ini"
 "Open the feed anyway, the last time today","Tetap buka feed, terakhir kali hari ini"
-Open the feed once so Metra can see which bottom tabs TikTok loaded.,Buka beranda TikTok untuk mendeteksi tab bawah yang dimuat.
-Open the feed once so Metra can see which tabs TikTok loaded.,Buka feed beranda TikTok untuk mendeteksi tab yang dimuat.
+Open the feed once so NINE’tok can see which bottom tabs TikTok loaded.,Buka beranda TikTok untuk mendeteksi tab bawah yang dimuat.
+Open the feed once so NINE’tok can see which tabs TikTok loaded.,Buka feed beranda TikTok untuk mendeteksi tab yang dimuat.
 Open the profile again and try once more,Buka lagi profilnya dan coba sekali lagi
 Open the story again and try once more,Buka lagi Story-nya dan coba sekali lagi
 Open TikTok on,Buka TikTok di
@@ -933,7 +933,7 @@ Save a story on a long press,Simpan Story dengan tekan lama
 Save field values,Simpan nilai bidang
 Save full report,Simpan laporan lengkap
 Save media,Simpan media
-Saves your Metra settings and Feature Gate Lab rules to a file.,Menyimpan pengaturan Metra dan aturan Feature Gate Lab ke satu file.
+Saves your NINE’tok settings and Feature Gate Lab rules to a file.,Menyimpan pengaturan NINE’tok dan aturan Feature Gate Lab ke satu file.
 Save subtitles beside videos,Simpan subtitle bersama video
 Saves TikTok's latest crash report on this phone so it can go in the diagnostic report.,Menyimpan laporan error TikTok terbaru di ponsel ini agar bisa dimasukkan ke laporan diagnostik.
 Save the original sound,Simpan suara asli
@@ -1101,7 +1101,7 @@ Tap the like heart twice within %1$d seconds. Removing a like stays immediate.,K
 Tap to start the feed,Ketuk untuk memulai feed
 Technical details,Detail teknis
 "Technical details, %1$s","Detail teknis, %1$s"
-That backup was written by a newer Metra than this one. Nothing was altered.,Cadangan itu dibuat oleh Metra yang lebih baru dari ini. Tidak ada yang diubah.
+That backup was written by a newer NINE’tok than this one. Nothing was altered.,Cadangan itu dibuat oleh NINE’tok yang lebih baru dari ini. Tidak ada yang diubah.
 That creator is already in the list,Kreator itu sudah ada di daftar
 "That creator pattern is too long to use, so it was skipped: %1$s","Pola kreator itu terlalu panjang, jadi dilewati: %1$s"
 "That creator pattern is too long, so it wasn't added: %1$s","Pola kreator itu terlalu panjang, jadi tidak ditambahkan: %1$s"
@@ -1111,20 +1111,20 @@ That file is too large to be a settings backup. Nothing was altered.,Berkas itu 
 "That folder name has a character Android doesn't allow. Use letters, numbers, spaces or dashes.",Ada nama folder yang tidak sah di tujuannya.
 That is %1$d minutes today,Itu %1$d menit hari ini
 That is %1$d videos today,Itu %1$d video hari ini
-That isn't a Metra settings backup. Nothing was altered.,Itu bukan cadangan pengaturan Metra. Tidak ada yang diubah.
+That isn't a NINE’tok settings backup. Nothing was altered.,Itu bukan cadangan pengaturan NINE’tok. Tidak ada yang diubah.
 "That isn't an app name. Try something like com.example.downloader, or leave the box empty to keep saving in TikTok.","Itu bukan nama aplikasi. Coba seperti com.example.downloader, atau kosongkan saja biar tetap disimpan di TikTok."
 That is one minute today,Itu satu menit hari ini
 That is one video today,Itu satu video hari ini
 That list has too many entries. Keep it to %1$s or fewer.,Daftar itu memiliki terlalu banyak entri. Batasi hingga %1$s entri atau kurang.
 That list is too large. Keep it to %1$s KB or less.,Daftar itu terlalu besar. Batasi ukurannya hingga %1$s KB atau kurang.
 That preset isn't recognized. Choose another.,Pratata SIM tidak sah.
-That settings backup contains a feed rule list larger than Metra accepts. Nothing was altered.,Cadangan pengaturan itu berisi daftar aturan feed yang lebih besar dari batas Metra. Tidak ada yang diubah.
-That settings backup holds a value Metra can't read. Nothing was altered.,Cadangan pengaturan itu memuat nilai yang tidak dapat dibaca Metra. Tidak ada yang diubah.
+That settings backup contains a feed rule list larger than NINE’tok accepts. Nothing was altered.,Cadangan pengaturan itu berisi daftar aturan feed yang lebih besar dari batas NINE’tok. Tidak ada yang diubah.
+That settings backup holds a value NINE’tok can't read. Nothing was altered.,Cadangan pengaturan itu memuat nilai yang tidak dapat dibaca NINE’tok. Tidak ada yang diubah.
 That settings backup holds more Feature Gate Lab rules than the Lab takes. Nothing was altered.,Cadangan pengaturan itu berisi lebih banyak aturan Feature Gate Lab daripada yang bisa diterima Lab. Tidak ada yang diubah.
 That settings backup is damaged or only partly downloaded. Nothing was altered.,Cadangan pengaturan itu rusak atau hanya terunduh sebagian. Tidak ada yang diubah.
 "That settings backup is incomplete, so it may have been cut short. Nothing was altered.","Cadangan pengaturan itu tidak lengkap, jadi mungkin terpotong. Tidak ada yang diubah."
 That settings change didn't go through. Nothing was altered.,Perubahan itu tidak berhasil. Tidak ada yang diubah.
-That sticker is in a format Metra can't read,Stiker itu formatnya tidak bisa dibaca Metra
+That sticker is in a format NINE’tok can't read,Stiker itu formatnya tidak bisa dibaca NINE’tok
 The Lab can't check this. TikTok gets it exactly as typed.,Lab tidak bisa memeriksa ini. TikTok menerimanya persis seperti yang kamu ketik.
 The Lab couldn't open. Go back and open it again.,Lab tidak bisa dibuka. Kembali lalu buka lagi.
 "The Lab keeps at most %1$s rules. This change would make %2$s, so nothing was changed.","Lab menyimpan paling banyak %1$s aturan. Perubahan ini akan membuat jumlahnya %2$s, jadi tidak ada yang diubah."
@@ -1210,7 +1210,7 @@ Turns off at %1$s,Mati pukul %1$s
 That loosens the budget. It waits until %1$s.,Itu melonggarkan anggaran. Menunggu sampai pukul %1$s.
 That loosens the lock. It waits until %1$s.,Itu melonggarkan kunci. Menunggu sampai pukul %1$s.
 Today can't start over while Wait a day to loosen the budget is on. The day starts over at %1$s.,Hari ini tidak bisa dimulai ulang selama Tunggu sehari untuk melonggarkan anggaran aktif. Hari dimulai ulang pukul %1$s.
-"Wait a day to loosen the budget is on, so Metra stays on","Tunggu sehari untuk melonggarkan anggaran aktif, jadi Metra tetap aktif"
+"Wait a day to loosen the budget is on, so NINE’tok stays on","Tunggu sehari untuk melonggarkan anggaran aktif, jadi NINE’tok tetap aktif"
 "Today has moved on, so there's nothing to put back","Hari sudah berganti, jadi tidak ada yang bisa dikembalikan"
 Today is back where it was,Hari ini kembali seperti semula
 Today started over. Tap again to put the counts back.,Hari ini dimulai ulang. Ketuk lagi untuk mengembalikan hitungannya.
@@ -1284,7 +1284,7 @@ Wait before hiding the controls.,Tunggu sebelum kontrol disembunyikan.
 What TikTok gets,Yang didapat TikTok
 "When TikTok requests this key, return the selected value below","Saat TikTok meminta kunci ini, kembalikan nilai yang dipilih di bawah"
 "When a video ends in full screen, stay on it instead of moving to the next one. Swiping still moves on.","Saat video selesai dalam layar penuh, tetap di video itu alih-alih pindah ke berikutnya. Menggeser tetap berpindah."
-"While diagnostic logging is on, a message names the part of Metra that failed. Off keeps failures in the report only.","Selama pencatatan diagnostik aktif, sebuah pesan menyebutkan bagian Metra yang gagal. Jika nonaktif, kegagalan hanya tercatat di laporan."
+"While diagnostic logging is on, a message names the part of NINE’tok that failed. Off keeps failures in the report only.","Selama pencatatan diagnostik aktif, sebuah pesan menyebutkan bagian NINE’tok yang gagal. Jika nonaktif, kegagalan hanya tercatat di laporan."
 Window width needed to enable the layout. Restart TikTok to apply this.,Lebar jendela yang dibutuhkan agar tata letaknya aktif. Mulai ulang TikTok agar berlaku.
 "Words, countries and languages","Kata, negara, dan bahasa"
 "Write the video's sound beside it, in the format picked under Sound format. Android 10 and later file audio separately, so it lands in Music under the same folder name as your videos.","Simpan suara video di sebelahnya, dalam format yang dipilih di Format suara. Android 10 ke atas menyimpan audio secara terpisah, jadi berkasnya masuk ke Music dengan nama folder yang sama seperti folder videomu."
@@ -1296,10 +1296,10 @@ Your filters hid everything TikTok just sent. Most were %1$s.,Filtermu menyembun
 "Your operator's name, like T-Mobile.","Nama operatormu, misalnya T-Mobile."
 "Your operator's numeric code, like 310260.","Kode angka operatormu, misalnya 310260."
 "Zero means the way out of the hold is always there. Any other number is how many times a day it works. Once they're used up, the hold stays until the day starts over. Ignored while the budget is locked, which removes the way out.","Nol berarti jalan keluar dari penahanan selalu tersedia. Angka lain adalah berapa kali sehari jalan keluar itu bisa dipakai. Setelah habis, penahanan tetap sampai hari dimulai ulang. Diabaikan saat anggaran terkunci, karena itu menghilangkan jalan keluar."
-"Zero means no limit. Counts the videos Metra advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.","Nol berarti tanpa batas. Menghitung video yang dilewati Metra untuk kamu, bukan yang kamu geser sendiri, dan mulai lagi saat feed dibangun ulang atau angka ini diubah."
+"Zero means no limit. Counts the videos NINE’tok advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.","Nol berarti tanpa batas. Menghitung video yang dilewati NINE’tok untuk kamu, bukan yang kamu geser sendiri, dan mulai lagi saat feed dibangun ulang atau angka ini diubah."
 "Zero shows the notice and leaves the feed alone. Anything else covers the feed for that many minutes once a budget is reached. Messages, profiles and search keep working, and nothing in the feed is thrown away.","Nol menampilkan pemberitahuan dan membiarkan feed apa adanya. Nilai lain menutupi feed selama sekian menit begitu batas tercapai. Pesan, profil, dan pencarian tetap berjalan, dan tidak ada isi feed yang dibuang."
 "Zero switches this off. A short reminder after that many minutes of watching, and again after the same again. Time on messages, a profile or search doesn't count, and nothing is shown while the feed is on hold.","Nol mematikan ini. Pengingat singkat setelah sekian menit menonton, lalu lagi setelah selang yang sama. Waktu di pesan, profil, atau pencarian tidak dihitung, dan tidak ada yang muncul selama feed ditahan."
-"Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Metra moved past for you.","Nol mematikan ini. Menghitung setiap video yang muncul di feed dan memberitahumu saat batas tercapai. Terpisah dari batas sesi maju otomatis di Pemutaran, yang hanya menghitung video yang dilewati Metra untukmu."
+"Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos NINE’tok moved past for you.","Nol mematikan ini. Menghitung setiap video yang muncul di feed dan memberitahumu saat batas tercapai. Terpisah dari batas sesi maju otomatis di Pemutaran, yang hanya menghitung video yang dilewati NINE’tok untukmu."
 "Zero switches this off. Count the minutes the player spends running in the feed. Time on messages, a profile or search doesn't count.","Nol mematikan ini. Menghitung menit saat pemutar berjalan di feed. Waktu di pesan, profil, atau pencarian tidak dihitung."
 collapsed,Diciutkan
 expanded,Diperluas
@@ -1341,7 +1341,7 @@ Filter location-tagged videos,Filter video berlabel lokasi
 Location-tagged videos,Video berlabel lokasi
 "Makes the heart easier to tap by using the empty space around it. The icon and spacing look the same, and Reply and other buttons keep their own space.","Membuat ikon hati lebih mudah diketuk dengan memakai ruang kosong di sekitarnya. Ikon dan jaraknya tampak sama, dan Balas serta tombol lain tetap punya ruangnya sendiri."
 "Hides the comment count, the sort and close buttons and the suggestions above them. Use Back or swipe down to close comments.","Menyembunyikan jumlah komentar, tombol urutkan dan tutup, serta saran di atasnya. Pakai Kembali atau geser ke bawah untuk menutup komentar."
-"Hide TikTok's ""Search: ..."" banner above the comment count. This doesn't hide the comments or Metra's comment-search box.","Sembunyikan banner ""Cari: ..."" TikTok di atas jumlah komentar. Ini tidak menyembunyikan komentar atau kotak pencarian komentar Metra."
+"Hide TikTok's ""Search: ..."" banner above the comment count. This doesn't hide the comments or NINE’tok's comment-search box.","Sembunyikan banner ""Cari: ..."" TikTok di atas jumlah komentar. Ini tidak menyembunyikan komentar atau kotak pencarian komentar NINE’tok."
 Hide the Report button on videos,Sembunyikan tombol Laporkan di video
 Hide the flag button TikTok puts above the creator's picture in some regions. You can still report a video from the share menu.,Sembunyikan tombol bendera yang ditaruh TikTok di atas foto kreator di beberapa wilayah. Kamu tetap bisa melaporkan video dari menu bagikan.
 Hide search rewards,Sembunyikan hadiah pencarian
@@ -1374,15 +1374,15 @@ this creator,kreator ini
 TikTok refused the follow with code %1$s,TikTok menolak permintaan mengikuti dengan kode %1$s
 TikTok refused the follow with code %1$s. A hidden CAPTCHA may be the cause.,TikTok menolak permintaan mengikuti dengan kode %1$s. CAPTCHA yang disembunyikan bisa jadi penyebabnya.
 TikTok refused the follow: %1$s A hidden CAPTCHA may be the cause.,TikTok menolak permintaan mengikuti: %1$s CAPTCHA yang disembunyikan bisa jadi penyebabnya.
-Metra is paused,Metra dijeda
-"Metra's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.","Sakelar Metra sedang dijeda. Pengaturanmu tetap tersimpan. Perubahan yang dibuat saat kamu mem-patch, seperti nama atau ikon aplikasi, tetap ada."
-"TikTok closed three times within a minute of starting, so Metra paused itself. Your settings stay as they are.","TikTok tertutup tiga kali dalam satu menit setelah dibuka, jadi Metra menjeda dirinya sendiri. Pengaturanmu tetap seperti semula."
-A file named hushfeed-safe-mode in TikTok's folder under Android/data paused Metra. Your settings stay as they are.,File bernama hushfeed-safe-mode di folder TikTok di dalam Android/data menjeda Metra. Pengaturanmu tetap seperti semula.
-Turn Metra back on,Aktifkan Metra lagi
-Pause Metra,Jeda Metra
-"Pause Metra's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.","Jeda sakelar Metra setelah TikTok dimulai ulang. Pengaturanmu tetap tersimpan. Perubahan yang dibuat saat kamu mem-patch, seperti nama atau ikon aplikasi, tetap ada."
-Metra turns back on when TikTok restarts.,Metra aktif lagi saat TikTok dimulai ulang.
-The file hushfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Metra back on.,File hushfeed-safe-mode tidak bisa dihapus. Hapus dari folder TikTok di dalam Android/data untuk mengaktifkan Metra lagi.
+NINE’tok is paused,NINE’tok dijeda
+"NINE’tok's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.","Sakelar NINE’tok sedang dijeda. Pengaturanmu tetap tersimpan. Perubahan yang dibuat saat kamu mem-patch, seperti nama atau ikon aplikasi, tetap ada."
+"TikTok closed three times within a minute of starting, so NINE’tok paused itself. Your settings stay as they are.","TikTok tertutup tiga kali dalam satu menit setelah dibuka, jadi NINE’tok menjeda dirinya sendiri. Pengaturanmu tetap seperti semula."
+A file named hushfeed-safe-mode in TikTok's folder under Android/data paused NINE’tok. Your settings stay as they are.,File bernama hushfeed-safe-mode di folder TikTok di dalam Android/data menjeda NINE’tok. Pengaturanmu tetap seperti semula.
+Turn NINE’tok back on,Aktifkan NINE’tok lagi
+Pause NINE’tok,Jeda NINE’tok
+"Pause NINE’tok's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.","Jeda sakelar NINE’tok setelah TikTok dimulai ulang. Pengaturanmu tetap tersimpan. Perubahan yang dibuat saat kamu mem-patch, seperti nama atau ikon aplikasi, tetap ada."
+NINE’tok turns back on when TikTok restarts.,NINE’tok aktif lagi saat TikTok dimulai ulang.
+The file hushfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn NINE’tok back on.,File hushfeed-safe-mode tidak bisa dihapus. Hapus dari folder TikTok di dalam Android/data untuk mengaktifkan NINE’tok lagi.
 Hide TikTok Shop in search,Sembunyikan TikTok Shop di pencarian
 Hide the Products block and product cards in search results.,Sembunyikan blok Produk dan kartu produk di hasil pencarian.
 Hide TikTok's Auto scroll button,Sembunyikan tombol Auto scroll TikTok
@@ -1441,7 +1441,7 @@ Allow storage for TikTok in Android settings to save the live photo's clip,Izink
 "This is the video's own sound, so YouTube Music won't have it","Ini suara asli video itu sendiri, jadi YouTube Music tidak akan memilikinya"
 "Not a handle or id, so ignored: %1$s","Bukan nama akun atau id, jadi diabaikan: %1$s"
 What's new,Yang baru
-Changes in Metra %1$s,Perubahan di Metra %1$s
+Changes in NINE’tok %1$s,Perubahan di NINE’tok %1$s
 Reviewed presets,Preset teruji
 Show See translation,Tampilkan Lihat terjemahan
 Reviewed for TikTok %1$s,Diuji untuk TikTok %1$s
@@ -1456,11 +1456,11 @@ This preset doesn't match the installed gates. Nothing changed.,Preset ini tidak
 About overrides,Tentang penggantian
 "Use {creator}, {date} and {video_id} to build the name. Start with {creator}/ to put each creator in a folder. The file ending is added for you.","Pakai {creator}, {date}, dan {video_id} untuk menyusun nama. Awali dengan {creator}/ agar setiap kreator masuk ke foldernya sendiri. Ekstensi file ditambahkan otomatis."
 Save details beside the video,Simpan detail di samping video
-"Saves the caption, creator, link and post date in a text file next to the video. On Android 10 and later, the pair goes in Download or Documents under the same folder name. Applies to saves made by Metra.","Menyimpan keterangan, kreator, tautan, dan tanggal unggah dalam file teks di samping video. Di Android 10 ke atas, pasangan file itu masuk ke Download atau Documents dengan nama folder yang sama. Berlaku untuk penyimpanan yang dilakukan Metra."
+"Saves the caption, creator, link and post date in a text file next to the video. On Android 10 and later, the pair goes in Download or Documents under the same folder name. Applies to saves made by NINE’tok.","Menyimpan keterangan, kreator, tautan, dan tanggal unggah dalam file teks di samping video. Di Android 10 ke atas, pasangan file itu masuk ke Download atau Documents dengan nama folder yang sama. Berlaku untuk penyimpanan yang dilakukan NINE’tok."
 Check for already-saved videos,Periksa video yang sudah disimpan
 Forget saved videos,Lupakan video tersimpan
 Undo forgetting saved videos,Batalkan melupakan video tersimpan
-"Forget which videos Metra saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.","Melupakan video mana saja yang disimpan Metra di sini, sehingga pemeriksaan video yang sudah disimpan dimulai lagi. File tersimpan dan pengaturanmu tetap ada. Mematikan pemeriksaan tidak menghapus catatan ini."
+"Forget which videos NINE’tok saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.","Melupakan video mana saja yang disimpan NINE’tok di sini, sehingga pemeriksaan video yang sudah disimpan dimulai lagi. File tersimpan dan pengaturanmu tetap ada. Mematikan pemeriksaan tidak menghapus catatan ini."
 Forgetting saved videos,Melupakan video tersimpan
 Putting the saved videos back,Mengembalikan video tersimpan
 Forgotten. Tap to put them back.,Sudah dilupakan. Ketuk untuk mengembalikannya.
@@ -1489,10 +1489,10 @@ Saving video: %1$s,Menyimpan video: %1$s
 Saving %1$s of %2$s: %3$s,Menyimpan %1$s dari %2$s: %3$s
 Couldn't save the change. Try again.,Perubahan tidak dapat disimpan. Coba lagi.
 Off. TikTok can report views and typing.,Nonaktif. TikTok dapat melaporkan tayangan dan aktivitas mengetik.
-Metra is paused. Ghost mode isn't active.,Metra dijeda. Mode hantu tidak aktif.
+NINE’tok is paused. Ghost mode isn't active.,NINE’tok dijeda. Mode hantu tidak aktif.
 Problem detected. Story views may still be reported. Check Ghost mode diagnostics. The warning stays until TikTok restarts.,Masalah terdeteksi. Tayangan cerita mungkin masih dilaporkan. Periksa diagnostik mode hantu. Peringatan tetap muncul sampai TikTok dimulai ulang.
-Metra blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.,Metra memblokir laporan TikTok di sini. Belum ada konfirmasi bahwa kamu tidak muncul di daftar penonton.
-On. Metra hasn't seen TikTok send any reports since it started.,Nyala. Metra belum melihat TikTok mengirim laporan apa pun sejak TikTok dimulai.
+NINE’tok blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.,NINE’tok memblokir laporan TikTok di sini. Belum ada konfirmasi bahwa kamu tidak muncul di daftar penonton.
+On. NINE’tok hasn't seen TikTok send any reports since it started.,Nyala. NINE’tok belum melihat TikTok mengirim laporan apa pun sejak TikTok dimulai.
 Ghost mode diagnostics,Diagnostik mode hantu
 The partial file couldn't be removed. Delete it from the folder you chose.,File yang belum lengkap tidak dapat dihapus. Hapus dari folder yang kamu pilih.
 The backup didn't start and its partial file couldn't be removed. Delete it from the folder you chose.,Pencadangan tidak dimulai dan file yang belum lengkap tidak dapat dihapus. Hapus dari folder yang kamu pilih.
@@ -1504,7 +1504,7 @@ Keep playing in the background,Tetap putar di latar belakang
 "The video you're watching keeps playing to its end after you leave TikTok or turn the screen off, with TikTok's own media notification to pause it. TikTok's background play switch stays on while this is on. Restart TikTok to apply this.","Video yang sedang kamu tonton tetap diputar sampai selesai setelah kamu keluar dari TikTok atau mematikan layar, dengan notifikasi media TikTok sendiri untuk menjedanya. Tombol putar di latar belakang milik TikTok tetap aktif selama ini aktif. Mulai ulang TikTok agar berlaku."
 Replay in the background,Putar ulang di latar belakang
 "When a video ends while TikTok plays in the background, it starts over instead of waiting for you to press Play in the notification. A call or another app's sound still pauses it.","Saat video selesai ketika TikTok diputar di latar belakang, video dimulai lagi dari awal tanpa menunggu kamu menekan Putar di notifikasi. Panggilan atau suara dari aplikasi lain tetap menjedanya."
-"Keep playing in the background is on in Metra's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.","Tetap putar di latar belakang aktif di pengaturan Pemutaran Metra, jadi TikTok mendapat 2 untuk kunci ini dan penggantian di sini tidak berpengaruh sampai tombol itu dimatikan."
+"Keep playing in the background is on in NINE’tok's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.","Tetap putar di latar belakang aktif di pengaturan Pemutaran NINE’tok, jadi TikTok mendapat 2 untuk kunci ini dan penggantian di sini tidak berpengaruh sampai tombol itu dimatikan."
 "2, from Keep playing in the background","2, dari Tetap putar di latar belakang"
 Let the last video finish,Biarkan video terakhir selesai
 "When the budget runs out, the video on screen plays to its end before the hold starts, and you can't swipe to another video meanwhile. If the fade already dimmed the feed, the hold starts right away. Needs a hold. It waits %1$d minutes at most.","Saat anggaran habis, video di layar diputar sampai selesai sebelum penahanan dimulai, dan kamu tidak bisa menggeser ke video lain selama itu. Jika peredupan sudah meredupkan feed, penahanan langsung dimulai. Perlu penahanan. Menunggu paling lama %1$d menit."
@@ -1562,7 +1562,7 @@ Hide the Clear display controls,Sembunyikan kontrol Tampilan bersih
 "While Clear display is on, also hide the progress bar, the close button and the pause and speed buttons at the bottom. You can still drag along the bottom edge to move through the video. To leave Clear display, press and hold the video and tap Restore display, or pinch the screen.","Saat Tampilan bersih aktif, sembunyikan juga bilah progres, tombol tutup, serta tombol jeda dan kecepatan di bagian bawah. Kamu tetap bisa menggeser di sepanjang tepi bawah untuk berpindah di dalam video. Untuk keluar dari Tampilan bersih, tekan lama video lalu ketuk Pulihkan tampilan, atau cubit layar."
 "Take the Add comment bar off videos you open from a profile, a hashtag, a sound or search, so the video fills the screen down to the bottom. The comment button on the right still opens comments.","Sembunyikan bilah untuk menulis komentar di video yang kamu buka dari profil, hashtag, suara, atau pencarian, agar video memenuhi layar sampai ke bawah. Tombol komentar di kanan tetap membuka komentar."
 Build details,Detail build
-Copy or save which patches and options this Metra was built with.,Salin atau simpan patch dan opsi apa saja yang dipakai untuk membuat Metra ini.
+Copy or save which patches and options this NINE’tok was built with.,Salin atau simpan patch dan opsi apa saja yang dipakai untuk membuat NINE’tok ini.
 Copy build details,Salin detail build
 Save build details,Simpan detail build
 Build details copied to the clipboard,Detail build disalin ke papan klip
@@ -1745,7 +1745,7 @@ Logging until %1$s. Tap to stop now.,Mencatat sampai %1$s. Ketuk untuk berhenti 
 Logging diagnostics until %1$s,Mencatat diagnostik sampai %1$s
 Timed logging stopped,Pencatatan berwaktu dihentikan
 Preview with a made-up post:,Pratinjau dengan postingan contoh:
-Metra's downloader: %1$s,Pengunduh Metra: %1$s
+NINE’tok's downloader: %1$s,Pengunduh NINE’tok: %1$s
 TikTok's downloader: %1$s,Pengunduh TikTok: %1$s
 Sound: %1$s,Suara: %1$s
 Details: %1$s,Detail: %1$s
@@ -1753,15 +1753,15 @@ Subtitles: %1$s,Subtitel: %1$s
 Stickers: %1$s,Stiker: %1$s
 Live photo clips: %1$s,Klip foto live: %1$s
 TikTok's own name,Nama bawaan TikTok
-"Not a part Metra fills in, so it's kept as typed: %1$s","Bukan bagian yang diisi Metra, jadi tetap seperti yang diketik: %1$s"
-"Metra's downloader doesn't fill this in, so it's kept as typed: %1$s","Pengunduh Metra tidak mengisi bagian ini, jadi tetap seperti yang diketik: %1$s"
+"Not a part NINE’tok fills in, so it's kept as typed: %1$s","Bukan bagian yang diisi NINE’tok, jadi tetap seperti yang diketik: %1$s"
+"NINE’tok's downloader doesn't fill this in, so it's kept as typed: %1$s","Pengunduh NINE’tok tidak mengisi bagian ini, jadi tetap seperti yang diketik: %1$s"
 "If that name is taken, Android adds a number to the new file.","Jika nama itu sudah dipakai, Android menambahkan angka pada file baru."
-"If that name is taken, Metra adds a number to the new file.","Jika nama itu sudah dipakai, Metra menambahkan angka pada file baru."
+"If that name is taken, NINE’tok adds a number to the new file.","Jika nama itu sudah dipakai, NINE’tok menambahkan angka pada file baru."
 Don't start the first video,Jangan mulai video pertama
 "When you open TikTok from its icon, the first video in the feed waits for one tap before it plays. A link, a notification or a shortcut opens as usual.","Saat kamu membuka TikTok dari ikonnya, video pertama di feed menunggu satu ketukan sebelum diputar. Tautan, notifikasi, atau pintasan tetap terbuka seperti biasa."
 Network proxy,Proksi jaringan
 Send TikTok through a proxy,Kirim TikTok lewat proksi
-"Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Metra also connect directly, after their own address checks. Other apps aren't affected.","Mengirim feed, pencarian, komentar, dan lalu lintas aplikasi TikTok lainnya lewat proxy di bawah. Video dan siaran LIVE tetap terhubung langsung. Penyimpanan dan pencarian tautan pendek dari Metra juga terhubung langsung, setelah pemeriksaan alamatnya sendiri. Aplikasi lain tidak terpengaruh."
+"Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from NINE’tok also connect directly, after their own address checks. Other apps aren't affected.","Mengirim feed, pencarian, komentar, dan lalu lintas aplikasi TikTok lainnya lewat proxy di bawah. Video dan siaran LIVE tetap terhubung langsung. Penyimpanan dan pencarian tautan pendek dari NINE’tok juga terhubung langsung, setelah pemeriksaan alamatnya sendiri. Aplikasi lain tidak terpengaruh."
 Proxy type,Jenis proksi
 HTTP,HTTP
 SOCKS5,SOCKS5
@@ -1801,8 +1801,8 @@ Save seen history to a file,Simpan riwayat video yang dilihat ke file
 Restore seen history from a file,Pulihkan riwayat video yang dilihat dari file
 "Save the videos @%1$s has seen, and when, to a JSON file. Anyone who opens the file can see that viewing history.",Simpan video yang telah dilihat @%1$s beserta waktunya ke file JSON. Siapa pun yang membuka file ini dapat melihat riwayat tontonan tersebut.
 "Save this account's seen videos, and when they were watched, to a JSON file. Anyone who opens the file can see that viewing history.",Simpan video yang telah dilihat akun ini beserta waktunya ke file JSON. Siapa pun yang membuka file ini dapat melihat riwayat tontonan tersebut.
-Add a seen-history file saved by Metra to the videos @%1$s has seen. A video in both keeps the newer date.,Tambahkan file riwayat yang disimpan Metra ke video yang telah dilihat @%1$s. Video yang ada di keduanya memakai tanggal yang lebih baru.
-Add a seen-history file saved by Metra to this account's seen videos. A video in both keeps the newer date.,Tambahkan file riwayat yang disimpan Metra ke video yang telah dilihat akun ini. Video yang ada di keduanya memakai tanggal yang lebih baru.
+Add a seen-history file saved by NINE’tok to the videos @%1$s has seen. A video in both keeps the newer date.,Tambahkan file riwayat yang disimpan NINE’tok ke video yang telah dilihat @%1$s. Video yang ada di keduanya memakai tanggal yang lebih baru.
+Add a seen-history file saved by NINE’tok to this account's seen videos. A video in both keeps the newer date.,Tambahkan file riwayat yang disimpan NINE’tok ke video yang telah dilihat akun ini. Video yang ada di keduanya memakai tanggal yang lebih baru.
 Sign in to TikTok before saving or restoring seen history.,Masuk ke TikTok sebelum menyimpan atau memulihkan riwayat video yang dilihat.
 Saving seen history,Menyimpan riwayat video yang dilihat
 Reading the seen-history file,Membaca file riwayat
@@ -1826,10 +1826,10 @@ Added %1$s seen videos.,%1$s video yang dilihat ditambahkan.
 %1$s older seen video was dropped to keep the newest %2$s.,%1$s video lama yang dilihat dihapus agar %2$s video terbaru tetap tersimpan.
 %1$s older seen videos were dropped to keep the newest %2$s.,%1$s video lama yang dilihat dihapus agar %2$s video terbaru tetap tersimpan.
 Couldn't restore seen history. Your saved history is unchanged.,Tidak dapat memulihkan riwayat video yang dilihat. Riwayat yang tersimpan tidak berubah.
-That file is larger than %1$s MB. Choose a seen-history file saved by Metra.,File itu lebih besar dari %1$s MB. Pilih file riwayat yang disimpan Metra.
+That file is larger than %1$s MB. Choose a seen-history file saved by NINE’tok.,File itu lebih besar dari %1$s MB. Pilih file riwayat yang disimpan NINE’tok.
 That file lists more than %1$s videos. Nothing was restored.,File itu berisi lebih dari %1$s video. Tidak ada yang dipulihkan.
-"That isn't a seen-history file saved by Metra. For TikTok's own data export, use Import watch history.","Itu bukan file riwayat yang disimpan Metra. Untuk ekspor data TikTok sendiri, gunakan Impor riwayat tontonan."
-"That file was saved by a newer Metra. Update Metra, then try again.","File itu disimpan oleh Metra versi lebih baru. Perbarui Metra, lalu coba lagi."
+"That isn't a seen-history file saved by NINE’tok. For TikTok's own data export, use Import watch history.","Itu bukan file riwayat yang disimpan NINE’tok. Untuk ekspor data TikTok sendiri, gunakan Impor riwayat tontonan."
+"That file was saved by a newer NINE’tok. Update NINE’tok, then try again.","File itu disimpan oleh NINE’tok versi lebih baru. Perbarui NINE’tok, lalu coba lagi."
 That seen-history file is damaged or was edited. Nothing was restored.,File riwayat itu rusak atau telah diedit. Tidak ada yang dipulihkan.
 Turn off haptics,Matikan getaran haptik
 Stop the short vibrations TikTok plays on its own taps and gestures. Your keyboard and your phone's own haptics stay as they are.,Hentikan getaran singkat yang dimainkan TikTok pada ketukan dan gesturnya sendiri. Keyboard dan haptik bawaan ponselmu tetap seperti semula.
@@ -1861,7 +1861,7 @@ Turn off push notifications,Matikan notifikasi push
 Save details as JSON,Simpan detail sebagai JSON
 Saves the details file in JSON format instead of plain text. Useful if another tool will read it.,"Menyimpan file detail dalam format JSON, bukan teks biasa. Berguna jika file akan dibaca oleh alat lain."
 Tag saved videos with their details,Beri tag detail pada video yang disimpan
-"Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Metra.","Menyimpan keterangan, kreator, tanggal unggah, dan tautan di dalam file video itu sendiri, tempat pemutar media bisa membacanya. Berlaku untuk penyimpanan yang dilakukan Metra."
+"Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by NINE’tok.","Menyimpan keterangan, kreator, tanggal unggah, dan tautan di dalam file video itu sendiri, tempat pemutar media bisa membacanya. Berlaku untuk penyimpanan yang dilakukan NINE’tok."
 Save the video's cover,Simpan sampul video
 Save the cover as well,Simpan sampulnya juga
 "Save the video's cover picture at the largest size TikTok has, each time you tap Download. It goes to your photo folder, named after the video.","Simpan gambar sampul video dengan ukuran terbesar yang dimiliki TikTok, setiap kali kamu mengetuk Unduh. Gambar masuk ke folder fotomu, dinamai sesuai videonya."
@@ -1903,10 +1903,10 @@ Liked videos,Video yang disukai
 Public,Publik
 Copy,Salin
 Copy the full link for short links,Salin tautan lengkap untuk tautan pendek
-"When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Metra opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.","Saat Salin tautan memberi tautan pendek vt.tiktok.com atau vm.tiktok.com, Metra membukanya sekali di latar belakang untuk menemukan tautan video lengkap, lalu menyalin yang itu. TikTok melihat kunjungan itu, dan terhubung langsung meskipun proxy aktif. Tautan yang kamu kirim ke aplikasi lain tetap seperti semula."
+"When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, NINE’tok opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.","Saat Salin tautan memberi tautan pendek vt.tiktok.com atau vm.tiktok.com, NINE’tok membukanya sekali di latar belakang untuk menemukan tautan video lengkap, lalu menyalin yang itu. TikTok melihat kunjungan itu, dan terhubung langsung meskipun proxy aktif. Tautan yang kamu kirim ke aplikasi lain tetap seperti semula."
 Full link copied,Tautan lengkap disalin
 Mark saved videos,Tandai video tersimpan
-"Puts a ✓ by videos and photo posts you saved with Metra, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.","Menaruh ✓ pada video dan kiriman foto yang kamu simpan dengan Metra, di grid profil dan di samping waktu di feed. Hanya berfungsi saat Periksa video yang sudah disimpan menyala."
+"Puts a ✓ by videos and photo posts you saved with NINE’tok, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.","Menaruh ✓ pada video dan kiriman foto yang kamu simpan dengan NINE’tok, di grid profil dan di samping waktu di feed. Hanya berfungsi saat Periksa video yang sudah disimpan menyala."
 Also replaces the saved region and country code TikTok sends with every request. Signing in still sends your real region. Your IP address and your account's own rules still apply.,"Juga mengganti wilayah tersimpan dan kode negara yang dikirim TikTok di setiap permintaan. Saat masuk, wilayah aslimu tetap dikirim. Alamat IP dan aturan akunmu sendiri tetap berlaku."
 Turn off double tap to react,Matikan ketuk dua kali untuk bereaksi
 A double tap on a message no longer adds a heart to it. A single tap and a long press work as before.,Ketuk dua kali pada pesan tidak lagi menambahkan hati ke pesan itu. Ketuk sekali dan tekan lama tetap berfungsi seperti biasa.
@@ -1938,7 +1938,7 @@ Keep offline videos until you delete them,Simpan video offline sampai kamu mengh
 "TikTok removes videos saved for offline viewing after a set time, sometimes only two days, watched or not. With this on they stay until you delete them in TikTok's Offline videos settings. TikTok can still clear watched ones when your phone is low on space.","TikTok menghapus video yang disimpan untuk ditonton offline setelah waktu tertentu, kadang hanya dua hari, sudah ditonton atau belum. Saat ini menyala, video tetap ada sampai kamu menghapusnya di pengaturan Video offline TikTok. TikTok masih bisa menghapus yang sudah ditonton saat ruang ponselmu menipis."
 Hide Thoughts on profiles,Sembunyikan Thoughts di profil
 "Hide the Thoughts bubble TikTok shows above a profile picture, and the prompt to share one on your own profile. Restart TikTok to apply this.","Sembunyikan gelembung Thoughts yang TikTok tampilkan di atas foto profil, dan ajakan untuk membagikannya di profilmu sendiri. Mulai ulang TikTok agar berlaku."
-About Metra,Tentang Metra
+About NINE’tok,Tentang NINE’tok
 "Version, changes and licenses","Versi, perubahan, dan lisensi"
 Active,Aktif
 Paused,Dijeda
@@ -2062,7 +2062,7 @@ About,Tentang
 Your settings,Pengaturanmu
 Report a problem,Laporkan masalah
 Opens a GitHub report with your versions and settings filled in. Add what happened.,Membuka laporan GitHub dengan versi dan pengaturanmu yang sudah terisi. Tambahkan apa yang terjadi.
-Support Metra,Dukung Metra
+Support NINE’tok,Dukung NINE’tok
 No app on this phone opens web links,Tidak ada aplikasi di ponsel ini yang membuka tautan web
 Quick setups,Pengaturan cepat
 "Quiet hides ads, Shop and LIVE. Privacy hides your views and typing and stops tracking. Back to defaults resets every switch. Press and hold to hide this row.","Tenang menyembunyikan iklan, Toko, dan LIVE. Privasi menyembunyikan tontonan dan ketikanmu serta menghentikan pelacakan. Kembalikan default mengatur ulang setiap sakelar. Tekan lama untuk menyembunyikan baris ini."
@@ -2081,14 +2081,14 @@ Your earlier settings are back,Pengaturan sebelumnya sudah kembali
 Your feed,Feed kamu
 Saving and sharing,Menyimpan dan berbagi
 Privacy and app,Privasi dan aplikasi
-Metra,Metra
-Open Metra settings,Buka pengaturan Metra
+NINE’tok,NINE’tok
+Open NINE’tok settings,Buka pengaturan NINE’tok
 Several photos in one comment,Beberapa foto dalam satu komentar
 Scrolling comments on videos,Komentar berjalan di atas video
 See-through bottom bar,Bilah bawah transparan
 Let the video reach the bottom of the screen on the main feed and show the tabs over it with no bar behind them.,Biarkan video di feed utama menjangkau bagian bawah layar dan tampilkan tab di atasnya tanpa bilah di belakangnya.
 LIVE chat auto-translate,Terjemahan otomatis chat LIVE
-"The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Metra settings > Region spoof, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.","Tombol Terjemahkan komentar di ruang LIVE juga memerlukan SIM Jepang. Aktifkan Timpa detail SIM di pengaturan Metra > Wilayah, atur Praset negara SIM ke Japan, NTT DOCOMO (44010), lalu mulai ulang TikTok."
+"The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in NINE’tok settings > Region spoof, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.","Tombol Terjemahkan komentar di ruang LIVE juga memerlukan SIM Jepang. Aktifkan Timpa detail SIM di pengaturan NINE’tok > Wilayah, atur Praset negara SIM ke Japan, NTT DOCOMO (44010), lalu mulai ulang TikTok."
 
 Pick videos to save from profile grids,Pilih video untuk disimpan dari grid profil
 "Puts a circle on each video in a profile, Liked or Favorites grid. Pick up to %1$s, then tap Save to save them one after another, with a count and Cancel.","Menaruh lingkaran di setiap video pada grid profil, Disukai, atau Favorit. Pilih hingga %1$s, lalu ketuk Simpan untuk menyimpannya satu per satu, dengan hitungan dan Batal."
@@ -2159,7 +2159,7 @@ Your Long press choice runs only on the left and right thirds of the video. A pr
 Full-width progress bar,Bilah progres selebar layar
 "Run the progress bar from one screen edge to the other, without the gap TikTok leaves at each end.","Bilah progres membentang dari satu tepi layar ke tepi lainnya, tanpa celah yang disisakan TikTok di kedua ujung."
 New device identity,Identitas perangkat baru
-"Wipe TikTok's data and give it a new Android ID and advertising ID on the next start, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Metra's settings stay.","Hapus data TikTok dan beri ID Android serta ID iklan baru saat mulai berikutnya, agar TikTok melihat ponsel yang belum pernah dikenalnya. Kamu akan keluar dari akun dan kehilangan draf. Pengaturan Metra tetap ada."
+"Wipe TikTok's data and give it a new Android ID and advertising ID on the next start, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. NINE’tok's settings stay.","Hapus data TikTok dan beri ID Android serta ID iklan baru saat mulai berikutnya, agar TikTok melihat ponsel yang belum pernah dikenalnya. Kamu akan keluar dari akun dan kehilangan draf. Pengaturan NINE’tok tetap ada."
 TikTok starts as a new phone after the restart. Tap again to cancel.,TikTok mulai sebagai ponsel baru setelah dimulai ulang. Ketuk lagi untuk membatalkan.
 Couldn't set up a new device identity. Try again.,Tidak bisa menyiapkan identitas perangkat baru. Coba lagi.
 Feed controls,Filter feed
@@ -2177,7 +2177,7 @@ Comma-separated action IDs. Other video actions remain available.,Comma-separate
 Make the native action available. It starts only when you choose it.,Make the native action available. It starts only when you choose it.
 MENUS,MENUS
 Support,Support
-Support Metra patches,Support Metra patches
+Support the original patch author,Support the original patch author
 Choose which posts appear in your feeds,Choose which posts appear in your feeds
 "Feed tabs, bottom tabs, and Tako AI","Feed tabs, bottom tabs, and Tako AI"
 "Promotions, overlays, profile and inbox controls","Promotions, overlays, profile and inbox controls"

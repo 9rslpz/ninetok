@@ -1,6 +1,6 @@
 import org.gradle.api.artifacts.repositories.MavenArtifactRepository
 
-rootProject.name = "metra-tiktok-patches"
+rootProject.name = "ninetok-tiktok-patches"
 
 pluginManagement {
     val allowLocalPlugins = providers.gradleProperty("allowMavenLocal")

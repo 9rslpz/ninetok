@@ -390,7 +390,7 @@ public class InputCheckTest {
             String shown = previewIn(root);
             assertNotNull("no preview under the field", shown);
             assertTrue(shown, shown.contains("/creator_name_{vidoe_id}.mp4"));
-            assertTrue(shown, shown.contains("Not a part Metra fills in, so it's kept as typed: {vidoe_id}"));
+            assertTrue(shown, shown.contains("Not a part NINE’tok fills in, so it's kept as typed: {vidoe_id}"));
 
             field.getEditText().setText("{video_id}");
             shown = previewIn(root);

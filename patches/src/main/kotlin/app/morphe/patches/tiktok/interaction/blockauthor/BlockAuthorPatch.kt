@@ -88,7 +88,7 @@ val blockAuthorPatch = bytecodePatch(
     name = "Block author button",
     description = "Adds buttons on videos to block the creator, hide them only on your phone, " +
         "or block the sound, so you can get rid of what you don't want in one tap. Starts off. " +
-        "Turn it on in Metra settings > Interface.",
+        "Turn it on in NINE’tok settings > Interface.",
 ) {
     category("Interaction")
     dependsOn(settingsPatch, sharedExtensionPatch, sessionPlaybackBridgePatch)

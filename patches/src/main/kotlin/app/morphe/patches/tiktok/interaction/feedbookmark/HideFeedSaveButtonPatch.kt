@@ -47,7 +47,7 @@ private object FeedFavoriteStateFingerprint : Fingerprint(
 val hideFeedSaveButtonPatch = bytecodePatch(
     name = "Hide feed save button",
     description = "Removes the save button from the right side of the feed, for a cleaner " +
-        "screen. Starts off. Turn it on in Metra settings > Interface.",
+        "screen. Starts off. Turn it on in NINE’tok settings > Interface.",
     default = true,
 ) {
     category("Feed")

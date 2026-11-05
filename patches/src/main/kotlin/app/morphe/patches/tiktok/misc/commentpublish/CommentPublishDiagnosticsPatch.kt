@@ -70,7 +70,7 @@ internal fun Instruction.isHandOff(owner: String): Boolean {
 @Suppress("unused")
 val commentPublishDiagnosticsPatch = bytecodePatch(
     name = "Comment publish diagnostics",
-    description = "Adds a note to Metra's diagnostic report about how far a comment got " +
+    description = "Adds a note to NINE’tok's diagnostic report about how far a comment got " +
         "when it fails to post, which helps track down comments that vanish without an error. " +
         "Works as soon as you patch it in, with no switch.",
     default = true,

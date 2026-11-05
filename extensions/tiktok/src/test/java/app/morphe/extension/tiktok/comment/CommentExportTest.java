@@ -154,7 +154,7 @@ public class CommentExportTest {
         assertEquals("=HYPERLINK(\"x\")", whole.getJSONArray("comments").getJSONObject(0).getString("text"));
         JSONObject cut = new JSONObject(CommentExport.toJson(rows, "2026-10-07T00:00:00Z", true));
         assertEquals(true, cut.getBoolean("truncated"));
-        assertTrue(cut.getString("note"), cut.getString("note").contains("more comments loaded than Metra keeps"));
+        assertTrue(cut.getString("note"), cut.getString("note").contains("more comments loaded than NINE’tok keeps"));
     }
 
     @Test public void csvFileLeadsWithAByteOrderMarkAndJsonDoesNot() throws Exception {

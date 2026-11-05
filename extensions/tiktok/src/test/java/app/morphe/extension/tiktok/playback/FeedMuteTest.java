@@ -181,7 +181,7 @@ public class FeedMuteTest {
         PausedProcess.set(true);
         try {
             assertEquals(List.of("Mute feed videos: on",
-                    "Metra is paused, so the feed plays with its sound",
+                    "NINE’tok is paused, so the feed plays with its sound",
                     "Mute button on the feed: shown",
                     "Feed players muted since TikTok started: 0", "Audio focus requests turned down: 0"),
                     FeedMute.Report.INSTANCE.lines());

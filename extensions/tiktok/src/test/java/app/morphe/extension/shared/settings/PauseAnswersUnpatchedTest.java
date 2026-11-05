@@ -179,7 +179,7 @@ public class PauseAnswersUnpatchedTest {
         assertEquals("@copy_link", ShareModelFilter.savedHiddenItems(ShareSurface.VIDEO));
     }
 
-    @Test public void pausedDownloadKeepsTikToksOwnFileDespiteMetrasHighestDefault() {
+    @Test public void pausedDownloadKeepsTikToksOwnFileDespiteNineToksHighestDefault() {
         var gear = new app.morphe.extension.tiktok.download.AdvancedDownloadsTest.Gear(
                 "normal_1080_0", 300, "https://example.com/1080");
         Object video = new Object() {

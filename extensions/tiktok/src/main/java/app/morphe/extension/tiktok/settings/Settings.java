@@ -25,7 +25,7 @@ import app.morphe.extension.tiktok.navigation.NavigationTabOptions;
 import java.util.Collections;
 
 public class Settings extends BaseSettings {
-    static { MetraLegacySettings.migrate(app.morphe.extension.shared.Utils.getContext()); }
+    static { NineTokLegacySettings.migrate(app.morphe.extension.shared.Utils.getContext()); }
     /** Backstop for direct writes and both settings-import formats. */
     private static final class FeedRuleStringSetting extends StringSetting {
         private final boolean creatorList;
@@ -44,7 +44,7 @@ public class Settings extends BaseSettings {
 
     public static final BooleanSetting REGION_SPOOF = new BooleanSetting(
             "region_spoof",
-            FALSE,
+            TRUE,
             true,
             // Not Setting.parent(SIM_SPOOF): that switch is declared further down this file and
             // a static initializer cannot read it yet. Naming it inside the methods is the same
@@ -81,7 +81,7 @@ public class Settings extends BaseSettings {
     // The same two switches as the store row, and the row names the one to turn on the same way.
     public static final BooleanSetting REGION_REQUEST_SPOOF = new BooleanSetting(
             "region_request_spoof",
-            FALSE,
+            TRUE,
             true,
             new Setting.Availability() {
                 @Override public boolean isAvailable() {
@@ -124,7 +124,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting PLAY_SDR = new BooleanSetting("play_sdr", FALSE);
     public static final BooleanSetting PREFER_H264 = new BooleanSetting("prefer_h264", FALSE);
     public static final StringSetting DOWNLOAD_VIDEO_QUALITY = new StringSetting("download_video_quality", "highest") {
-        // Metra's chosen default is still an override. Pause must use TikTok's own file.
+        // NINE’tok's chosen default is still an override. Pause must use TikTok's own file.
         @Override protected String pausedValue() { return "auto"; }
     };
     /** Download lists the video's renditions and saves the one picked, for that save alone. */
@@ -270,7 +270,7 @@ public class Settings extends BaseSettings {
     // first. Off until the reader turns one on, and a paused build answers off. The splash, update
     // and traffic hooks act on TikTok's startup tasks, so they need a restart. The animated image
     // cache is read as each sticker or GIF is built, so it reaches the next one without one.
-    public static final BooleanSetting SKIP_SPLASH_AD = new BooleanSetting("skip_splash_ad", FALSE, true);
+    public static final BooleanSetting SKIP_SPLASH_AD = new BooleanSetting("skip_splash_ad", TRUE, true);
     public static final BooleanSetting SKIP_UPDATE_CHECKS = new BooleanSetting("skip_update_checks", FALSE, true);
     public static final BooleanSetting LIMIT_BACKGROUND_TRAFFIC =
             new BooleanSetting("limit_background_traffic", FALSE, true);
@@ -303,7 +303,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting LAUNCHER_SHORTCUTS_REMOVED =
             new BooleanSetting("launcher_shortcuts_removed", FALSE, false, false);
     public static final BooleanSetting ALLOW_DUET_AND_STITCH =
-            new BooleanSetting("allow_duet_and_stitch", FALSE);
+            new BooleanSetting("allow_duet_and_stitch", TRUE);
     public static final BooleanSetting HIDE_FOLLOWER_NOTIFICATIONS =
             new BooleanSetting("hide_follower_notifications", FALSE);
     /**
@@ -390,11 +390,11 @@ public class Settings extends BaseSettings {
      * releases, so a true saved under it was never a choice made for the browsing rule.
      */
     public static final BooleanSetting HIDE_CAPTCHA_POPUPS = new BooleanSetting("hide_browsing_captcha_popups", FALSE, true);
-    public static final BooleanSetting HIDE_HOMEPAGE_COIN = new BooleanSetting("hide_homepage_coin", FALSE, true);
+    public static final BooleanSetting HIDE_HOMEPAGE_COIN = new BooleanSetting("hide_homepage_coin", TRUE, true);
     // A restart: the gift box is hidden when the profile header binds it, and a profile already
     // drawn keeps it until TikTok starts again.
     public static final BooleanSetting HIDE_PROFILE_REWARDS_SHORTCUT =
-            new BooleanSetting("hide_profile_rewards_shortcut", FALSE, true);
+            new BooleanSetting("hide_profile_rewards_shortcut", TRUE, true);
     public static final StringSetting MIN_MAX_VIEWS = new StringSetting("min_max_views", "0-" + Long.MAX_VALUE, true);
     public static final StringSetting MIN_MAX_LIKES = new StringSetting("min_max_likes", "0-" + Long.MAX_VALUE, true);
     public static final StringSetting MIN_MAX_COMMENTS = new StringSetting("min_max_comments", "0-" + Long.MAX_VALUE, true);
@@ -1027,7 +1027,7 @@ public class Settings extends BaseSettings {
             new StringSetting("store_identity_installer", "com.android.vending", true);
     // Skip passkey sign-in (#102), in the default selection with this off. Read each time a
     // sign-in screen asks whether this phone can use passkeys, so no restart.
-    public static final BooleanSetting SKIP_PASSKEY_SIGN_IN = new BooleanSetting("skip_passkey_sign_in", FALSE);
+    public static final BooleanSetting SKIP_PASSKEY_SIGN_IN = new BooleanSetting("skip_passkey_sign_in", TRUE);
     // Keep the app language (#61), in the default selection with this off. TikTok's reset runs
     // once early in each start, so a change counts from the next one, with no restart asked for.
     public static final BooleanSetting KEEP_APP_LANGUAGE = new BooleanSetting("keep_app_language", FALSE);
@@ -1132,14 +1132,14 @@ public class Settings extends BaseSettings {
             new BooleanSetting("compact_comment_header", FALSE, true);
     public static final BooleanSetting LARGER_COMMENT_LIKE_TARGET =
             new BooleanSetting("larger_comment_like_target", FALSE, true);
-    public static final BooleanSetting HIDE_COMMENT_EGGS = new BooleanSetting("hide_comment_eggs", FALSE);
+    public static final BooleanSetting HIDE_COMMENT_EGGS = new BooleanSetting("hide_comment_eggs", TRUE);
     public static final BooleanSetting COMMENT_SORT_CONTROLS = new BooleanSetting("comment_sort_controls", FALSE);
     // Share sheet tools.
     public static final BooleanSetting HIDE_SHARE_CONTACTS = new BooleanSetting("hide_share_contacts", FALSE);
     public static final BooleanSetting SHARE_TAP_COPIES_LINK = new BooleanSetting("share_tap_copies_link", FALSE);
     public static final StringSetting SHARE_HIDDEN_ITEMS = new StringSetting("share_hidden_items", "");
-    public static final StringSetting SHARE_HIDDEN_CHANNEL_ITEMS = new StringSetting(MetraLegacySettings.HIDDEN_CHANNELS, "", false, Setting.parentNot(HIDE_SHARE_CHANNELS));
-    public static final StringSetting SHARE_HIDDEN_ACTION_ITEMS = new StringSetting(MetraLegacySettings.HIDDEN_ACTIONS, "", false, Setting.parentNot(HIDE_SHARE_ACTIONS));
+    public static final StringSetting SHARE_HIDDEN_CHANNEL_ITEMS = new StringSetting(NineTokLegacySettings.HIDDEN_CHANNELS, "", false, Setting.parentNot(HIDE_SHARE_CHANNELS));
+    public static final StringSetting SHARE_HIDDEN_ACTION_ITEMS = new StringSetting(NineTokLegacySettings.HIDDEN_ACTIONS, "", false, Setting.parentNot(HIDE_SHARE_ACTIONS));
     // The profile and LIVE sheets keep lists of their own. Until one is saved it holds this
     // marker and follows SHARE_HIDDEN_ITEMS, so a list chosen before the split keeps working on
     // every sheet, unknown identifiers included.
@@ -1193,7 +1193,7 @@ public class Settings extends BaseSettings {
             new BooleanSetting("enable_non_personalized_search", FALSE, true);
     public static final BooleanSetting ENABLE_LIVE_SEARCH =
             new BooleanSetting("enable_live_search", FALSE, true);
-    public static final BooleanSetting SIM_SPOOF = new BooleanSetting("simspoof", FALSE, true);
+    public static final BooleanSetting SIM_SPOOF = new BooleanSetting("simspoof", TRUE, true);
     public static final StringSetting SIM_SPOOF_ISO = new StringSetting("simspoof_iso", "us");
     public static final StringSetting SIMSPOOF_MCCMNC = new StringSetting("simspoof_mccmnc", "310260");
     public static final StringSetting SIMSPOOF_OP_NAME = new StringSetting("simspoof_op_name", "T-Mobile");

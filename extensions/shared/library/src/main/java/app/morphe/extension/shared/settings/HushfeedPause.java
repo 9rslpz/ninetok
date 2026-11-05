@@ -81,12 +81,12 @@ public final class HushfeedPause {
             if (Utils.isMainProcess()) countLastStart(context);
         } catch (RuntimeException failure) {
             // Never let the safety net be what stops TikTok from starting.
-            Logger.printException(() -> "Metra pause: could not read the last start", failure);
+            Logger.printException(() -> "NINE’tok pause: could not read the last start", failure);
         }
         reason = decide(context);
         Setting.setPausedForProcess(reason != Reason.NONE);
         if (reason != Reason.NONE) {
-            Logger.printInfo(() -> "Metra is paused for this start: " + reason);
+            Logger.printInfo(() -> "NINE’tok is paused for this start: " + reason);
         }
     }
 
@@ -149,7 +149,7 @@ public final class HushfeedPause {
             if (streak >= CRASHES_TO_SAFE_MODE) {
                 BaseSettings.SAFE_MODE.save(true);
                 streak = 0;
-                Logger.printInfo(() -> "Metra safe mode: three starts in a row crashed within a minute");
+                Logger.printInfo(() -> "NINE’tok safe mode: three starts in a row crashed within a minute");
             }
             write(streakFile, Integer.toString(streak));
         }
@@ -190,7 +190,7 @@ public final class HushfeedPause {
                 if (error.pid == pid) return true;
             }
         } catch (RuntimeException unanswered) {
-            Logger.printException(() -> "Metra pause: could not ask for the crash state", unanswered);
+            Logger.printException(() -> "NINE’tok pause: could not ask for the crash state", unanswered);
         }
         return false;
     }
@@ -305,7 +305,7 @@ public final class HushfeedPause {
         try (FileOutputStream out = new FileOutputStream(file)) {
             out.write(text.getBytes(StandardCharsets.US_ASCII));
         } catch (IOException | RuntimeException failure) {
-            Logger.printException(() -> "Metra pause: could not write " + file.getName(), failure);
+            Logger.printException(() -> "NINE’tok pause: could not write " + file.getName(), failure);
         }
     }
 

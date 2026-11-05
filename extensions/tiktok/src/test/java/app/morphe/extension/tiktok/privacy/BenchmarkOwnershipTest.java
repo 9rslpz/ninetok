@@ -90,7 +90,7 @@ public class BenchmarkOwnershipTest {
         app.morphe.extension.tiktok.settings.SettingsStatus.resourceGovernorEnabled = false;
         app.morphe.extension.tiktok.settings.Settings.STOP_BENCHMARK_RUNS.save(true);
         try (var owner = org.robolectric.Robolectric.buildActivity(android.app.Activity.class).setup()) {
-            app.morphe.extension.tiktok.MetraStartup.onActivity(owner.get());
+            app.morphe.extension.tiktok.NineTokStartup.onActivity(owner.get());
             long deadline = System.nanoTime() + 2_000_000_000L;
             while (packages.getComponentEnabledSetting(component) != 0 && System.nanoTime() < deadline) Thread.sleep(10);
             assertEquals(0, packages.getComponentEnabledSetting(component));

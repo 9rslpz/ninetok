@@ -53,7 +53,7 @@ public final class StorageScanContract {
         for (String suffix : new String[] {"", ".bak", ".new"}) {
             equal(StorageScan.Bucket.SAVE_RECORDS,
                     StorageScan.bucket("files/hushfeed-save-records.json" + suffix, StorageScan.Kind.FILE));
-            for (String name : new String[] {"hushfeed-settings-undo.json", "metra-settings-undo.json",
+            for (String name : new String[] {"hushfeed-settings-undo.json", "ninetok-settings-undo.json",
                     "hushfeed-settings-operation.json"}) {
                 equal(StorageScan.Bucket.SETTINGS, StorageScan.bucket("files/" + name + suffix, StorageScan.Kind.FILE));
             }

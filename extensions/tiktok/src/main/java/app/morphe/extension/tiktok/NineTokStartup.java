@@ -1,5 +1,5 @@
 /*
- * Copyright 2026 Metra contributors
+ * Copyright 2026 NINE’tok contributors
  * https://github.com/icysymmetra/tiktok-patches-for-morphe
  */
 package app.morphe.extension.tiktok;
@@ -9,17 +9,17 @@ import android.content.Context;
 import app.morphe.extension.tiktok.download.MediaCache;
 import app.morphe.extension.tiktok.navigation.HomeTabSettingsShortcut;
 import app.morphe.extension.tiktok.privacy.BenchmarkRuns;
-import app.morphe.extension.tiktok.settings.MetraLegacySettings;
+import app.morphe.extension.tiktok.settings.NineTokLegacySettings;
 
 /** Shared startup keeps upgrade migrations and owned Android state independent of optional patches. */
-public final class MetraStartup {
-    private MetraStartup() {}
+public final class NineTokStartup {
+    private NineTokStartup() {}
     public static void onContextReady(Context context) {
-        MetraLegacySettings.migrate(context);
+        NineTokLegacySettings.migrate(context);
         MediaCache.reconcileAsync(context);
     }
     public static void onActivity(Context context) {
-        MetraLegacySettings.migrate(context);
+        NineTokLegacySettings.migrate(context);
         HomeTabSettingsShortcut.install(context);
         if (context instanceof Activity) BenchmarkRuns.onAppOpened((Activity) context);
     }

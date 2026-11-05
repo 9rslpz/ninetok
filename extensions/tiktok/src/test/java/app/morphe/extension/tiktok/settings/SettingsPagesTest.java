@@ -49,8 +49,8 @@ public class SettingsPagesTest {
     private static final String[] HOME_LAYOUT = {
             "Feed controls", "Feed navigation", "Interface", "Comments and translation", "Downloads",
             "Region spoof", "Share sheet", "App behavior",
-            "# Metra", "[status card]", "[Pause Metra]", "Diagnostics", "Backup and restore", "About Metra",
-            "Report a problem", "Support Metra"};
+            "# NINE’tok", "[status card]", "[Pause NINE’tok]", "Diagnostics", "Backup and restore", "About NINE’tok",
+            "Report a problem", "Support NINE’tok"};
     private final Map<Field, Boolean> statuses = new LinkedHashMap<>();
 
     public static class PageActivity extends Activity {
@@ -96,7 +96,7 @@ public class SettingsPagesTest {
                     "Screen time", "Region", "App"}) {
                 assertFalse(title + " has nothing in it without its patches", routes.contains(title));
             }
-            assertTrue(routes.contains("About Metra"));
+            assertTrue(routes.contains("About NINE’tok"));
             assertTrue(routes.contains("Backup and restore"));
             // A heading with every page under it left out of the bundle isn't shown either.
             var screen = home.getPreferenceScreen();
@@ -455,7 +455,7 @@ public class SettingsPagesTest {
                 } else if (row instanceof app.morphe.extension.tiktok.settings.preference.SettingsStatusPreference) {
                     layout.add("[status card]");
                 } else if (app.morphe.extension.shared.settings.BaseSettings.PAUSED.key.equals(row.getKey())) {
-                    layout.add("[Pause Metra]");
+                    layout.add("[Pause NINE’tok]");
                 }
             }
             assertEquals(java.util.Arrays.asList(HOME_LAYOUT), layout);
@@ -584,16 +584,16 @@ public class SettingsPagesTest {
             layout(home.getView(), 390, 844);
             Shadows.shadowOf(Looper.getMainLooper()).idle();
             ListView list = home.getView().findViewById(android.R.id.list);
-            // Metra's destinations open the page. Presets stay available below the main menus.
+            // NINE’tok's destinations open the page. Presets stay available below the main menus.
             int quickSetups = positionOf(list, "quick_setups");
             assertTrue("Quick setups is missing from the home page", quickSetups >= 0);
-            assertTrue("Quick setups displaced Metra's feature menus",
+            assertTrue("Quick setups displaced NINE’tok's feature menus",
                     quickSetups > positionOf(list, "section_behavior"));
             assertTrue("the first destination no longer shows without scrolling",
                     positionOf(list, menuRows(home).get(0).getKey()) <= list.getLastVisiblePosition());
             for (var row : menuRows(home)) {
                 if (row.getKey().startsWith("section_")) {
-                    assertFalse("Metra's feature routes changed their binding mode", row.isCompact());
+                    assertFalse("NINE’tok's feature routes changed their binding mode", row.isCompact());
                 }
             }
             TextView heading = home.getView().findViewWithTag("hushfeed_page_title");
@@ -668,7 +668,7 @@ public class SettingsPagesTest {
                     }
                 }
                 if ("BEHAVIOR".equals(SECTIONS[i])) {
-                    // Player and privacy controls share Metra's App behavior page. Keep both
+                    // Player and privacy controls share NINE’tok's App behavior page. Keep both
                     // scroll targets exercised after merging the upstream pages.
                     int player = positionOf(list, Settings.SHOW_SEEKBAR.key);
                     assertTrue("the Player controls are missing", player > 0);
@@ -835,7 +835,7 @@ public class SettingsPagesTest {
             float original = configuration.fontScale;
             try {
                 configuration.fontScale = 1.0f;
-                assertEquals("the ordinary scale should match Metra's home heading", 32,
+                assertEquals("the ordinary scale should match NINE’tok's home heading", 32,
                         app.morphe.extension.tiktok.settings.preference.SettingsHeaderPreference
                                 .headingSizeSp(activity));
 
@@ -1065,7 +1065,7 @@ public class SettingsPagesTest {
             EditText input = (EditText) page.getView().findViewWithTag("settings_search_input");
             input.setText("pause");
             Shadows.shadowOf(Looper.getMainLooper()).idle();
-            Preference result = findPreference(page.getPreferenceScreen(), "Pause Metra");
+            Preference result = findPreference(page.getPreferenceScreen(), "Pause NINE’tok");
             assertNotNull(result);
 
             assertTrue(result.getOnPreferenceClickListener().onPreferenceClick(result));
@@ -2573,7 +2573,7 @@ assertEquals(View.LAYOUT_DIRECTION_RTL, configuration.getLayoutDirection());
         }
     }
 
-    @Test public void metraThemeKeepsFlatRowsCompactHeadersAndPinkSwitchThumbs() throws Exception {
+    @Test public void ninetokThemeKeepsFlatRowsCompactHeadersAndPinkSwitchThumbs() throws Exception {
         try (var owner = Robolectric.buildActivity(PageActivity.class).setup().visible()) {
             Activity activity = owner.get();
             Utils.setContext(activity);
@@ -2603,7 +2603,7 @@ assertEquals(View.LAYOUT_DIRECTION_RTL, configuration.getLayoutDirection());
             android.widget.Switch control = new android.widget.Switch(activity);
             app.morphe.extension.tiktok.settings.preference.SettingsUi.styleSwitch(control);
             int[] checked = {android.R.attr.state_enabled, android.R.attr.state_checked};
-            assertEquals("enabled switches lost Metra's pink thumb",
+            assertEquals("enabled switches lost NINE’tok's pink thumb",
                     app.morphe.extension.tiktok.settings.preference.SettingsUi.accent(),
                     trackColour(control.getThumbDrawable(), checked));
             assertNotEquals("the switch thumb and track have the same fill",
@@ -2612,8 +2612,8 @@ assertEquals(View.LAYOUT_DIRECTION_RTL, configuration.getLayoutDirection());
     }
 
     @Test @Config(qualifiers = "w480dp-h960dp-notnight-mdpi")
-    public void lightMetraThemeKeepsTheSameLayoutAndControls() throws Exception {
-        metraThemeKeepsFlatRowsCompactHeadersAndPinkSwitchThumbs();
+    public void lightNineTokThemeKeepsTheSameLayoutAndControls() throws Exception {
+        ninetokThemeKeepsFlatRowsCompactHeadersAndPinkSwitchThumbs();
     }
 
     /** What the track paints in the state given, at its centre. */

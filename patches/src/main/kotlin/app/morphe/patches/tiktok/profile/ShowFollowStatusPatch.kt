@@ -77,7 +77,7 @@ internal fun ClassDef.itemViewField(): Field? = fields.singleOrNull {
 @Suppress("unused")
 val showFollowStatusPatch = bytecodePatch(
     name = "Show follow status",
-    description = "Shows on a profile whether that person follows you back, and marks accounts in your follow lists that don't. On by default. Turn it off in Metra settings > App behavior. Optional local counts and appearance controls apply to your own profile.",
+    description = "Shows on a profile whether that person follows you back, and marks accounts in your follow lists that don't. On by default. Turn it off in NINE’tok settings > App behavior. Optional local counts and appearance controls apply to your own profile.",
     default = true,
 ) {
     category("Interaction")

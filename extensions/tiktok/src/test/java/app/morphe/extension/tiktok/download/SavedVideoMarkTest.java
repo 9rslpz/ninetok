@@ -142,7 +142,7 @@ public class SavedVideoMarkTest {
         SettingsStatus.advancedDownloadsEnabled = true;
 
         PausedProcess.set(true);
-        assertEquals("Pause Metra left the mark on", "12.3K", SavedVideoMark.gridText("12.3K", cell));
+        assertEquals("Pause NINE’tok left the mark on", "12.3K", SavedVideoMark.gridText("12.3K", cell));
         PausedProcess.set(false);
         assertEquals(MARKED, SavedVideoMark.gridText("12.3K", cell));
     }

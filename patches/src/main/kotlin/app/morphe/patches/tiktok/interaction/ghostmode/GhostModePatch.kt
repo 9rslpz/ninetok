@@ -141,7 +141,7 @@ val ghostModePatch = bytecodePatch(
     name = "Ghost mode",
     description = "Stops TikTok telling people you viewed their story or profile, or that " +
         "you're typing. What TikTok already recorded stays. A separate switch hides your online " +
-        "status. Starts off. Turn it on in Metra settings > App behavior.",
+        "status. Starts off. Turn it on in NINE’tok settings > App behavior.",
 ) {
     category("Privacy")
     dependsOn(settingsPatch, sharedExtensionPatch)

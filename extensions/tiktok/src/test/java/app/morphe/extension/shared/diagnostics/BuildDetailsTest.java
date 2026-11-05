@@ -158,7 +158,7 @@ public class BuildDetailsTest {
         // declared app's version and code.
         assertUnknown(record.replace("47.4.3", "47.1.3").replace("2024704030", "2024701030"));
         assertUnknown(record.replace("47.4.3", "47.1.4").replace("2024704030", "2024701040"));
-        // Neither the retained upstream reference build nor another package is a Metra target.
+        // Neither the retained upstream reference build nor another package is a NINE’tok target.
         assertUnknown(record.replace("com.zhiliaoapp.musically", "com.ss.android.ttmd.video")
                 .replace("47.4.3", "47.1.4").replace("2024704030", "2024701040"));
         assertUnknown(record.replace("com.zhiliaoapp.musically", "com.ss.android.ttmd.video"));

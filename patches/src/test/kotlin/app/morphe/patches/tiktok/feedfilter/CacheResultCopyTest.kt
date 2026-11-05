@@ -1,5 +1,5 @@
 /*
- * Copyright 2026 Metra contributors
+ * Copyright 2026 NINE’tok contributors
  * https://github.com/icysymmetra/tiktok-patches-for-morphe
  */
 package app.morphe.patches.tiktok.feedfilter

@@ -270,7 +270,7 @@ public final class AdvancedFeedRules {
             try {
                 Pattern.compile(source, Pattern.CASE_INSENSITIVE);
             } catch (PatternSyntaxException invalid) {
-                return L10n.f("Metra can't read the creator pattern %1$s", L10n.isolate(entry));
+                return L10n.f("NINE’tok can't read the creator pattern %1$s", L10n.isolate(entry));
             }
             if (couldStall(source)) {
                 return L10n.f("That creator pattern could stall the feed, so it wasn't added: %1$s",
@@ -386,7 +386,7 @@ public final class AdvancedFeedRules {
             pattern = Pattern.compile(source, Pattern.CASE_INSENSITIVE);
         } catch (PatternSyntaxException invalid) {
             COMPILED.put(entry, INVALID);
-            Utils.showToastLong(L10n.f("Metra can't read the creator pattern %1$s", L10n.isolate(entry)));
+            Utils.showToastLong(L10n.f("NINE’tok can't read the creator pattern %1$s", L10n.isolate(entry)));
             return null;
         }
         if (couldStall(source)) {

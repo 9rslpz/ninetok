@@ -75,7 +75,7 @@ internal object MainPagerTouchFingerprint : Fingerprint(
 @Suppress("unused")
 val swipeLeftPatch = bytecodePatch(
     name = "Swipe-left controls",
-    description = "Lets a left swipe on a video open its comments or do nothing, instead of opening the creator's profile. Starts off. Pick an action in Metra settings > Interface.",
+    description = "Lets a left swipe on a video open its comments or do nothing, instead of opening the creator's profile. Starts off. Pick an action in NINE’tok settings > Interface.",
 ) {
     category("Interaction")
     compatibleWith(*AppCompatibilities.tiktok())

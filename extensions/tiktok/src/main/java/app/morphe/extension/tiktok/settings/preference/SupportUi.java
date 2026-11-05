@@ -47,7 +47,7 @@ final class SupportUi {
                         SettingsUi.focusRing(context, SettingsUi.RADIUS_PILL)})));
         SettingsUi.markAsButton(pill);
         pill.setFocusable(true);
-        pill.setContentDescription(app.morphe.extension.tiktok.settings.L10n.t(context, "Support Metra patches"));
+        pill.setContentDescription(app.morphe.extension.tiktok.settings.L10n.t(context, "Support the original patch author"));
         pill.setOnClickListener(view -> openSupport());
 
         ImageView heart = new ImageView(context);

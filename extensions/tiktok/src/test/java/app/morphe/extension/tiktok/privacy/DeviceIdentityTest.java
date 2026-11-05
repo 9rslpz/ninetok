@@ -132,7 +132,7 @@ public class DeviceIdentityTest {
                 file(data, "shared_prefs/hushfeed-calm-feed-preset.xml"),
                 file(data, "files/hushfeed-save-records.json"),
                 file(data, "files/hushfeed_fonts/imported.ttf"),
-                file(data, "files/metra-settings-undo.json"),
+                file(data, "files/ninetok-settings-undo.json"),
                 file(data, "files/feature-gate-lab-undo.json"),
                 file(data, "files/morphe_java_crash_report_v1.txt"),
                 file(data, "databases/seen_videos.db"),
@@ -156,7 +156,7 @@ public class DeviceIdentityTest {
 
         int removed = DeviceIdentity.wipe(data);
 
-        for (File file : kept) assertTrue("the wipe took Metra's " + file, file.isFile());
+        for (File file : kept) assertTrue("the wipe took NINE’tok's " + file, file.isFile());
         for (File file : taken) assertFalse("the wipe left TikTok's " + file, file.exists());
         assertFalse("TikTok's directories go whole", new File(data, "files/keva").exists());
         assertFalse(new File(data, "app_webview").exists());

@@ -16,7 +16,7 @@ import org.robolectric.annotation.Config;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = 28)
-public class MetraLegacySettingsTest {
+public class NineTokLegacySettingsTest {
     @Rule public final SettingsContextRule settings = new SettingsContextRule();
 
     @Test public void aliasesPreserveExplicitModernChoicesAndInvertVisibleRows() {
@@ -26,7 +26,7 @@ public class MetraLegacySettingsTest {
         before.put("share_sheet_send_to", false);
         before.put("share_sheet_channels", true);
         before.put("share_sheet_force_auto_scroll", true);
-        Map<String, Object> updates = MetraLegacySettings.migratedValues(before);
+        Map<String, Object> updates = NineTokLegacySettings.migratedValues(before);
         assertFalse(updates.containsKey("hide_ai_generated"));
         assertEquals(true, updates.get("hide_share_contacts"));
         assertEquals(false, updates.get("hide_share_channels"));
@@ -35,33 +35,33 @@ public class MetraLegacySettingsTest {
     }
 
     @Test public void disabledKnownIdsStaySeparateAndUnseenIdsStayAllowed() {
-        Map<String, Object> updates = MetraLegacySettings.migratedValues(Map.of(
+        Map<String, Object> updates = NineTokLegacySettings.migratedValues(Map.of(
                 "share_sheet_channels_observed", "copy,whatsapp,new_app",
                 "share_sheet_channels_enabled", "whatsapp,new_app",
                 "share_sheet_actions_observed", "copy,save",
                 "share_sheet_actions_enabled", "copy"));
-        assertEquals("copy", updates.get(MetraLegacySettings.HIDDEN_CHANNELS));
-        assertEquals("save", updates.get(MetraLegacySettings.HIDDEN_ACTIONS));
+        assertEquals("copy", updates.get(NineTokLegacySettings.HIDDEN_CHANNELS));
+        assertEquals("save", updates.get(NineTokLegacySettings.HIDDEN_ACTIONS));
         assertFalse(updates.toString().contains("unseen"));
     }
 
     @Test public void qualitiesRetainTheirMeaningAndRepeatedMigrationConverges() {
         for (String[] pair : new String[][]{{"high", "highest"}, {"low", "lowest"}, {"medium", "medium"}, {" MEDIUM ", "medium"}}) {
             Map<String, Object> values = new LinkedHashMap<>(Map.of("download_video_quality", pair[0]));
-            values.putAll(MetraLegacySettings.migratedValues(values));
+            values.putAll(NineTokLegacySettings.migratedValues(values));
             assertEquals(pair[1], values.get("download_video_quality"));
-            assertTrue(MetraLegacySettings.migratedValues(values).isEmpty());
+            assertTrue(NineTokLegacySettings.migratedValues(values).isEmpty());
         }
     }
 
     @Test public void allKnownOptionsDisabledIsRepresentedByAnAbsentOldEnabledKey() {
-        assertEquals("save,copy", MetraLegacySettings.migratedValues(Map.of(
-                "share_sheet_actions_observed", "save,copy")).get(MetraLegacySettings.HIDDEN_ACTIONS));
+        assertEquals("save,copy", NineTokLegacySettings.migratedValues(Map.of(
+                "share_sheet_actions_observed", "save,copy")).get(NineTokLegacySettings.HIDDEN_ACTIONS));
     }
 
     @Test public void clipboardAllowListsRecoverKnownChoicesWithoutBlockingFutureOptions() {
-        String hidden = (String) MetraLegacySettings.migratedValues(Map.of(
-                "share_sheet_channels_enabled", "whatsapp,RAW:new_app")).get(MetraLegacySettings.HIDDEN_CHANNELS);
+        String hidden = (String) NineTokLegacySettings.migratedValues(Map.of(
+                "share_sheet_channels_enabled", "whatsapp,RAW:new_app")).get(NineTokLegacySettings.HIDDEN_CHANNELS);
         java.util.Set<String> ids = new java.util.HashSet<>(java.util.Arrays.asList(hidden.split(",")));
         assertTrue(ids.contains("facebook"));
         assertFalse(ids.contains("whatsapp"));
@@ -77,14 +77,14 @@ public class MetraLegacySettingsTest {
                 {"hide_feed_live_button", "hide_live_entrance"},
                 {"hide_suggested_accounts", "hide_inbox_suggested_accounts"}};
         for (String[] pair : booleans) for (boolean value : new boolean[]{false, true}) {
-            assertEquals(pair[0], value, MetraLegacySettings.migratedValues(Map.of(pair[0], value)).get(pair[1]));
+            assertEquals(pair[0], value, NineTokLegacySettings.migratedValues(Map.of(pair[0], value)).get(pair[1]));
         }
         for (String[] pair : new String[][]{{"share_sheet_send_to", "hide_share_contacts"},
                 {"share_sheet_channels", "hide_share_channels"}, {"share_sheet_actions", "hide_share_actions"}}) {
             for (boolean value : new boolean[]{false, true}) assertEquals(!value,
-                    MetraLegacySettings.migratedValues(Map.of(pair[0], value)).get(pair[1]));
+                    NineTokLegacySettings.migratedValues(Map.of(pair[0], value)).get(pair[1]));
         }
-        assertEquals("es,de", MetraLegacySettings.migratedValues(Map.of(
+        assertEquals("es,de", NineTokLegacySettings.migratedValues(Map.of(
                 "comment_translation_excluded_languages", "es,de")).get("dont_auto_translate_languages"));
     }
 
@@ -93,10 +93,10 @@ public class MetraLegacySettingsTest {
         Settings.HIDE_AI_GENERATED.save(false);
         var prefs = context.getSharedPreferences(Setting.PREFERENCES_NAME, Context.MODE_PRIVATE);
         prefs.edit().clear().putBoolean("hide_ai_content", true).commit();
-        MetraLegacySettings.migrate(context);
+        NineTokLegacySettings.migrate(context);
         assertTrue(Settings.HIDE_AI_GENERATED.get());
         Settings.HIDE_AI_GENERATED.save(false);
-        MetraLegacySettings.migrate(context);
+        NineTokLegacySettings.migrate(context);
         assertFalse(Settings.HIDE_AI_GENERATED.get());
         assertTrue(prefs.getBoolean("hide_ai_content", false));
     }
@@ -106,9 +106,9 @@ public class MetraLegacySettingsTest {
         var prefs = context.getSharedPreferences(Setting.PREFERENCES_NAME, Context.MODE_PRIVATE);
         prefs.edit().clear().putBoolean("hide_ai_content", true)
                 .putString("share_sheet_send_to", "wrong type").commit();
-        MetraLegacySettings.migrate(context);
+        NineTokLegacySettings.migrate(context);
         assertFalse(prefs.contains("hide_ai_generated"));
-        assertFalse(prefs.contains("metra_legacy_settings_v1"));
+        assertFalse(prefs.contains("ninetok_legacy_settings_v1"));
     }
 
     @Test public void secondaryStartupLeavesMigrationAndItsCompletionMarkerToTheMainProcess() {
@@ -125,15 +125,15 @@ public class MetraLegacySettingsTest {
         Utils.setContext(secondary);
         try {
             assertFalse(Utils.isMainProcess());
-            MetraLegacySettings.migrate(secondary);
+            NineTokLegacySettings.migrate(secondary);
             assertFalse("A background process must not write a migrated value", prefs.contains("hide_ai_generated"));
-            assertFalse("A background process must not complete the migration", prefs.contains("metra_legacy_settings_v1"));
+            assertFalse("A background process must not complete the migration", prefs.contains("ninetok_legacy_settings_v1"));
         } finally {
             Utils.setContext(app);
         }
-        MetraLegacySettings.migrate(app);
+        NineTokLegacySettings.migrate(app);
         assertTrue(prefs.getBoolean("hide_ai_generated", false));
-        assertTrue(prefs.getBoolean("metra_legacy_settings_v1", false));
+        assertTrue(prefs.getBoolean("ninetok_legacy_settings_v1", false));
     }
 
     @Test public void failedCommitDoesNotLeaveAMemoryOnlyCompletionMarkerAndCanRetry() {
@@ -158,12 +158,12 @@ public class MetraLegacySettingsTest {
                 return Setting.PREFERENCES_NAME.equals(name) ? wrapped : super.getSharedPreferences(name, mode);
             }
         };
-        MetraLegacySettings.migrate(failing);
-        assertFalse("The failed transaction must not appear complete in memory", prefs.contains("metra_legacy_settings_v1"));
+        NineTokLegacySettings.migrate(failing);
+        assertFalse("The failed transaction must not appear complete in memory", prefs.contains("ninetok_legacy_settings_v1"));
         assertFalse("The failed transaction must restore its previous values", prefs.contains("hide_ai_generated"));
         assertTrue(prefs.getBoolean("hide_ai_content", false));
-        MetraLegacySettings.migrate(failing);
-        assertTrue(prefs.getBoolean("metra_legacy_settings_v1", false));
+        NineTokLegacySettings.migrate(failing);
+        assertTrue(prefs.getBoolean("ninetok_legacy_settings_v1", false));
         assertTrue(prefs.getBoolean("hide_ai_generated", false));
         assertTrue(Settings.HIDE_AI_GENERATED.get());
     }
@@ -192,7 +192,7 @@ public class MetraLegacySettingsTest {
             }
         };
         Thread migration = new Thread(() -> {
-            try { MetraLegacySettings.migrate(delayed); } catch (Throwable error) { errors.set(error); }
+            try { NineTokLegacySettings.migrate(delayed); } catch (Throwable error) { errors.set(error); }
         });
         Thread writer = new Thread(() -> {
             try { assertTrue(Settings.HIDE_SHARE_CONTACTS.save(true)); }

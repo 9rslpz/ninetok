@@ -1,5 +1,5 @@
 /*
- * Copyright 2026 Metra contributors
+ * Copyright 2026 NINE’tok contributors
  * https://github.com/icysymmetra/tiktok-patches-for-morphe
  */
 package app.morphe.patches.tiktok.feedfilter
@@ -24,7 +24,7 @@ import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethodImplementation
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethodParameter
 
-internal const val NORMALIZED_CACHE_BRIDGE = "metraNormalizeCacheResult"
+internal const val NORMALIZED_CACHE_BRIDGE = "ninetokNormalizeCacheResult"
 
 /** Native cleanup runs on the original state, then downstream consumers receive an immutable copy. */
 internal fun normalizedCacheBridge(normalizer: MethodReference, payload: FieldReference,
@@ -35,16 +35,16 @@ internal fun normalizedCacheBridge(normalizer: MethodReference, payload: FieldRe
         null, null, ImmutableMethodImplementation(2, emptyList(), null, null))).apply {
         addInstructions(0, """
             invoke-static/range {p0 .. p0}, $normalizer
-            if-eqz p0, :metra_keep_normalized_result
+            if-eqz p0, :ninetok_keep_normalized_result
             iget-object v0, p0, $payload
-            if-eqz v0, :metra_keep_normalized_result
+            if-eqz v0, :ninetok_keep_normalized_result
             iget-object v0, v0, $aweme
             invoke-static/range {v0 .. v0}, Lapp/morphe/extension/tiktok/feedfilter/FeedItemsFilter;->shouldKeepNormalizedCache(Lcom/ss/android/ugc/aweme/feed/model/Aweme;)Z
             move-result v0
-            if-nez v0, :metra_keep_normalized_result
+            if-nez v0, :ninetok_keep_normalized_result
             invoke-static/range {p0 .. p0}, $emptyCopy
             move-result-object p0
-            :metra_keep_normalized_result
+            :ninetok_keep_normalized_result
             return-object p0
         """)
     }

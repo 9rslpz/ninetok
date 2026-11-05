@@ -60,10 +60,10 @@ public final class SettingsStatusPreference extends Preference {
         // No fixed order: the home page lists the card where it adds it, under the Hushfeed
         // heading, while the restart row keeps its -950 just under the page header.
         if (HushfeedPause.isPaused()) {
-            setTitle(L10n.t(context, "Metra is paused"));
+            setTitle(L10n.t(context, "NINE’tok is paused"));
             showPause(context);
         } else {
-            setTitle(L10n.t(context, "Metra is active"));
+            setTitle(L10n.t(context, "NINE’tok is active"));
             setSummary(MorpheTikTokAboutPreference.versionSummary(
                     context, bundleVersion, appVersion));
         }
@@ -86,7 +86,7 @@ public final class SettingsStatusPreference extends Preference {
     private void showPause(Context context) {
         backOnAtRestart = !HushfeedPause.pausesNextStart(context);
         setSummary(backOnAtRestart
-                ? L10n.t(context, "Metra turns back on when TikTok restarts.")
+                ? L10n.t(context, "NINE’tok turns back on when TikTok restarts.")
                 : pausedSummary(context, HushfeedPause.reason()));
     }
 
@@ -94,11 +94,11 @@ public final class SettingsStatusPreference extends Preference {
     static String pausedSummary(Context context, HushfeedPause.Reason reason) {
         switch (reason) {
             case CRASH_LOOP:
-                return L10n.t(context, "TikTok closed three times within a minute of starting, so Metra paused itself. Your settings stay as they are.");
+                return L10n.t(context, "TikTok closed three times within a minute of starting, so NINE’tok paused itself. Your settings stay as they are.");
             case MARKER_FILE:
-                return L10n.t(context, "A file named hushfeed-safe-mode in TikTok's folder under Android/data paused Metra. Your settings stay as they are.");
+                return L10n.t(context, "A file named hushfeed-safe-mode in TikTok's folder under Android/data paused NINE’tok. Your settings stay as they are.");
             default:
-                return L10n.t(context, "Metra's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.");
+                return L10n.t(context, "NINE’tok's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.");
         }
     }
 
@@ -172,7 +172,7 @@ public final class SettingsStatusPreference extends Preference {
         boolean offerTurnBackOn = HushfeedPause.isPaused() && turnBackOnAction != null;
         Runnable cardAction = offerTurnBackOn ? turnBackOnAction : diagnosticsAction;
         if (cardAction != null) {
-            String label = L10n.t(context, offerTurnBackOn ? "Turn Metra back on" : "Diagnostics");
+            String label = L10n.t(context, offerTurnBackOn ? "Turn NINE’tok back on" : "Diagnostics");
             TextView action = SettingsUi.text(
                     context, label, SettingsUi.TEXT_BODY_SMALL, SettingsUi.accent(),
                     android.graphics.Typeface.BOLD);

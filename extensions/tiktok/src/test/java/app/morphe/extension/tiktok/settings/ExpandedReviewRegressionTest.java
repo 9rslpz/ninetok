@@ -1,4 +1,4 @@
-/* Copyright 2026 Metra contributors. */
+/* Copyright 2026 NINE’tok contributors. */
 package app.morphe.extension.tiktok.settings;
 
 import static org.junit.Assert.*;
@@ -55,14 +55,14 @@ public class ExpandedReviewRegressionTest {
                     return Setting.PREFERENCES_NAME.equals(name) ? wrapped : super.getSharedPreferences(name, mode);
                 }
             };
-            MetraLegacySettings.migrate(failing);
-            assertFalse("Failed migration appeared complete in scenario " + scenario, prefs.contains("metra_legacy_settings_v1"));
+            NineTokLegacySettings.migrate(failing);
+            assertFalse("Failed migration appeared complete in scenario " + scenario, prefs.contains("ninetok_legacy_settings_v1"));
             assertFalse(prefs.contains("hide_ai_generated"));
             assertFalse(Settings.HIDE_AI_GENERATED.savedValue());
             assertEquals(7, prefs.getInt("retained_test_value", 0));
             assertTrue(prefs.getBoolean("hide_ai_content", false));
-            MetraLegacySettings.migrate(failing);
-            assertTrue(prefs.getBoolean("metra_legacy_settings_v1", false));
+            NineTokLegacySettings.migrate(failing);
+            assertTrue(prefs.getBoolean("ninetok_legacy_settings_v1", false));
             assertTrue(Settings.HIDE_AI_GENERATED.savedValue());
             assertEquals(7, prefs.getInt("retained_test_value", 0));
         }

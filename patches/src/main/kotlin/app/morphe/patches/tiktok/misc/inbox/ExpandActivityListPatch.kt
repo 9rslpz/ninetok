@@ -38,7 +38,7 @@ private const val ATOMIC_BOOLEAN_DESCRIPTOR = "Ljava/util/concurrent/atomic/Atom
 val expandActivityListPatch = bytecodePatch(
     name = "Expand activity list",
     description = "Shows the whole Activity and New followers lists in the Inbox, so you " +
-        "don't have to tap View all. Starts off. Turn it on in Metra settings > Interface.",
+        "don't have to tap View all. Starts off. Turn it on in NINE’tok settings > Interface.",
 ) {
     category("Inbox")
     dependsOn(settingsPatch, sharedExtensionPatch)

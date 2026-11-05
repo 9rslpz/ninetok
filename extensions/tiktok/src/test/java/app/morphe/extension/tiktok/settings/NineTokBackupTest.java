@@ -13,7 +13,7 @@ import org.robolectric.annotation.Config;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = 28)
-public class MetraBackupTest {
+public class NineTokBackupTest {
     @Rule public final SettingsContextRule settings = new SettingsContextRule();
     @org.junit.Before public void defaults() {
         Settings.REGION_SPOOF.get();
@@ -37,9 +37,9 @@ public class MetraBackupTest {
         Settings.AUTO_ADVANCE.resetToDefault();
     }
 
-    @Test public void bothStructuredFormatsReadAndOnlyMetraIsExported() throws Exception {
+    @Test public void bothStructuredFormatsReadAndOnlyNineTokIsExported() throws Exception {
         JSONObject backup = new JSONObject(SettingsBackup.create(false));
-        assertEquals("metra-settings", backup.getString("format"));
+        assertEquals("ninetok-settings", backup.getString("format"));
         assertNotNull(parse(backup.toString()));
         assertNotNull(parse(backup.put("format", "hushfeed-settings").toString()));
     }

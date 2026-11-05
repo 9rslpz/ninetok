@@ -336,7 +336,7 @@ public class AutoAdvanceTest {
             app.morphe.extension.shared.settings.PausedProcess.set(true);
             state.set(State.AUTO_SCROLL_STATE_START);
             control.update(state::get, start, stop);
-            assertEquals("paused, Metra still stopped TikTok's scroll", 2, stops.get());
+            assertEquals("paused, NINE’tok still stopped TikTok's scroll", 2, stops.get());
         } finally {
             app.morphe.extension.shared.settings.PausedProcess.set(false);
             Settings.SHARED_VIDEO_ALONE.resetToDefault();

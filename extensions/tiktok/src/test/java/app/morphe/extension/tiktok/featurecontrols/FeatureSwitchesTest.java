@@ -184,7 +184,7 @@ public class FeatureSwitchesTest {
         assertFalse(FeatureControls.hideFeedSidebarButtonEnabled(false));
 
         PausedProcess.set(true);
-        assertTrue("Pause Metra leaves the button to TikTok",
+        assertTrue("Pause NINE’tok leaves the button to TikTok",
                 FeatureControls.hideFeedSidebarButtonEnabled(true));
     }
 

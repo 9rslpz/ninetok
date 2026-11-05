@@ -74,7 +74,7 @@ public class FeedOverlayControlsTest {
             assertFalse("the Footnotes switch closed the Report gate",
                     FeedOverlayControls.shouldHideReportButton());
             PausedProcess.set(true);
-            assertFalse("a paused Metra still closed the gate", FeedOverlayControls.shouldHideFootnotes());
+            assertFalse("a paused NINE’tok still closed the gate", FeedOverlayControls.shouldHideFootnotes());
             PausedProcess.set(false);
             assertTrue(String.join(" ", HookStatus.report()).contains("footnote banner"));
         } finally {

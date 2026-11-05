@@ -441,7 +441,7 @@ public class SaveRecordsTest {
         assertTrue(reached.await(5, TimeUnit.SECONDS));
 
         String kept = text(atDeath(context));
-        for (String secret : new String[]{"http", "tiktokcdn", "SECRETTOKEN", videoId, "creatorname", "Pictures", "Metra"}) {
+        for (String secret : new String[]{"http", "tiktokcdn", "SECRETTOKEN", videoId, "creatorname", "Pictures", "NINE’tok"}) {
             assertFalse("the records kept " + secret + ": " + kept, kept.contains(secret));
         }
 

@@ -26,7 +26,7 @@ class AppCompatibilitiesMatchFixturesTest {
         val buildScript = File("build.gradle.kts").takeIf { it.isFile }
             ?: File("patches/build.gradle.kts")
         assertTrue("patches build script is missing", buildScript.isFile)
-        val description = Regex("""description = "(Metra patches for TikTok[^"]+)"""")
+        val description = Regex("""description = "(NINE’tok for TikTok[^"]+)"""")
             .find(buildScript.readText())?.groupValues?.get(1)
         BundleVerifier.requireTargetDescription(description)
     }
@@ -94,7 +94,7 @@ class AppCompatibilitiesMatchFixturesTest {
      * from TikTok's 47.1.4 code and carries that build's version code.
      */
     @Test
-    fun `the retained PineDrama reference helper does not expand Metra catalog targets`() {
+    fun `the retained PineDrama reference helper does not expand NINE’tok catalog targets`() {
         val pineDrama = AppCompatibilities.pineDrama().single()
         assertEquals("com.ss.android.ttmd.video", pineDrama.packageName)
         assertEquals(setOf(AppCompatibilities.PINEDRAMA_SIGNER_SHA256), pineDrama.signatures)

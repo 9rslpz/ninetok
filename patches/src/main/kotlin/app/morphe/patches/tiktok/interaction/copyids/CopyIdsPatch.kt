@@ -78,7 +78,7 @@ internal fun ClassDef.sharePackageField(): Field? = fields.singleOrNull {
 @Suppress("unused")
 val copyIdsPatch = bytecodePatch(
     name = "Copy bio and IDs",
-    description = "Lets you long-press a bio to copy it, and adds share sheet buttons that copy a username, user ID or video ID. On by default. Turn it off in Metra settings > App behavior.",
+    description = "Lets you long-press a bio to copy it, and adds share sheet buttons that copy a username, user ID or video ID. On by default. Turn it off in NINE’tok settings > App behavior.",
     default = true,
 ) {
     category("Interaction")

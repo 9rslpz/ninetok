@@ -255,7 +255,7 @@ final class StorageScan {
         if (database(path, "hushfeed-saved-videos.db")) return Bucket.SAVED_VIDEO_ARCHIVE;
         if (database(path, "seen_videos.db")) return Bucket.SEEN_HISTORY;
         if (atomic(path, "hushfeed-save-records.json")) return Bucket.SAVE_RECORDS;
-        if (atomic(path, "hushfeed-settings-undo.json") || atomic(path, "metra-settings-undo.json")
+        if (atomic(path, "hushfeed-settings-undo.json") || atomic(path, "ninetok-settings-undo.json")
                 || atomic(path, "hushfeed-settings-operation.json")
                 || path.equals("files/hushfeed-settings-operation.json.damaged")) return Bucket.SETTINGS;
         if (atomic(path, "feature-gate-lab-undo.json")) return Bucket.FEATURE_LAB;

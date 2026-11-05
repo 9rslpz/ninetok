@@ -105,7 +105,7 @@ public class PauseRefusesALockedDayTest {
             assertFalse("Pause took the budget off while loosening it has to wait",
                     row.getOnPreferenceChangeListener().onPreferenceChange(row, Boolean.TRUE));
             Shadows.shadowOf(Looper.getMainLooper()).idle();
-            assertEquals("Wait a day to loosen the budget is on, so Metra stays on",
+            assertEquals("Wait a day to loosen the budget is on, so NINE’tok stays on",
                     ShadowToast.getTextOfLatestToast());
             assertTrue("turning Pause off is never refused",
                     row.getOnPreferenceChangeListener().onPreferenceChange(row, Boolean.FALSE));

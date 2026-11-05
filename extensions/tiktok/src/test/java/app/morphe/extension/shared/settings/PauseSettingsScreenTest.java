@@ -44,9 +44,9 @@ import java.io.File;
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = 28)
 public class PauseSettingsScreenTest {
-    private static final String BACK_ON_AT_RESTART = "Metra turns back on when TikTok restarts.";
+    private static final String BACK_ON_AT_RESTART = "NINE’tok turns back on when TikTok restarts.";
     private static final String SWITCH_SUMMARY =
-            "Metra's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.";
+            "NINE’tok's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.";
 
     @Rule public final SettingsContextRule settingsContext = new SettingsContextRule();
 
@@ -76,8 +76,8 @@ public class PauseSettingsScreenTest {
         try (var owner = Robolectric.buildActivity(SettingsPagesTest.PageActivity.class).setup().visible()) {
             TikTokPreferenceFragment home = openHome(owner.get());
             Preference status = home.getPreferenceScreen().findPreference(SettingsStatusPreference.KEY);
-            assertEquals("Metra is paused", String.valueOf(status.getTitle()));
-            assertEquals("TikTok closed three times within a minute of starting, so Metra paused "
+            assertEquals("NINE’tok is paused", String.valueOf(status.getTitle()));
+            assertEquals("TikTok closed three times within a minute of starting, so NINE’tok paused "
                     + "itself. Your settings stay as they are.", String.valueOf(status.getSummary()));
 
             View card = status.getView(null, null);
@@ -85,8 +85,8 @@ public class PauseSettingsScreenTest {
             assertNotNull("a paused card offered no way back", back);
             assertNull("Diagnostics took the place of the way back",
                     card.findViewWithTag(SettingsStatusPreference.ACTION_TAG));
-            assertEquals("Turn Metra back on", back.getText().toString());
-            assertEquals("Turn Metra back on", String.valueOf(back.getContentDescription()));
+            assertEquals("Turn NINE’tok back on", back.getText().toString());
+            assertEquals("Turn NINE’tok back on", String.valueOf(back.getContentDescription()));
 
             assertTrue(back.performClick());
             assertFalse("safe mode is still on", BaseSettings.SAFE_MODE.savedValue());
@@ -221,17 +221,17 @@ public class PauseSettingsScreenTest {
             assertTrue(marker.createNewFile());
             HushfeedPause.pauseForTests(HushfeedPause.Reason.MARKER_FILE);
             assertEquals("A file named hushfeed-safe-mode in TikTok's folder under Android/data paused "
-                    + "Metra. Your settings stay as they are.",
+                    + "NINE’tok. Your settings stay as they are.",
                     String.valueOf(new SettingsStatusPreference(activity, () -> {}).getSummary()));
             assertTrue(marker.delete());
 
             HushfeedPause.pauseForTests(HushfeedPause.Reason.NONE);
             SettingsStatusPreference running = new SettingsStatusPreference(activity, () -> {});
             running.setTurnBackOnAction(() -> {});
-            assertEquals("Metra is active", String.valueOf(running.getTitle()));
+            assertEquals("NINE’tok is active", String.valueOf(running.getTitle()));
             View card = running.getView(null, null);
             assertNotNull(card.findViewWithTag(SettingsStatusPreference.ACTION_TAG));
-            assertNull("a running start offered to turn Metra back on",
+            assertNull("a running start offered to turn NINE’tok back on",
                     card.findViewWithTag(SettingsStatusPreference.TURN_BACK_ON_TAG));
         }
     }
@@ -240,10 +240,10 @@ public class PauseSettingsScreenTest {
         try (var owner = Robolectric.buildActivity(SettingsPagesTest.PageActivity.class).setup().visible()) {
             TikTokPreferenceFragment home = openHome(owner.get());
             Preference row = home.getPreferenceScreen().findPreference(BaseSettings.PAUSED.key);
-            assertTrue("no Pause Metra switch on the home page", row instanceof TogglePreference);
-            assertEquals("Pause Metra", String.valueOf(row.getTitle()));
+            assertTrue("no Pause NINE’tok switch on the home page", row instanceof TogglePreference);
+            assertEquals("Pause NINE’tok", String.valueOf(row.getTitle()));
             assertTrue(String.valueOf(row.getSummary()).contains(
-                    "Pause Metra's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay."));
+                    "Pause NINE’tok's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay."));
             assertFalse(String.valueOf(row.getSummary()).contains("as if it weren't patched"));
             assertFalse(((TogglePreference) row).isChecked());
         }
@@ -262,14 +262,14 @@ public class PauseSettingsScreenTest {
             TextView status = home.getView().findViewWithTag("hushfeed_compact_status");
             assertNotNull(status);
             assertEquals("Active", status.getText().toString());
-            assertEquals("Metra is active", String.valueOf(status.getContentDescription()));
+            assertEquals("NINE’tok is active", String.valueOf(status.getContentDescription()));
 
             BaseSettings.PAUSED.save(true);
             HushfeedPause.pauseForTests(HushfeedPause.Reason.SWITCH);
             AbstractPreferenceFragment.restartPending.clear();
             home.onResume();
             assertEquals("Paused", status.getText().toString());
-            assertEquals("Metra is paused", String.valueOf(status.getContentDescription()));
+            assertEquals("NINE’tok is paused", String.valueOf(status.getContentDescription()));
 
             AbstractPreferenceFragment.restartPending.add(BaseSettings.PAUSED.key);
             home.onResume();
@@ -294,7 +294,7 @@ public class PauseSettingsScreenTest {
         HushfeedPause.pauseForTests(HushfeedPause.Reason.SWITCH);
         String paused = LogBufferManager.buildExportText();
         assertTrue("an all-bound paused start said nothing", !paused.isEmpty());
-        assertTrue(paused, paused.contains("Metra: paused (switch)"));
+        assertTrue(paused, paused.contains("NINE’tok: paused (switch)"));
         String table = paused.substring(paused.indexOf("[HOOK STATUS]"));
         table = table.substring(0, table.indexOf("\n\n") < 0 ? table.length() : table.indexOf("\n\n"));
         int families = 0;

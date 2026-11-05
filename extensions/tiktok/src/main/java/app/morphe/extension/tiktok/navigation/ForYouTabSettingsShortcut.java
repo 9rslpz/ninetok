@@ -70,7 +70,7 @@ public final class ForYouTabSettingsShortcut {
                     press = new Press();
                     tab.setOnTouchListener(press);
                     PRESSES.put(tab, press);
-                    Logger.printInfo(() -> "A long press on For You opens Metra settings");
+                    Logger.printInfo(() -> "A long press on For You opens NINE’tok settings");
                 }
                 press.forYou = forYou;
                 if (forYou) offerToTalkBack(tab, press);
@@ -225,7 +225,7 @@ public final class ForYouTabSettingsShortcut {
             else super.onInitializeAccessibilityNodeInfo(host, info);
             if (offered(host)) {
                 info.addAction(new AccessibilityNodeInfo.AccessibilityAction(ID,
-                        L10n.t(host.getContext(), "Open Metra settings")));
+                        L10n.t(host.getContext(), "Open NINE’tok settings")));
             }
         }
 

@@ -58,7 +58,7 @@ internal object AppCompatibilities {
      */
     const val PINEDRAMA_4714_VERSION_CODE = 2024701040
 
-    /** Version codes declared by this Metra catalog, for patches that read the manifest. */
+    /** Version codes declared by this NINE’tok catalog, for patches that read the manifest. */
     val DECLARED_VERSION_CODES = TIKTOK_VERSION_CODES
 
     /**
@@ -79,6 +79,6 @@ internal object AppCompatibilities {
         ),
     )
 
-    /** Historical shared helper; this Metra adaptation targets TikTok global only. */
+    /** Historical shared helper; this NINE’tok adaptation targets TikTok global only. */
     fun tiktokAndPineDrama(): Array<Compatibility> = tiktok()
 }

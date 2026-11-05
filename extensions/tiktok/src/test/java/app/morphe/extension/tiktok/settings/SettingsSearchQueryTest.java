@@ -265,9 +265,9 @@ public class SettingsSearchQueryTest {
         TikTokPreferenceFragment search = attachSearch();
 
         assertTrue("the About row is not indexed by its name",
-                search(search, "metra").contains("Metra"));
+                search(search, "ninetok").contains("NINE’tok"));
         assertTrue("the About row's summary is not searched",
-                search(search, "github").contains("Metra"));
+                search(search, "github").contains("NINE’tok"));
     }
 
     /**
@@ -278,10 +278,10 @@ public class SettingsSearchQueryTest {
     @Test public void handIndexedRowsAreFoundAndNameTheirPage() throws Exception {
         TikTokPreferenceFragment search = attachSearch();
         assertTrue("Build details is not indexed", search(search, "build details").contains("Build details"));
-        assertEquals("About Metra", category(search, "Build details"));
-        assertEquals("About Metra", category(search, "Metra"));
+        assertEquals("About NINE’tok", category(search, "Build details"));
+        assertEquals("About NINE’tok", category(search, "NINE’tok"));
         // Pause sits on the home page, so its line names the heading it's under there.
-        assertEquals("Metra", category(search, "Pause Metra"));
+        assertEquals("NINE’tok", category(search, "Pause NINE’tok"));
     }
 
     /**
@@ -327,7 +327,7 @@ public class SettingsSearchQueryTest {
             TikTokPreferenceFragment search = attachSearch();
             assertTrue("What's new is not indexed while pending",
                     search(search, "release notes").contains("What's new"));
-            assertEquals("About Metra", category(search, "What's new"));
+            assertEquals("About NINE’tok", category(search, "What's new"));
 
             Preference result = null;
             PreferenceScreen screen = search.getPreferenceScreen();

@@ -69,12 +69,12 @@ public class SettingsL10nTest {
 
     private static final String[] QUIET_INDEX_COPY = {
             "Make it yours.", "Your feed. Your rules.",
-            "Your feed", "Conversations", "Saving and sharing", "Privacy and app", "Metra",
-            "About", "Your settings", "About Metra", "Version, changes and licenses",
+            "Your feed", "Conversations", "Saving and sharing", "Privacy and app", "NINE’tok",
+            "About", "Your settings", "About NINE’tok", "Version, changes and licenses",
             "Budgets and reminders",
-            "Active", "Paused", "Restart pending", "Metra is active", "Metra is paused",
-            "Pause Metra's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",
-            "Metra's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay."
+            "Active", "Paused", "Restart pending", "NINE’tok is active", "NINE’tok is paused",
+            "Pause NINE’tok's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",
+            "NINE’tok's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay."
     };
 
     @Before
@@ -154,7 +154,7 @@ public class SettingsL10nTest {
                 assertEquals(language + " did not generate " + key, source.get(key), generated.get(key));
             }
             for (String retired : new String[]{
-                    "From the next start TikTok runs as if it weren't patched, so you can tell whether a problem comes from Metra. Your settings stay as they are.",
+                    "From the next start TikTok runs as if it weren't patched, so you can tell whether a problem comes from NINE’tok. Your settings stay as they are.",
                     "TikTok runs as if it weren't patched. Your settings stay as they are."}) {
                 assertFalse(language + " still carries the claim that Pause restores the original app",
                         source.containsKey(retired));

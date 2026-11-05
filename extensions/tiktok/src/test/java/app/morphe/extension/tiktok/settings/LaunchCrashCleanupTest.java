@@ -82,7 +82,7 @@ public class LaunchCrashCleanupTest {
         expected.put("settings/CalmFeedPreset.java", Arrays.asList("PREFERENCES"));
         expected.put("privacy/DeviceIdentity.java", Arrays.asList("PREFERENCES", "PREFERENCES"));
         expected.put("privacy/BenchmarkRuns.java", Arrays.asList("STATE_FILE"));
-        expected.put("settings/MetraLegacySettings.java", Arrays.asList("Setting.PREFERENCES_NAME"));
+        expected.put("settings/NineTokLegacySettings.java", Arrays.asList("Setting.PREFERENCES_NAME"));
         expected.put("translation/DmTranslationPreview.java", Arrays.asList("Setting.preferences.name"));
         expected.put("translation/ReceivedDmTranslationPreview.java", Arrays.asList("Setting.preferences.name"));
         expected.put("shared/settings/EarlySwitch.java", Arrays.asList("Setting.PREFERENCES_NAME"));

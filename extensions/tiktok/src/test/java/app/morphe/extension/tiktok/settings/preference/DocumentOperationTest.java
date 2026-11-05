@@ -600,7 +600,7 @@ public class DocumentOperationTest {
         assertTrue(backup.isEnabled());
         assertTrue(restore.isEnabled());
         assertTrue(fragment.findPreference(RESET).isEnabled());
-        assertEquals("Saves your Metra settings and Feature Gate Lab rules to a file.",
+        assertEquals("Saves your NINE’tok settings and Feature Gate Lab rules to a file.",
                 String.valueOf(backup.getSummary()));
         assertEquals("Choose a backup file. Your current settings are kept for Undo.",
                 String.valueOf(restore.getSummary()));

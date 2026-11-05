@@ -1489,7 +1489,7 @@ public final class FeatureGateLabFragment extends Fragment {
         // The picker made a document for this export, and nothing will fill it now.
         if (exports && context != null) {
             ContentResolver resolver = context.getContentResolver();
-            Utils.runOnOwnThread("Metra-LabCleanup",
+            Utils.runOnOwnThread("NINE’tok-LabCleanup",
                     () -> DocumentOperation.removeUnsaved(resolver, uri, false));
         }
         if (DocumentOperation.busy(DocumentOperation.Kind.LAB_FILE)) {

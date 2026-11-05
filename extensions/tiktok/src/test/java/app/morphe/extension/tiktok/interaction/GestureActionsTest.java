@@ -230,7 +230,7 @@ public class GestureActionsTest {
             for (String value : entryValues(screen, "double_tap_action")) {
                 Settings.DOUBLE_TAP_ACTION.save(value);
                 assertEquals(value, !"default".equals(value), GestureActions.onDoubleTap());
-                assertEquals(value + " is Metra's on one gesture and TikTok's on the other",
+                assertEquals(value + " is NINE’tok's on one gesture and TikTok's on the other",
                         GestureActions.takesLongPress(value), !"default".equals(value));
                 org.robolectric.Shadows.shadowOf(android.os.Looper.getMainLooper()).idle();
             }
@@ -448,7 +448,7 @@ public class GestureActionsTest {
             assertEquals("every value needs a label to pick it by",
                     choice.getEntryValues().length, choice.getEntries().length);
             assertEquals(L10n.t("Like the video"), String.valueOf(choice.getEntries()[2]));
-            assertTrue("a like is Metra's press, not TikTok's hold", GestureActions.takesLongPress("like"));
+            assertTrue("a like is NINE’tok's press, not TikTok's hold", GestureActions.takesLongPress("like"));
             // The edge seek rides on the same patch, so its two controls come with it.
             assertNotNull(screen.findPreference("edge_seek"));
             assertNotNull(screen.findPreference("edge_seek_seconds"));

@@ -70,7 +70,7 @@ private fun BytecodePatchContext.resolveSearchEnabledBoundary(): MutableMethod {
 val hideFeedSearchButtonPatch = bytecodePatch(
     name = "Hide feed search button",
     description = "Removes the search button from the top right of the feed, for a cleaner " +
-        "screen. Starts off. Turn it on in Metra settings > Interface.",
+        "screen. Starts off. Turn it on in NINE’tok settings > Interface.",
     default = true,
 ) {
     category("Feed")

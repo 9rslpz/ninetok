@@ -144,7 +144,7 @@ public final class MainThreadStallProbe {
 
     /** One disposable worker per timed capture, with at most one outstanding main callback. */
     private static final class Session implements Runnable {
-        final HandlerThread thread = new HandlerThread("MetraStallProbe");
+        final HandlerThread thread = new HandlerThread("NineTokStallProbe");
         final Handler main;
         final Handler worker;
         final Object token = new Object();

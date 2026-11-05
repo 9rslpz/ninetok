@@ -17,10 +17,10 @@ import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
-/** Exercises the shared Metra toolbar through its Lab consumer, including fresh view creation. */
+/** Exercises the shared NINE’tok toolbar through its Lab consumer, including fresh view creation. */
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = 28, qualifiers = "w390dp-h844dp-night-mdpi")
-public class MetraFeatureGateHeaderTest {
+public class NineTokFeatureGateHeaderTest {
     @Rule public final SettingsContextRule context = new SettingsContextRule();
 
     @Test public void openingAndRecreatingTheLabKeepsItsTitleAndActions() {
@@ -39,7 +39,7 @@ public class MetraFeatureGateHeaderTest {
                 TextView title = frame.findViewWithTag("hushfeed_page_title");
                 LinearLayout toolbar = frame.findViewWithTag("hushfeed_toolbar");
                 assertEquals("Feature Gate Lab", title.getText().toString());
-                assertSame("the Lab must retain Metra's toolbar title", toolbar, title.getParent());
+                assertSame("the Lab must retain NINE’tok's toolbar title", toolbar, title.getParent());
                 assertEquals(17f, title.getTextSize()
                         / activity.getResources().getDisplayMetrics().scaledDensity, .01f);
                 assertTrue(toolbar.getChildAt(0).performClick());
@@ -57,7 +57,7 @@ public class MetraFeatureGateHeaderTest {
         openingAndRecreatingTheLabKeepsItsTitleAndActions();
     }
 
-    @Test public void aGateDetailKeepsMetraTypographyWithoutAnOverflowMenu() {
+    @Test public void aGateDetailKeepsNineTokTypographyWithoutAnOverflowMenu() {
         try (var owner = Robolectric.buildActivity(PageActivity.class).setup().visible()) {
             Activity activity = owner.get();
             Utils.setContext(activity);

@@ -176,8 +176,8 @@ class ReadmePatchNamesTest {
         val readme = File(root, "README.md").readText()
         assertTrue(readme.contains("The table below describes this dev prerelease."))
         assertTrue(shippedPatchDescriptions().size >= 135)
-        val retiredRoute = Regex("""Metra settings\s*>\s*(?:Feed filter|Feed tabs|Feed screen|Privacy|Playback|Screen time|Inbox|App(?! behavior)|Comments(?! and translation)|Region(?! spoof))(?=[., >]|$)""")
-        assertTrue("a shipped description points to a retired Metra menu",
+        val retiredRoute = Regex("""NINE’tok settings\s*>\s*(?:Feed filter|Feed tabs|Feed screen|Privacy|Playback|Screen time|Inbox|App(?! behavior)|Comments(?! and translation)|Region(?! spoof))(?=[., >]|$)""")
+        assertTrue("a shipped description points to a retired NINE’tok menu",
             shippedPatchDescriptions().values.none { retiredRoute.containsMatchIn(it) })
         assertTrue(readme.contains("Hushfeed v0.76.0"))
         assertTrue(readme.contains("b68741ca02898c2003751da75df34b44b8943daa"))

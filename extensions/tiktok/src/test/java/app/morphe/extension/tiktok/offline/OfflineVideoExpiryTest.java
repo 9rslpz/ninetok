@@ -65,7 +65,7 @@ public class OfflineVideoExpiryTest {
                 String.join(" ", HookStatus.report()).contains("offline video expiry"));
 
         PausedProcess.set(true);
-        assertFalse("a paused Metra still kept the videos", OfflineVideoExpiry.keepOfflineVideos());
+        assertFalse("a paused NINE’tok still kept the videos", OfflineVideoExpiry.keepOfflineVideos());
         PausedProcess.set(false);
 
         Settings.KEEP_OFFLINE_VIDEOS.save(false);
@@ -83,7 +83,7 @@ public class OfflineVideoExpiryTest {
                 String.join(" ", HookStatus.report()).contains("offline auto adjust"));
 
         PausedProcess.set(true);
-        assertFalse("a paused Metra still held Auto adjust back", OfflineVideoExpiry.keepThroughAutoAdjust());
+        assertFalse("a paused NINE’tok still held Auto adjust back", OfflineVideoExpiry.keepThroughAutoAdjust());
         PausedProcess.set(false);
 
         Settings.KEEP_OFFLINE_VIDEOS.save(false);
@@ -103,7 +103,7 @@ public class OfflineVideoExpiryTest {
                 String.join(" ", HookStatus.report()).contains("offline default cleanup"));
 
         PausedProcess.set(true);
-        assertTrue("a paused Metra still cancelled the clean-up", OfflineVideoExpiry.keepThroughDefaultEnableCleanup(true));
+        assertTrue("a paused NINE’tok still cancelled the clean-up", OfflineVideoExpiry.keepThroughDefaultEnableCleanup(true));
         PausedProcess.set(false);
     }
 

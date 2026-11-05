@@ -36,7 +36,7 @@ public class DiagnosticRedactorTest {
     }
 
     @Test public void clockTimesAndVersionsAreNotTakenForAddresses() {
-        String line = "10:23:11.269 Metra 0.63.0 for TikTok 47.1.3, Logger::printInfo";
+        String line = "10:23:11.269 NINE’tok 0.63.0 for TikTok 47.1.3, Logger::printInfo";
 
         assertEquals(line, DiagnosticRedactor.redact(line));
     }

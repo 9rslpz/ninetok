@@ -1,5 +1,5 @@
 /*
- * Copyright 2026 Metra contributors
+ * Copyright 2026 NINE’tok contributors
  * https://github.com/icysymmetra/tiktok-patches-for-morphe
  */
 package app.morphe.patches.tiktok.feedfilter
@@ -20,8 +20,8 @@ import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethodImplementation
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethodParameter
 
-internal const val REJECTED_CACHE_COPY = "metraRejectedCacheCopy"
-internal const val EMPTY_CACHE_COPY = "metraEmptyCacheCopy"
+internal const val REJECTED_CACHE_COPY = "ninetokRejectedCacheCopy"
+internal const val EMPTY_CACHE_COPY = "ninetokEmptyCacheCopy"
 
 /** Copy all constructor-owned state and change only success, without writing any final field. */
 internal fun rejectedCacheCopy(owner: ClassDef, success: FieldReference, emptyPayload: FieldReference? = null): MutableMethod {
@@ -38,7 +38,7 @@ internal fun rejectedCacheCopy(owner: ClassDef, success: FieldReference, emptyPa
     val name = if (emptyPayload == null) REJECTED_CACHE_COPY else EMPTY_CACHE_COPY
     if (emptyPayload != null && emptyPayload !in fields) throw PatchException("Cache payload does not belong to the result")
     if (owner.methods.any { it.name == name }) {
-        throw PatchException("Cache result already contains the Metra copy helper")
+        throw PatchException("Cache result already contains the NINE’tok copy helper")
     }
     val candidates = owner.methods.mapNotNull { constructor ->
         // Dexlib may expose parameter descriptors as MethodParameter CharSequences.

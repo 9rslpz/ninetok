@@ -22,7 +22,7 @@ Puts a save button in the sheet a story's Share button opens. It saves the story
 Save a story from its share sheet	Story über das Teilen-Menü speichern
 Save cover	Titelbild speichern
 Save cover button in the share sheet	„Titelbild speichern“ im Teilen-Menü
-Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Metra.	Gespeicherte Videos zeigen unten links den @Benutzernamen und die erste Zeile der Beschreibung. Dafür kodiert das Handy das ganze Video neu, das Speichern dauert also länger. Gilt für Speicherungen durch Metra.
+Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by NINE’tok.	Gespeicherte Videos zeigen unten links den @Benutzernamen und die erste Zeile der Beschreibung. Dafür kodiert das Handy das ganze Video neu, das Speichern dauert also länger. Gilt für Speicherungen durch NINE’tok.
 Sound format	Tonformat
 Speed up this video, double tap again to undo	Dieses Video beschleunigen, erneut doppeltippen zum Zurücksetzen
 TikTok only had its watermarked copy of this story, so that copy was saved to %1$s	TikTok hatte von dieser Story nur die Kopie mit Wasserzeichen, deshalb wurde diese Kopie unter %1$s gespeichert
@@ -39,7 +39,7 @@ Writing the caption on the video: %1$s	Beschreibung wird ins Video geschrieben: 
 Your TikTok account changed. Choose the file again for this account.	Dein TikTok-Konto hat sich geändert. Wähle die Datei für dieses Konto erneut.
 Reading watch history	Wiedergabeverlauf wird gelesen
 Importing watch history	Wiedergabeverlauf wird importiert
-Reopen Metra settings, then choose the file	Öffne die Metra-Einstellungen erneut und wähle dann die Datei
+Reopen NINE’tok settings, then choose the file	Öffne die NINE’tok-Einstellungen erneut und wähle dann die Datei
 Couldn't start the import. Try again in a moment.	Der Import konnte nicht gestartet werden. Versuche es gleich noch einmal.
 Your seen history changed before the import finished. Choose the file again.	Dein Verlauf hat sich vor Abschluss des Imports geändert. Wähle die Datei erneut.
 Couldn't import watch history. Your saved history is unchanged.	Der Wiedergabeverlauf konnte nicht importiert werden. Dein gespeicherter Verlauf ist unverändert.
@@ -95,7 +95,7 @@ That watch-history file is damaged. Nothing was imported.	Die Datei mit dem Wied
 %1$s videos left	Noch %1$s Videos
 %1$s videos were recorded before each account kept its own list. They hide nothing until you add them here.	%1$s Videos wurden aufgezeichnet, bevor jedes Konto eine eigene Liste hatte. Sie blenden nichts aus, bis du sie hier hinzufügst.
 %1$s was rejected. %2$s	%1$s wurde abgelehnt. %2$s
-%1$s · Metra's list only	%1$s · nur in der Liste von Metra
+%1$s · NINE’tok's list only	%1$s · nur in der Liste von NINE’tok
 %1$s · current value only	%1$s · nur aktueller Wert
 %1$s · declared by TikTok	%1$s · von TikTok deklariert
 %1$s · declared by TikTok, with a current value	%1$s · von TikTok deklariert, mit aktuellem Wert
@@ -176,7 +176,7 @@ Stickers can't be saved to the folder in that file, so your sticker folder was k
 Stop TikTok's speed tests	TikToks Geschwindigkeitstests stoppen
 That creator pattern could stall the feed, so it was skipped: %1$s	Dieses Kreator-Muster könnte den Feed aufhalten und wurde übersprungen: %1$s
 That creator pattern could stall the feed, so it wasn't added: %1$s	Dieses Kreator-Muster könnte den Feed aufhalten und wurde nicht hinzugefügt: %1$s
-This key isn't in Metra's list, so its type can't be checked. Reset the override.	Dieser Schlüssel steht nicht in der Liste von Metra, deshalb lässt sich sein Typ nicht prüfen. Setze die Überschreibung zurück.
+This key isn't in NINE’tok's list, so its type can't be checked. Reset the override.	Dieser Schlüssel steht nicht in der Liste von NINE’tok, deshalb lässt sich sein Typ nicht prüfen. Setze die Überschreibung zurück.
 This key touches account safety. Forcing it can change login, region, payment or security checks.	Dieser Schlüssel betrifft den Kontoschutz. Ihn zu erzwingen kann Anmelde-, Regions-, Zahlungs- oder Sicherheitsprüfungen verändern.
 Activity	Aktivität
 Activity center (PIA)	Activity Center (PIA)
@@ -295,12 +295,12 @@ Clear all Lab data (overrides, switch, recordings)	Alle Labordaten löschen (Üb
 Clear all suggested accounts	Alle vorgeschlagenen Konten löschen
 Clears the recent events, saved crash reports, a recorded screen layout and the Hook status results above.	Löscht die letzten Ereignisse, gespeicherte Absturzberichte, ein aufgezeichnetes Bildschirmlayout und die Hook-Status-Ergebnisse oben.
 Record a screen's layout	Layout eines Bildschirms aufzeichnen
-Tap, then go to the screen with what you want hidden. After %1$d seconds Metra records how that screen is built, without any of its text, for the diagnostic report.	Tippe hier und geh dann zu dem Bildschirm mit dem, was ausgeblendet werden soll. Nach %1$d Sekunden zeichnet Metra auf, wie dieser Bildschirm aufgebaut ist, ohne seinen Text, für den Diagnosebericht.
+Tap, then go to the screen with what you want hidden. After %1$d seconds NINE’tok records how that screen is built, without any of its text, for the diagnostic report.	Tippe hier und geh dann zu dem Bildschirm mit dem, was ausgeblendet werden soll. Nach %1$d Sekunden zeichnet NINE’tok auf, wie dieser Bildschirm aufgebaut ist, ohne seinen Text, für den Diagnosebericht.
 Waiting to record. Go to the screen you want recorded.	Warte auf die Aufzeichnung. Geh zu dem Bildschirm, der aufgezeichnet werden soll.
 A screen's layout is recorded. Export the diagnostic report to send it, or tap to record another.	Ein Bildschirmlayout ist aufgezeichnet. Exportiere den Diagnosebericht, um es zu senden, oder tippe, um ein anderes aufzuzeichnen.
-Go to the screen now. Metra records its layout in %1$d seconds.	Geh jetzt zu dem Bildschirm. Metra zeichnet sein Layout in %1$d Sekunden auf.
+Go to the screen now. NINE’tok records its layout in %1$d seconds.	Geh jetzt zu dem Bildschirm. NINE’tok zeichnet sein Layout in %1$d Sekunden auf.
 Screen layout recorded. Export the diagnostic report to send it.	Bildschirmlayout aufgezeichnet. Exportiere den Diagnosebericht, um es zu senden.
-Nothing was recorded because Metra settings were still open. Start again, then leave settings.	Es wurde nichts aufgezeichnet, weil die Metra-Einstellungen noch offen waren. Starte erneut und verlasse dann die Einstellungen.
+Nothing was recorded because NINE’tok settings were still open. Start again, then leave settings.	Es wurde nichts aufgezeichnet, weil die NINE’tok-Einstellungen noch offen waren. Starte erneut und verlasse dann die Einstellungen.
 Couldn't record the screen's layout. Start again from Diagnostics.	Das Layout des Bildschirms konnte nicht aufgezeichnet werden. Starte erneut unter Diagnose.
 Clear diagnostic data	Diagnosedaten löschen
 Clear display	Freie Ansicht
@@ -413,7 +413,7 @@ Diagnostic report copied to the clipboard	Diagnosebericht in die Zwischenablage 
 Diagnostics	Diagnose
 Disable	Ausschalten
 Stop analytics and tracking	Analyse und Tracking stoppen
-Long-press Home for Metra settings	Startseite lange drücken für Metra-Einstellungen
+Long-press Home for NINE’tok settings	Startseite lange drücken für NINE’tok-Einstellungen
 Press and hold the Home tab to open these settings. A tap on Home works as before.	Halte den Tab Startseite gedrückt, um diese Einstellungen zu öffnen. Ein Tippen auf Startseite funktioniert wie bisher.
 Keep For You on a Home tap	„Für dich“ beim Tippen auf Startseite behalten
 Keep For You on a pull down	„Für dich“ beim Herunterziehen behalten
@@ -434,7 +434,7 @@ Drag to move, release to place	Zum Verschieben ziehen, zum Ablegen loslassen
 Drama and Series	Drama und Serien
 Shows TikTok's text in your phone's font instead of TikTok Sans. Icons and gift animations keep their own fonts. Restart TikTok to see the change.	Zeigt TikToks Text in der Schrift deines Telefons statt in TikTok Sans. Symbole und Geschenk-Animationen behalten ihre eigenen Schriften. Starte TikTok neu, um die Änderung zu sehen.
 Hide the notification saying somebody new followed you before it reaches the drawer. Every other notification is left alone, and the follower still appears in the Inbox.	Die Benachrichtigung, dass dir jemand Neues folgt, ausblenden, bevor sie in der Leiste landet. Alle anderen Benachrichtigungen bleiben unberührt, und der Follower erscheint weiterhin im Posteingang.
-Each area shows how many of the things Metra looks for were found in this TikTok and how many are missing.	Jeder Bereich zeigt, wie viele der Dinge, nach denen Metra sucht, in diesem TikTok gefunden wurden und wie viele fehlen.
+Each area shows how many of the things NINE’tok looks for were found in this TikTok and how many are missing.	Jeder Bereich zeigt, wie viele der Dinge, nach denen NINE’tok sucht, in diesem TikTok gefunden wurden und wie viele fehlen.
 Empty	Leer
 Empty the menu that opens when you press and hold TikTok's icon on the home screen. Turning this off asks TikTok to build them again. Tapping the icon still opens the app, and a shortcut you pinned yourself stays where you put it.	Das Menü leeren, das sich beim langen Drücken des TikTok-Symbols auf dem Startbildschirm öffnet. Wird dies ausgeschaltet, wird TikTok gebeten, sie wieder aufzubauen. Ein Tippen auf das Symbol öffnet die App weiterhin, und eine selbst angeheftete Verknüpfung bleibt dort, wo sie abgelegt wurde.
 Enable	Einschalten
@@ -643,9 +643,9 @@ Hold the feed after the budget	Feed nach dem Budget anhalten
 Home	Startseite
 Hook status	Funktionsprüfung
 How far each edge press moves the video.	Wie weit ein Druck am Rand das Video bewegt.
-Metra can't read the creator pattern %1$s	Metra kann das Creator-Muster %1$s nicht lesen
-Metra hid a TikTok CAPTCHA. Turn off Hide CAPTCHA popups if something stops working.	Metra hat ein TikTok-CAPTCHA ausgeblendet. Schalte „CAPTCHA-Popups ausblenden“ aus, wenn etwas nicht mehr funktioniert.
-Metra is active	Metra ist aktiv
+NINE’tok can't read the creator pattern %1$s	NINE’tok kann das Creator-Muster %1$s nicht lesen
+NINE’tok hid a TikTok CAPTCHA. Turn off Hide CAPTCHA popups if something stops working.	NINE’tok hat ein TikTok-CAPTCHA ausgeblendet. Schalte „CAPTCHA-Popups ausblenden“ aus, wenn etwas nicht mehr funktioniert.
+NINE’tok is active	NINE’tok ist aktiv
 Shows the Duet and Stitch options even when the creator turned them off. TikTok may still refuse to accept the result.	Zeigt die Optionen Duett und Stitch auch dann, wenn der Creator sie ausgeschaltet hat. TikTok kann das Ergebnis trotzdem ablehnen.
 Import finished	Import abgeschlossen
 Import loaded values	Geladene Werte importieren
@@ -819,8 +819,8 @@ Open profile and story website links in your system browser instead of TikTok's 
 Open the feed anyway	Feed trotzdem öffnen
 Open the feed anyway, %1$d left today	Feed trotzdem öffnen, heute noch %1$d Mal
 Open the feed anyway, the last time today	Feed trotzdem öffnen, heute zum letzten Mal
-Open the feed once so Metra can see which bottom tabs TikTok loaded.	Öffne die TikTok-Startseite, damit geladene untere Tabs erkannt werden.
-Open the feed once so Metra can see which tabs TikTok loaded.	Öffne den TikTok-Startfeed, damit geladene Tabs erkannt werden.
+Open the feed once so NINE’tok can see which bottom tabs TikTok loaded.	Öffne die TikTok-Startseite, damit geladene untere Tabs erkannt werden.
+Open the feed once so NINE’tok can see which tabs TikTok loaded.	Öffne den TikTok-Startfeed, damit geladene Tabs erkannt werden.
 Open the profile again and try once more	Öffne das Profil erneut und versuche es noch einmal
 Open the story again and try once more	Öffne die Story erneut und versuche es noch einmal
 Open TikTok on	TikTok öffnen mit
@@ -939,7 +939,7 @@ Save every photo in the post at full size as a JPEG, not as the screen shows it.
 Save field values	Feldwerte speichern
 Save full report	Vollständigen Bericht speichern
 Save media	Medien speichern
-Saves your Metra settings and Feature Gate Lab rules to a file.	Speichert deine Metra-Einstellungen und Feature-Gate-Lab-Regeln in einer Datei.
+Saves your NINE’tok settings and Feature Gate Lab rules to a file.	Speichert deine NINE’tok-Einstellungen und Feature-Gate-Lab-Regeln in einer Datei.
 Save subtitles beside videos	Untertitel neben Videos speichern
 Saves TikTok's latest crash report on this phone so it can go in the diagnostic report.	Speichert TikToks letzten Absturzbericht auf diesem Telefon, damit er in den Diagnosebericht aufgenommen werden kann.
 Save the original sound	Originalsound speichern
@@ -1107,7 +1107,7 @@ Tap the like heart twice within %1$d seconds. Removing a like stays immediate.	T
 Tap to start the feed	Zum Starten des Feeds tippen
 Technical details	Technische Details
 Technical details, %1$s	Technische Details, %1$s
-That backup was written by a newer Metra than this one. Nothing was altered.	Diese Sicherung stammt aus einem neueren Metra als diesem. Es wurde nichts geändert.
+That backup was written by a newer NINE’tok than this one. Nothing was altered.	Diese Sicherung stammt aus einem neueren NINE’tok als diesem. Es wurde nichts geändert.
 That creator is already in the list	Dieser Creator ist bereits in der Liste
 That creator pattern is too long to use, so it was skipped: %1$s	Dieses Kreator-Muster ist zu lang und wurde übersprungen: %1$s
 That creator pattern is too long, so it wasn't added: %1$s	Dieses Kreator-Muster ist zu lang und wurde nicht hinzugefügt: %1$s
@@ -1117,20 +1117,20 @@ That file is too large to be a settings backup. Nothing was altered.	Diese Datei
 That folder name has a character Android doesn't allow. Use letters, numbers, spaces or dashes.	Im Zielpfad steht ein unzulässiger Ordnername.
 That is %1$d minutes today	Das sind %1$d Minuten heute
 That is %1$d videos today	Das sind %1$d Videos heute
-That isn't a Metra settings backup. Nothing was altered.	Das ist keine Metra-Einstellungssicherung. Es wurde nichts geändert.
+That isn't a NINE’tok settings backup. Nothing was altered.	Das ist keine NINE’tok-Einstellungssicherung. Es wurde nichts geändert.
 That isn't an app name. Try something like com.example.downloader, or leave the box empty to keep saving in TikTok.	Das ist kein App-Name. Versuche etwas wie com.example.downloader, oder lass das Feld leer, damit weiter in TikTok gespeichert wird.
 That is one minute today	Das ist eine Minute heute
 That is one video today	Das ist ein Video heute
 That list has too many entries. Keep it to %1$s or fewer.	Diese Liste enthält zu viele Einträge. Begrenze sie auf höchstens %1$s.
 That list is too large. Keep it to %1$s KB or less.	Diese Liste ist zu groß. Begrenze sie auf höchstens %1$s KB.
 That preset isn't recognized. Choose another.	Ungültige SIM-Vorlage.
-That settings backup contains a feed rule list larger than Metra accepts. Nothing was altered.	Diese Einstellungssicherung enthält eine Feed-Regelliste, die größer ist, als Metra zulässt. Es wurde nichts geändert.
-That settings backup holds a value Metra can't read. Nothing was altered.	Diese Einstellungssicherung enthält einen Wert, den Metra nicht lesen kann. Es wurde nichts geändert.
+That settings backup contains a feed rule list larger than NINE’tok accepts. Nothing was altered.	Diese Einstellungssicherung enthält eine Feed-Regelliste, die größer ist, als NINE’tok zulässt. Es wurde nichts geändert.
+That settings backup holds a value NINE’tok can't read. Nothing was altered.	Diese Einstellungssicherung enthält einen Wert, den NINE’tok nicht lesen kann. Es wurde nichts geändert.
 That settings backup holds more Feature Gate Lab rules than the Lab takes. Nothing was altered.	Diese Einstellungssicherung enthält mehr Feature-Gate-Lab-Regeln, als das Lab annimmt. Es wurde nichts geändert.
 That settings backup is damaged or only partly downloaded. Nothing was altered.	Diese Einstellungssicherung ist beschädigt oder nur teilweise heruntergeladen. Es wurde nichts geändert.
 That settings backup is incomplete, so it may have been cut short. Nothing was altered.	Diese Einstellungssicherung ist unvollständig und wurde womöglich abgeschnitten. Es wurde nichts geändert.
 That settings change didn't go through. Nothing was altered.	Diese Änderung hat nicht geklappt. Es wurde nichts geändert.
-That sticker is in a format Metra can't read	Dieser Sticker liegt in einem Format vor, das Metra nicht lesen kann
+That sticker is in a format NINE’tok can't read	Dieser Sticker liegt in einem Format vor, das NINE’tok nicht lesen kann
 The Lab can't check this. TikTok gets it exactly as typed.	Das Lab kann das nicht prüfen. TikTok bekommt es genau so, wie du es tippst.
 The Lab couldn't open. Go back and open it again.	Das Lab ließ sich nicht öffnen. Geh zurück und öffne es noch einmal.
 The Lab keeps at most %1$s rules. This change would make %2$s, so nothing was changed.	Das Lab speichert höchstens %1$s Regeln. Diese Änderung würde %2$s ergeben, daher wurde nichts geändert.
@@ -1214,7 +1214,7 @@ Turns off at %1$s	Schaltet sich um %1$s aus
 That loosens the budget. It waits until %1$s.	Das lockert das Budget. Es wartet bis %1$s.
 That loosens the lock. It waits until %1$s.	Das lockert die Sperre. Es wartet bis %1$s.
 Today can't start over while Wait a day to loosen the budget is on. The day starts over at %1$s.	Heute kann nicht neu beginnen, solange Lockerungen des Budgets einen Tag warten lassen an ist. Der Tag beginnt um %1$s neu.
-Wait a day to loosen the budget is on, so Metra stays on	Lockerungen des Budgets einen Tag warten lassen ist an, daher bleibt Metra an
+Wait a day to loosen the budget is on, so NINE’tok stays on	Lockerungen des Budgets einen Tag warten lassen ist an, daher bleibt NINE’tok an
 Today has moved on, so there's nothing to put back	Der Tag ist weitergezogen, es gibt nichts zurückzuholen
 Today is back where it was	Der heutige Tag ist wieder wie zuvor
 Today started over. Tap again to put the counts back.	Heute wurde neu gestartet. Zum Zurücksetzen der Zähler erneut tippen.
@@ -1288,7 +1288,7 @@ WebP, exactly as TikTok sent it	WebP, genau so wie TikTok es geschickt hat
 What TikTok gets	Was TikTok erhält
 When TikTok requests this key, return the selected value below	Wenn TikTok diesen Schlüssel abfragt, den unten gewählten Wert zurückgeben
 When a video ends in full screen, stay on it instead of moving to the next one. Swiping still moves on.	Wenn ein Video im Vollbild endet, bleibt es stehen, statt zum nächsten zu wechseln. Wischen führt weiterhin weiter.
-While diagnostic logging is on, a message names the part of Metra that failed. Off keeps failures in the report only.	Solange die Diagnoseprotokollierung läuft, nennt eine Meldung den Teil von Metra, der fehlgeschlagen ist. Aus behält Fehler nur im Bericht.
+While diagnostic logging is on, a message names the part of NINE’tok that failed. Off keeps failures in the report only.	Solange die Diagnoseprotokollierung läuft, nennt eine Meldung den Teil von NINE’tok, der fehlgeschlagen ist. Aus behält Fehler nur im Bericht.
 Window width needed to enable the layout. Restart TikTok to apply this.	Fensterbreite, ab der das Layout gilt. TikTok neu starten, damit das gilt.
 Words, countries and languages	Wörter, Länder und Sprachen
 Write the video's sound beside it, in the format picked under Sound format. Android 10 and later file audio separately, so it lands in Music under the same folder name as your videos.	Den Ton des Videos daneben speichern, im Format, das unter Tonformat gewählt ist. Ab Android 10 wird Audio getrennt abgelegt, also landet die Datei unter Music im Ordner mit dem Namen deines Videoordners.
@@ -1300,10 +1300,10 @@ Your filters hid everything TikTok sent, %1$d times in a row. Most were %2$s.	De
 Your operator's name, like T-Mobile.	Der Name deines Anbieters, etwa T-Mobile.
 Your operator's numeric code, like 310260.	Der Zahlencode deines Anbieters, etwa 310260.
 Zero means the way out of the hold is always there. Any other number is how many times a day it works. Once they're used up, the hold stays until the day starts over. Ignored while the budget is locked, which removes the way out.	Null heißt, der Ausweg aus der Sperre ist immer da. Jede andere Zahl ist, wie oft er pro Tag funktioniert. Sind sie aufgebraucht, bleibt die Sperre, bis der Tag neu beginnt. Wird ignoriert, solange das Budget gesperrt ist, denn dann entfällt der Ausweg.
-Zero means no limit. Counts the videos Metra advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.	Null bedeutet kein Limit. Zählt die Videos, die Metra für dich weitergeschaltet hat, nicht die, die du selbst weggewischt hast, und beginnt neu, wenn der Feed neu aufgebaut wird oder du diese Zahl änderst.
+Zero means no limit. Counts the videos NINE’tok advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.	Null bedeutet kein Limit. Zählt die Videos, die NINE’tok für dich weitergeschaltet hat, nicht die, die du selbst weggewischt hast, und beginnt neu, wenn der Feed neu aufgebaut wird oder du diese Zahl änderst.
 Zero shows the notice and leaves the feed alone. Anything else covers the feed for that many minutes once a budget is reached. Messages, profiles and search keep working, and nothing in the feed is thrown away.	Null zeigt den Hinweis und lässt den Feed in Ruhe. Alles andere legt sich für so viele Minuten über den Feed, sobald ein Limit erreicht ist. Nachrichten, Profile und Suche funktionieren weiter, und nichts im Feed geht verloren.
 Zero switches this off. A short reminder after that many minutes of watching, and again after the same again. Time on messages, a profile or search doesn't count, and nothing is shown while the feed is on hold.	Null schaltet das aus. Eine kurze Erinnerung nach so vielen Minuten Zuschauen und danach jeweils wieder. Zeit in Nachrichten, auf einem Profil oder in der Suche zählt nicht, und während der Feed pausiert ist, wird nichts angezeigt.
-Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Metra moved past for you.	Null schaltet das aus. Zählt jedes Video, das im Feed erscheint, und sagt dir Bescheid, wenn du das Limit erreichst. Getrennt vom Sitzungslimit für automatisches Weiterschalten unter Wiedergabe, das nur Videos zählt, die Metra für dich übersprungen hat.
+Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos NINE’tok moved past for you.	Null schaltet das aus. Zählt jedes Video, das im Feed erscheint, und sagt dir Bescheid, wenn du das Limit erreichst. Getrennt vom Sitzungslimit für automatisches Weiterschalten unter Wiedergabe, das nur Videos zählt, die NINE’tok für dich übersprungen hat.
 Zero switches this off. Count the minutes the player spends running in the feed. Time on messages, a profile or search doesn't count.	Null schaltet das aus. Zählt die Minuten, die der Player im Feed läuft. Zeit in Nachrichten, auf einem Profil oder in der Suche zählt nicht.
 collapsed	Eingeklappt
 expanded	Ausgeklappt
@@ -1345,7 +1345,7 @@ Hide feed videos with place badges, even when they aren't paid ads. To keep the 
 Location-tagged videos	Videos mit Ortsangaben
 Makes the heart easier to tap by using the empty space around it. The icon and spacing look the same, and Reply and other buttons keep their own space.	Macht das Herz leichter antippbar, indem der freie Platz drumherum genutzt wird. Symbol und Abstände sehen gleich aus, und Antworten und andere Schaltflächen behalten ihren eigenen Platz.
 Hides the comment count, the sort and close buttons and the suggestions above them. Use Back or swipe down to close comments.	Blendet die Kommentarzahl, die Sortier- und Schließen-Schaltflächen und die Vorschläge darüber aus. Zum Schließen der Kommentare Zurück nutzen oder nach unten wischen.
-Hide TikTok's "Search: ..." banner above the comment count. This doesn't hide the comments or Metra's comment-search box.	Blende TikToks Banner „Suchen: ...“ über der Kommentaranzahl aus. Die Kommentare und das Metra-Suchfeld für Kommentare bleiben sichtbar.
+Hide TikTok's "Search: ..." banner above the comment count. This doesn't hide the comments or NINE’tok's comment-search box.	Blende TikToks Banner „Suchen: ...“ über der Kommentaranzahl aus. Die Kommentare und das NINE’tok-Suchfeld für Kommentare bleiben sichtbar.
 Hide the Report button on videos	Melden-Schaltfläche auf Videos ausblenden
 Hide the flag button TikTok puts above the creator's picture in some regions. You can still report a video from the share menu.	Blendet die Flaggen-Schaltfläche aus, die TikTok in manchen Regionen über dem Bild des Creators zeigt. Melden kannst du ein Video weiterhin über das Teilen-Menü.
 Hide search rewards	Such-Prämien ausblenden
@@ -1381,15 +1381,15 @@ this creator	dieser Creator
 TikTok refused the follow with code %1$s	TikTok hat das Folgen mit Code %1$s abgelehnt
 TikTok refused the follow with code %1$s. A hidden CAPTCHA may be the cause.	TikTok hat das Folgen mit Code %1$s abgelehnt. Ein ausgeblendetes CAPTCHA kann die Ursache sein.
 TikTok refused the follow: %1$s A hidden CAPTCHA may be the cause.	TikTok hat das Folgen abgelehnt: %1$s Ein ausgeblendetes CAPTCHA kann die Ursache sein.
-Metra is paused	Metra ist pausiert
-Metra's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.	Hushfeeds Schalter sind pausiert. Deine Einstellungen bleiben gespeichert. Was du beim Patchen geändert hast, etwa Name oder Symbol der App, bleibt.
-TikTok closed three times within a minute of starting, so Metra paused itself. Your settings stay as they are.	TikTok wurde dreimal innerhalb einer Minute nach dem Start beendet, deshalb hat sich Metra selbst pausiert. Deine Einstellungen bleiben, wie sie sind.
-A file named hushfeed-safe-mode in TikTok's folder under Android/data paused Metra. Your settings stay as they are.	Eine Datei namens hushfeed-safe-mode im TikTok-Ordner unter Android/data hat Metra pausiert. Deine Einstellungen bleiben, wie sie sind.
-Turn Metra back on	Metra wieder einschalten
-Pause Metra	Metra pausieren
-Pause Metra's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.	Pausiere Hushfeeds Schalter nach dem Neustart von TikTok. Deine Einstellungen bleiben gespeichert. Was du beim Patchen geändert hast, etwa Name oder Symbol der App, bleibt.
-Metra turns back on when TikTok restarts.	Metra ist wieder aktiv, sobald TikTok neu startet.
-The file hushfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Metra back on.	Die Datei hushfeed-safe-mode konnte nicht entfernt werden. Lösche sie im TikTok-Ordner unter Android/data, um Metra wieder einzuschalten.
+NINE’tok is paused	NINE’tok ist pausiert
+NINE’tok's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.	Hushfeeds Schalter sind pausiert. Deine Einstellungen bleiben gespeichert. Was du beim Patchen geändert hast, etwa Name oder Symbol der App, bleibt.
+TikTok closed three times within a minute of starting, so NINE’tok paused itself. Your settings stay as they are.	TikTok wurde dreimal innerhalb einer Minute nach dem Start beendet, deshalb hat sich NINE’tok selbst pausiert. Deine Einstellungen bleiben, wie sie sind.
+A file named hushfeed-safe-mode in TikTok's folder under Android/data paused NINE’tok. Your settings stay as they are.	Eine Datei namens hushfeed-safe-mode im TikTok-Ordner unter Android/data hat NINE’tok pausiert. Deine Einstellungen bleiben, wie sie sind.
+Turn NINE’tok back on	NINE’tok wieder einschalten
+Pause NINE’tok	NINE’tok pausieren
+Pause NINE’tok's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.	Pausiere Hushfeeds Schalter nach dem Neustart von TikTok. Deine Einstellungen bleiben gespeichert. Was du beim Patchen geändert hast, etwa Name oder Symbol der App, bleibt.
+NINE’tok turns back on when TikTok restarts.	NINE’tok ist wieder aktiv, sobald TikTok neu startet.
+The file hushfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn NINE’tok back on.	Die Datei hushfeed-safe-mode konnte nicht entfernt werden. Lösche sie im TikTok-Ordner unter Android/data, um NINE’tok wieder einzuschalten.
 Hide TikTok Shop in search	TikTok Shop in der Suche ausblenden
 Hide the Products block and product cards in search results.	Den Produkte-Block und Produktkarten in den Suchergebnissen ausblenden.
 Hide TikTok's Auto scroll button	TikToks Auto-Scroll-Schaltfläche ausblenden
@@ -1448,8 +1448,8 @@ YouTube Music couldn't be opened. Open it yourself and search for the sound.	You
 Allow storage for TikTok in Android settings to save the live photo's clip	Erlaube TikTok in den Android-Einstellungen den Speicherzugriff, um den Clip des Live-Fotos zu speichern
 This is the video's own sound, so YouTube Music won't have it	Das ist der eigene Sound des Videos, YouTube Music hat ihn also nicht
 Not a handle or id, so ignored: %1$s	Kein Konto-Name und keine ID, daher ignoriert: %1$s
-What's new	Neu in Metra
-Changes in Metra %1$s	Änderungen in Metra %1$s
+What's new	Neu in NINE’tok
+Changes in NINE’tok %1$s	Änderungen in NINE’tok %1$s
 Reviewed presets	Geprüfte Vorlagen
 Show See translation	Übersetzung anzeigen einblenden
 Reviewed for TikTok %1$s	Geprüft für TikTok %1$s
@@ -1464,11 +1464,11 @@ This preset doesn't match the installed gates. Nothing changed.	Diese Vorlage pa
 About overrides	Über Überschreibungen
 Use {creator}, {date} and {video_id} to build the name. Start with {creator}/ to put each creator in a folder. The file ending is added for you.	Baue den Namen aus {creator}, {date} und {video_id}. Beginne mit {creator}/, um jeden Creator in einen eigenen Ordner zu legen. Die Dateiendung wird automatisch angehängt.
 Save details beside the video	Details neben dem Video speichern
-Saves the caption, creator, link and post date in a text file next to the video. On Android 10 and later, the pair goes in Download or Documents under the same folder name. Applies to saves made by Metra.	Speichert Beschreibung, Creator, Link und Veröffentlichungsdatum in einer Textdatei neben dem Video. Ab Android 10 landet das Paar in Download oder Documents unter demselben Ordnernamen. Gilt für Speicherungen durch Metra.
+Saves the caption, creator, link and post date in a text file next to the video. On Android 10 and later, the pair goes in Download or Documents under the same folder name. Applies to saves made by NINE’tok.	Speichert Beschreibung, Creator, Link und Veröffentlichungsdatum in einer Textdatei neben dem Video. Ab Android 10 landet das Paar in Download oder Documents unter demselben Ordnernamen. Gilt für Speicherungen durch NINE’tok.
 Check for already-saved videos	Bereits gespeicherte Videos prüfen
 Forget saved videos	Gespeicherte Videos vergessen
 Undo forgetting saved videos	Vergessen der gespeicherten Videos rückgängig machen
-Forget which videos Metra saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.	Vergisst, welche Videos Metra hier gespeichert hat, damit die Prüfung auf bereits gespeicherte Videos neu beginnt. Die gespeicherten Dateien und deine Einstellungen bleiben. Die Prüfung auszuschalten löscht diese Liste nicht.
+Forget which videos NINE’tok saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.	Vergisst, welche Videos NINE’tok hier gespeichert hat, damit die Prüfung auf bereits gespeicherte Videos neu beginnt. Die gespeicherten Dateien und deine Einstellungen bleiben. Die Prüfung auszuschalten löscht diese Liste nicht.
 Forgetting saved videos	Gespeicherte Videos werden vergessen
 Putting the saved videos back	Gespeicherte Videos werden zurückgeholt
 Forgotten. Tap to put them back.	Vergessen. Tippe, um sie zurückzuholen.
@@ -1497,10 +1497,10 @@ Saving video: %1$s	Video wird gespeichert: %1$s
 Saving %1$s of %2$s: %3$s	%1$s von %2$s wird gespeichert: %3$s
 Couldn't save the change. Try again.	Die Änderung konnte nicht gespeichert werden. Versuch es erneut.
 Off. TikTok can report views and typing.	Aus. TikTok kann Aufrufe und Tippaktivität melden.
-Metra is paused. Ghost mode isn't active.	Metra ist pausiert. Der Geistermodus ist nicht aktiv.
+NINE’tok is paused. Ghost mode isn't active.	NINE’tok ist pausiert. Der Geistermodus ist nicht aktiv.
 Problem detected. Story views may still be reported. Check Ghost mode diagnostics. The warning stays until TikTok restarts.	Problem erkannt. Story-Aufrufe werden möglicherweise weiterhin gemeldet. Öffne die Diagnose des Geistermodus. Die Warnung bleibt bis zum Neustart von TikTok.
-Metra blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.	Metra hat hier TikToks Meldungen blockiert. Es hat noch nicht bestätigt, dass du auf Zuschauerlisten nicht auftauchst.
-On. Metra hasn't seen TikTok send any reports since it started.	An. Metra hat seit dem Start von TikTok keine Meldungen von TikTok gesehen.
+NINE’tok blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.	NINE’tok hat hier TikToks Meldungen blockiert. Es hat noch nicht bestätigt, dass du auf Zuschauerlisten nicht auftauchst.
+On. NINE’tok hasn't seen TikTok send any reports since it started.	An. NINE’tok hat seit dem Start von TikTok keine Meldungen von TikTok gesehen.
 Ghost mode diagnostics	Diagnose des Geistermodus
 The partial file couldn't be removed. Delete it from the folder you chose.	Die unvollständige Datei konnte nicht entfernt werden. Lösche sie aus dem gewählten Ordner.
 The backup didn't start and its partial file couldn't be removed. Delete it from the folder you chose.	Die Sicherung wurde nicht gestartet und ihre unvollständige Datei konnte nicht entfernt werden. Lösche sie aus dem gewählten Ordner.
@@ -1512,7 +1512,7 @@ Keep playing in the background	Im Hintergrund weiterspielen
 The video you're watching keeps playing to its end after you leave TikTok or turn the screen off, with TikTok's own media notification to pause it. TikTok's background play switch stays on while this is on. Restart TikTok to apply this.	Das Video, das du gerade ansiehst, läuft bis zum Ende weiter, wenn du TikTok verlässt oder den Bildschirm ausschaltest, und lässt sich über TikToks eigene Medienbenachrichtigung pausieren. TikToks Schalter für die Hintergrundwiedergabe bleibt an, solange das hier an ist. TikTok neu starten, damit das gilt.
 Replay in the background	Im Hintergrund wiederholen
 When a video ends while TikTok plays in the background, it starts over instead of waiting for you to press Play in the notification. A call or another app's sound still pauses it.	Wenn ein Video endet, während TikTok im Hintergrund spielt, startet es von vorn, statt darauf zu warten, dass du in der Benachrichtigung auf Abspielen tippst. Ein Anruf oder der Ton einer anderen App pausiert es weiterhin.
-Keep playing in the background is on in Metra's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.	Im Hintergrund weiterspielen ist in Hushfeeds Wiedergabe-Einstellungen an, daher bekommt TikTok für diesen Schlüssel 2, und eine Überschreibung hier wirkt erst, wenn dieser Schalter aus ist.
+Keep playing in the background is on in NINE’tok's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.	Im Hintergrund weiterspielen ist in Hushfeeds Wiedergabe-Einstellungen an, daher bekommt TikTok für diesen Schlüssel 2, und eine Überschreibung hier wirkt erst, wenn dieser Schalter aus ist.
 2, from Keep playing in the background	2, von Im Hintergrund weiterspielen
 Let the last video finish	Letztes Video zu Ende laufen lassen
 When the budget runs out, the video on screen plays to its end before the hold starts, and you can't swipe to another video meanwhile. If the fade already dimmed the feed, the hold starts right away. Needs a hold. It waits %1$d minutes at most.	Wenn das Budget aufgebraucht ist, läuft das Video auf dem Bildschirm zu Ende, bevor die Sperre beginnt, und du kannst währenddessen nicht zu einem anderen Video wischen. Hat die Abblendung den Feed schon abgedunkelt, beginnt die Sperre sofort. Braucht eine Sperre. Es wartet höchstens %1$d Minuten.
@@ -1570,7 +1570,7 @@ Hide the Clear display controls	Steuerelemente der freien Ansicht ausblenden
 While Clear display is on, also hide the progress bar, the close button and the pause and speed buttons at the bottom. You can still drag along the bottom edge to move through the video. To leave Clear display, press and hold the video and tap Restore display, or pinch the screen.	Bei freier Ansicht auch den Fortschrittsbalken, die Schließen-Schaltfläche und die Pause- und Tempo-Schaltflächen unten ausblenden. Du kannst trotzdem am unteren Rand entlang ziehen, um im Video zu spulen. Um die freie Ansicht zu verlassen, halte das Video gedrückt und tippe auf Anzeige wiederherstellen. Du kannst auch zwei Finger auf dem Bildschirm zusammenziehen.
 Take the Add comment bar off videos you open from a profile, a hashtag, a sound or search, so the video fills the screen down to the bottom. The comment button on the right still opens comments.	Blende die Kommentarleiste unter Videos aus, die du über ein Profil, einen Hashtag, einen Sound oder die Suche öffnest, damit das Video den Bildschirm bis ganz unten füllt. Die Kommentar-Schaltfläche rechts öffnet die Kommentare weiterhin.
 Build details	Build-Informationen
-Copy or save which patches and options this Metra was built with.	Kopiere oder speichere, mit welchen Patches und Optionen dieses Metra gebaut wurde.
+Copy or save which patches and options this NINE’tok was built with.	Kopiere oder speichere, mit welchen Patches und Optionen dieses NINE’tok gebaut wurde.
 Copy build details	Build-Informationen kopieren
 Save build details	Build-Informationen speichern
 Build details copied to the clipboard	Build-Informationen in die Zwischenablage kopiert
@@ -1758,7 +1758,7 @@ Logging until %1$s. Tap to stop now.	Protokolliert bis %1$s. Tippe, um jetzt auf
 Logging diagnostics until %1$s	Diagnose wird bis %1$s protokolliert
 Timed logging stopped	Zeitlich begrenztes Protokoll beendet
 Preview with a made-up post:	Vorschau mit einem erfundenen Beitrag:
-Metra's downloader: %1$s	Hushfeeds Downloader: %1$s
+NINE’tok's downloader: %1$s	Hushfeeds Downloader: %1$s
 TikTok's downloader: %1$s	TikToks Downloader: %1$s
 Sound: %1$s	Ton: %1$s
 Details: %1$s	Details: %1$s
@@ -1766,15 +1766,15 @@ Subtitles: %1$s	Untertitel: %1$s
 Stickers: %1$s	Sticker: %1$s
 Live photo clips: %1$s	Clips von Live-Fotos: %1$s
 TikTok's own name	TikToks eigener Name
-Not a part Metra fills in, so it's kept as typed: %1$s	Kein Teil, den Metra ausfüllt, daher bleibt es wie eingegeben: %1$s
-Metra's downloader doesn't fill this in, so it's kept as typed: %1$s	Hushfeeds Downloader füllt das nicht aus, daher bleibt es wie eingegeben: %1$s
+Not a part NINE’tok fills in, so it's kept as typed: %1$s	Kein Teil, den NINE’tok ausfüllt, daher bleibt es wie eingegeben: %1$s
+NINE’tok's downloader doesn't fill this in, so it's kept as typed: %1$s	Hushfeeds Downloader füllt das nicht aus, daher bleibt es wie eingegeben: %1$s
 If that name is taken, Android adds a number to the new file.	Ist der Name schon vergeben, hängt Android an die neue Datei eine Zahl an.
-If that name is taken, Metra adds a number to the new file.	Ist der Name schon vergeben, hängt Metra an die neue Datei eine Zahl an.
+If that name is taken, NINE’tok adds a number to the new file.	Ist der Name schon vergeben, hängt NINE’tok an die neue Datei eine Zahl an.
 Don't start the first video	Erstes Video nicht starten
 When you open TikTok from its icon, the first video in the feed waits for one tap before it plays. A link, a notification or a shortcut opens as usual.	Wenn du TikTok über das Symbol öffnest, wartet das erste Video im Feed auf ein Tippen, bevor es abspielt. Ein Link, eine Benachrichtigung oder eine Verknüpfung öffnet sich wie gewohnt.
 Network proxy	Netzwerk-Proxy
 Send TikTok through a proxy	TikTok über einen Proxy leiten
-Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Metra also connect directly, after their own address checks. Other apps aren't affected.	Leitet TikToks Feed, Suche, Kommentare und anderen App-Datenverkehr über den Proxy unten. Videos und LIVE-Streams verbinden sich weiterhin direkt. Speichern und Kurzlink-Abfragen von Metra verbinden sich ebenfalls direkt, nach ihren eigenen Adressprüfungen. Andere Apps sind nicht betroffen.
+Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from NINE’tok also connect directly, after their own address checks. Other apps aren't affected.	Leitet TikToks Feed, Suche, Kommentare und anderen App-Datenverkehr über den Proxy unten. Videos und LIVE-Streams verbinden sich weiterhin direkt. Speichern und Kurzlink-Abfragen von NINE’tok verbinden sich ebenfalls direkt, nach ihren eigenen Adressprüfungen. Andere Apps sind nicht betroffen.
 Proxy type	Proxy-Typ
 HTTP	HTTP
 SOCKS5	SOCKS5
@@ -1814,8 +1814,8 @@ Save seen history to a file	Gesehene Videos in einer Datei sichern
 Restore seen history from a file	Gesehene Videos aus einer Datei wiederherstellen
 Save the videos @%1$s has seen, and when, to a JSON file. Anyone who opens the file can see that viewing history.	Die Videos, die @%1$s gesehen hat, samt Zeitpunkt in einer JSON-Datei sichern. Wer die Datei öffnet, sieht diesen Wiedergabeverlauf.
 Save this account's seen videos, and when they were watched, to a JSON file. Anyone who opens the file can see that viewing history.	Die gesehenen Videos dieses Kontos samt Zeitpunkt in einer JSON-Datei sichern. Wer die Datei öffnet, sieht diesen Wiedergabeverlauf.
-Add a seen-history file saved by Metra to the videos @%1$s has seen. A video in both keeps the newer date.	Eine von Metra gesicherte Verlaufsdatei zu den Videos hinzufügen, die @%1$s gesehen hat. Ein Video, das in beiden steht, behält das neuere Datum.
-Add a seen-history file saved by Metra to this account's seen videos. A video in both keeps the newer date.	Eine von Metra gesicherte Verlaufsdatei zu den gesehenen Videos dieses Kontos hinzufügen. Ein Video, das in beiden steht, behält das neuere Datum.
+Add a seen-history file saved by NINE’tok to the videos @%1$s has seen. A video in both keeps the newer date.	Eine von NINE’tok gesicherte Verlaufsdatei zu den Videos hinzufügen, die @%1$s gesehen hat. Ein Video, das in beiden steht, behält das neuere Datum.
+Add a seen-history file saved by NINE’tok to this account's seen videos. A video in both keeps the newer date.	Eine von NINE’tok gesicherte Verlaufsdatei zu den gesehenen Videos dieses Kontos hinzufügen. Ein Video, das in beiden steht, behält das neuere Datum.
 Sign in to TikTok before saving or restoring seen history.	Melde dich bei TikTok an, bevor du gesehene Videos sicherst oder wiederherstellst.
 Saving seen history	Gesehene Videos werden gesichert
 Reading the seen-history file	Verlaufsdatei wird gelesen
@@ -1839,10 +1839,10 @@ Added %1$s seen videos.	%1$s gesehene Videos hinzugefügt.
 %1$s older seen video was dropped to keep the newest %2$s.	%1$s älteres gesehenes Video wurde entfernt, damit die neuesten %2$s bleiben.
 %1$s older seen videos were dropped to keep the newest %2$s.	%1$s ältere gesehene Videos wurden entfernt, damit die neuesten %2$s bleiben.
 Couldn't restore seen history. Your saved history is unchanged.	Gesehene Videos konnten nicht wiederhergestellt werden. Dein gespeicherter Verlauf ist unverändert.
-That file is larger than %1$s MB. Choose a seen-history file saved by Metra.	Die Datei ist größer als %1$s MB. Wähle eine von Metra gesicherte Verlaufsdatei.
+That file is larger than %1$s MB. Choose a seen-history file saved by NINE’tok.	Die Datei ist größer als %1$s MB. Wähle eine von NINE’tok gesicherte Verlaufsdatei.
 That file lists more than %1$s videos. Nothing was restored.	Die Datei enthält mehr als %1$s Videos. Es wurde nichts wiederhergestellt.
-That isn't a seen-history file saved by Metra. For TikTok's own data export, use Import watch history.	Das ist keine von Metra gesicherte Verlaufsdatei. Für TikToks eigenen Datenexport nimm Wiedergabeverlauf importieren.
-That file was saved by a newer Metra. Update Metra, then try again.	Die Datei stammt von einer neueren Metra-Version. Aktualisiere Metra und versuch es dann noch einmal.
+That isn't a seen-history file saved by NINE’tok. For TikTok's own data export, use Import watch history.	Das ist keine von NINE’tok gesicherte Verlaufsdatei. Für TikToks eigenen Datenexport nimm Wiedergabeverlauf importieren.
+That file was saved by a newer NINE’tok. Update NINE’tok, then try again.	Die Datei stammt von einer neueren NINE’tok-Version. Aktualisiere NINE’tok und versuch es dann noch einmal.
 That seen-history file is damaged or was edited. Nothing was restored.	Die Verlaufsdatei ist beschädigt oder wurde bearbeitet. Es wurde nichts wiederhergestellt.
 Turn off haptics	Haptisches Feedback ausschalten
 Stop the short vibrations TikTok plays on its own taps and gestures. Your keyboard and your phone's own haptics stay as they are.	Stoppt die kurzen Vibrationen, die TikTok bei seinen eigenen Tippern und Gesten abspielt. Deine Tastatur und die eigene Haptik deines Handys bleiben, wie sie sind.
@@ -1874,7 +1874,7 @@ Turns off TikTok's notification service, so nothing it sends reaches your notifi
 Save details as JSON	Details als JSON speichern
 Saves the details file in JSON format instead of plain text. Useful if another tool will read it.	Speichert die Detaildatei im JSON-Format statt als einfachen Text. Praktisch, wenn ein anderes Programm sie liest.
 Tag saved videos with their details	Gespeicherte Videos mit ihren Details versehen
-Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Metra.	Legt Beschreibung, Creator, Veröffentlichungsdatum und Link in der Videodatei selbst ab, wo Mediaplayer sie lesen können. Gilt für Speicherungen durch Metra.
+Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by NINE’tok.	Legt Beschreibung, Creator, Veröffentlichungsdatum und Link in der Videodatei selbst ab, wo Mediaplayer sie lesen können. Gilt für Speicherungen durch NINE’tok.
 Save the video's cover	Titelbild des Videos speichern
 Save the cover as well	Titelbild ebenfalls speichern
 Save the video's cover picture at the largest size TikTok has, each time you tap Download. It goes to your photo folder, named after the video.	Speichere bei jedem Tippen auf Herunterladen das Titelbild des Videos in der größten Auflösung, die TikTok hat. Es landet in deinem Fotoordner und trägt den Namen des Videos.
@@ -1916,10 +1916,10 @@ Liked videos	Gelikte Videos
 Public	Öffentlich
 Copy	Kopieren
 Copy the full link for short links	Bei Kurzlinks den vollständigen Link kopieren
-When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Metra opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.	Wenn „Link kopieren“ einen kurzen Link wie vt.tiktok.com oder vm.tiktok.com liefert, öffnet Metra ihn einmal im Hintergrund, findet den vollständigen Videolink und kopiert stattdessen den. TikTok sieht diesen Aufruf, und er läuft auch bei aktivem Proxy direkt. Links, die du an eine andere App sendest, gehen unverändert raus.
+When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, NINE’tok opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.	Wenn „Link kopieren“ einen kurzen Link wie vt.tiktok.com oder vm.tiktok.com liefert, öffnet NINE’tok ihn einmal im Hintergrund, findet den vollständigen Videolink und kopiert stattdessen den. TikTok sieht diesen Aufruf, und er läuft auch bei aktivem Proxy direkt. Links, die du an eine andere App sendest, gehen unverändert raus.
 Full link copied	Vollständiger Link kopiert
 Mark saved videos	Gespeicherte Videos markieren
-Puts a ✓ by videos and photo posts you saved with Metra, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.	Setzt ein ✓ an Videos und Fotobeiträgen, die du mit Metra gespeichert hast, in Profilrastern und neben der Uhrzeit im Feed. Funktioniert nur, solange „Bereits gespeicherte Videos prüfen“ an ist.
+Puts a ✓ by videos and photo posts you saved with NINE’tok, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.	Setzt ein ✓ an Videos und Fotobeiträgen, die du mit NINE’tok gespeichert hast, in Profilrastern und neben der Uhrzeit im Feed. Funktioniert nur, solange „Bereits gespeicherte Videos prüfen“ an ist.
 Also replaces the saved region and country code TikTok sends with every request. Signing in still sends your real region. Your IP address and your account's own rules still apply.	Ersetzt auch die gespeicherte Region und den Ländercode, die TikTok mit jeder Anfrage sendet. Beim Anmelden wird weiterhin deine echte Region gesendet. Deine IP-Adresse und die eigenen Regeln deines Kontos gelten weiterhin.
 Turn off double tap to react	Doppeltippen zum Reagieren ausschalten
 A double tap on a message no longer adds a heart to it. A single tap and a long press work as before.	Doppeltippen auf eine Nachricht fügt ihr kein Herz mehr hinzu. Einfaches Tippen und langes Drücken funktionieren wie bisher.
@@ -1952,7 +1952,7 @@ TikTok removes videos saved for offline viewing after a set time, sometimes only
 Hide Thoughts on profiles	Thoughts auf Profilen ausblenden
 Hide the Thoughts bubble TikTok shows above a profile picture, and the prompt to share one on your own profile. Restart TikTok to apply this.	Die Thoughts-Blase ausblenden, die TikTok über einem Profilbild zeigt, und auf deinem eigenen Profil die Aufforderung, einen zu teilen. TikTok neu starten, damit das gilt.
 
-About Metra	Über Metra
+About NINE’tok	Über NINE’tok
 Version, changes and licenses	Version, Änderungen und Lizenzen
 Active	Aktiv
 Paused	Pausiert
@@ -2078,7 +2078,7 @@ About	Über
 Your settings	Deine Einstellungen
 Report a problem	Problem melden
 Opens a GitHub report with your versions and settings filled in. Add what happened.	Öffnet einen GitHub-Bericht, in dem deine Versionen und Einstellungen schon eingetragen sind. Ergänze, was passiert ist.
-Support Metra	Metra unterstützen
+Support NINE’tok	NINE’tok unterstützen
 No app on this phone opens web links	Keine App auf diesem Handy öffnet Weblinks
 Quick setups	Schnelleinstellungen
 Quiet hides ads, Shop and LIVE. Privacy hides your views and typing and stops tracking. Back to defaults resets every switch. Press and hold to hide this row.	Ruhig blendet Werbung, Shop und LIVE aus. Datenschutz verbirgt deine Aufrufe und dein Tippen und stoppt das Tracking. Standard wiederherstellen setzt jeden Schalter zurück. Halte gedrückt, um diese Zeile auszublenden.
@@ -2102,16 +2102,16 @@ Your feed	Dein Feed
 Saving and sharing	Speichern und Teilen
 # context: a heading on the settings home page, over Privacy, App, Region, Backup and restore and Feature Gate Lab
 Privacy and app	Datenschutz und App
-# context: a heading on the settings home page, over Metra's status, Pause, Diagnostics, About, Report a problem and Support; the app's name, usually kept as is
-Metra	Metra
-Open Metra settings	Metra-Einstellungen öffnen
+# context: a heading on the settings home page, over NINE’tok's status, Pause, Diagnostics, About, Report a problem and Support; the app's name, usually kept as is
+NINE’tok	NINE’tok
+Open NINE’tok settings	NINE’tok-Einstellungen öffnen
 Several photos in one comment	Mehrere Fotos in einem Kommentar
 Scrolling comments on videos	Laufende Kommentare über Videos
 See-through bottom bar	Durchsichtige untere Leiste
 Let the video reach the bottom of the screen on the main feed and show the tabs over it with no bar behind them.	Das Video reicht im Haupt-Feed bis zum unteren Bildschirmrand, und die Tabs liegen ohne Leiste dahinter darüber.
 LIVE chat auto-translate	Automatische Übersetzung im LIVE-Chat
 
-The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Metra settings > Region spoof, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.	Die Schaltfläche „Kommentare übersetzen“ in einem LIVE-Raum braucht zusätzlich eine japanische SIM. Schalte in den Metra-Einstellungen > Region „SIM-Angaben überschreiben“ ein, stelle die SIM-Ländervorgabe auf Japan, NTT DOCOMO (44010) und starte TikTok neu.
+The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in NINE’tok settings > Region spoof, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.	Die Schaltfläche „Kommentare übersetzen“ in einem LIVE-Raum braucht zusätzlich eine japanische SIM. Schalte in den NINE’tok-Einstellungen > Region „SIM-Angaben überschreiben“ ein, stelle die SIM-Ländervorgabe auf Japan, NTT DOCOMO (44010) und starte TikTok neu.
 
 Pick videos to save from profile grids	Videos in Profilrastern zum Speichern auswählen
 Puts a circle on each video in a profile, Liked or Favorites grid. Pick up to %1$s, then tap Save to save them one after another, with a count and Cancel.	Setzt einen Kreis auf jedes Video in einem Profil-, Gefällt-mir- oder Favoritenraster. Wähle bis zu %1$s aus und tippe dann auf Speichern, um sie nacheinander zu speichern, mit Zähler und Abbrechen.
@@ -2183,7 +2183,7 @@ Your Long press choice runs only on the left and right thirds of the video. A pr
 Full-width progress bar	Fortschrittsbalken in voller Breite
 Run the progress bar from one screen edge to the other, without the gap TikTok leaves at each end.	Der Fortschrittsbalken läuft von einem Bildschirmrand zum anderen, ohne die Lücke, die TikTok an beiden Enden lässt.
 New device identity	Neue Geräteidentität
-Wipe TikTok's data and give it a new Android ID and advertising ID on the next start, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Metra's settings stay.	Löscht die Daten von TikTok und gibt ihm beim nächsten Start eine neue Android-ID und Werbe-ID, damit es ein Telefon sieht, das es nicht kennt. Du wirst abgemeldet und verlierst deine Entwürfe. Die Einstellungen von Metra bleiben.
+Wipe TikTok's data and give it a new Android ID and advertising ID on the next start, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. NINE’tok's settings stay.	Löscht die Daten von TikTok und gibt ihm beim nächsten Start eine neue Android-ID und Werbe-ID, damit es ein Telefon sieht, das es nicht kennt. Du wirst abgemeldet und verlierst deine Entwürfe. Die Einstellungen von NINE’tok bleiben.
 TikTok starts as a new phone after the restart. Tap again to cancel.	TikTok startet nach dem Neustart als neues Telefon. Tippe erneut, um abzubrechen.
 Couldn't set up a new device identity. Try again.	Die neue Geräteidentität konnte nicht eingerichtet werden. Versuch es noch einmal.
 Feed controls	Feed-Filter
@@ -2201,7 +2201,7 @@ Comma-separated action IDs. Other video actions remain available.	Comma-separate
 Make the native action available. It starts only when you choose it.	Make the native action available. It starts only when you choose it.
 MENUS	MENUS
 Support	Support
-Support Metra patches	Support Metra patches
+Support the original patch author	Support the original patch author
 Choose which posts appear in your feeds	Choose which posts appear in your feeds
 Feed tabs, bottom tabs, and Tako AI	Feed tabs, bottom tabs, and Tako AI
 Promotions, overlays, profile and inbox controls	Promotions, overlays, profile and inbox controls

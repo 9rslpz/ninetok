@@ -13,7 +13,7 @@ import org.robolectric.annotation.Config;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = 28)
-public class MetraAutoScrollTest {
+public class NineTokAutoScrollTest {
     @Rule public final SettingsContextRule settings = new SettingsContextRule();
     @After public void reset() {
         SettingsStatus.forceShowAutoScrollEnabled = false;

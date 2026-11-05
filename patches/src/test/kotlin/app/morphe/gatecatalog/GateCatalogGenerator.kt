@@ -745,7 +745,7 @@ object GateCatalogGenerator {
         error("${apk.name} has no manifest element")
     }
 
-    private const val HEADER = "/*\n * Copyright 2026 Metra contributors\n * https://github.com/SysAdminDoc/hushfeed\n *\n" +
+    private const val HEADER = "/*\n * Copyright 2026 NINE’tok contributors\n * https://github.com/SysAdminDoc/hushfeed\n *\n" +
         " * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).\n */\n" +
         "package app.morphe.extension.tiktok.featuregatelab;\n\n"
 

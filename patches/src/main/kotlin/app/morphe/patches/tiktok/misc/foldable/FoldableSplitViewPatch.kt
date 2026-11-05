@@ -139,7 +139,7 @@ internal fun MutableMethod.handConfigurationChangesToSplitView() = addInstructio
 @Suppress("unused")
 val foldableSplitViewPatch = bytecodePatch(
     name = "Foldable split comment view",
-    description = "On a folding phone or tablet, shows comments beside the video instead of over it when the screen is wide enough. Starts off. Turn it on in Metra settings > App behavior.",
+    description = "On a folding phone or tablet, shows comments beside the video instead of over it when the screen is wide enough. Starts off. Turn it on in NINE’tok settings > App behavior.",
 ) {
     category("Comments")
     compatibleWith(*AppCompatibilities.tiktokAndPineDrama())

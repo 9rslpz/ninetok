@@ -148,7 +148,7 @@ public class AndroidTargetChangesGuardTest {
                 "not fetched or opened: only its length is counted, so Report a problem's link "
                         + "still fits once GitHub's sign-in page wraps it");
         REVIEWED_ADDRESSES.put("https://ko-fi.com/P5P5YOUU7",
-                "not fetched: the Support Metra row, opened in the reader's browser");
+                "not fetched: the Support NINE’tok row, opened in the reader's browser");
         REVIEWED_ADDRESSES.put("https://(?:(?:vm|vt)\\\\.tiktok\\\\.com/[A-Za-z0-9]+|(?:www\\\\.|m\\\\.)?"
                         + "tiktok\\\\.com/t/[A-Za-z0-9]{4,20})/?",
                 "not a host: the pattern that finds a TikTok short link in copied text. The "

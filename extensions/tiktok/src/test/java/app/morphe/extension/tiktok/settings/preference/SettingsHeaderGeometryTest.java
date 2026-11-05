@@ -92,7 +92,7 @@ public class SettingsHeaderGeometryTest {
                     View.MeasureSpec.makeMeasureSpec(SettingsUi.dp(activity, 800), View.MeasureSpec.EXACTLY));
             root.layout(0, 0, root.getMeasuredWidth(), root.getMeasuredHeight());
 
-            TextView brand = textViewWithText(header, "METRA PATCHES");
+            TextView brand = textViewWithText(header, "NINE’TOK");
             TextView status = header.findViewWithTag("hushfeed_compact_status");
             assertNotNull(brand);
             assertNotNull(status);
@@ -238,7 +238,7 @@ public class SettingsHeaderGeometryTest {
                             + bounds.height() + " px, under " + target,
                     bounds.width() >= target && bounds.height() >= target);
 
-            // Metra keeps the title beside the bare Back control in the same toolbar.
+            // NINE’tok keeps the title beside the bare Back control in the same toolbar.
             View title = header.findViewWithTag("hushfeed_page_title");
             int inset = SettingsUi.dp(activity, 8);
             if (direction == View.LAYOUT_DIRECTION_RTL) {

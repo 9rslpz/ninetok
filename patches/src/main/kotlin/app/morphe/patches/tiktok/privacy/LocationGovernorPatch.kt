@@ -20,7 +20,7 @@ private const val LISTENER = "Landroid/location/LocationListener;"
 val locationGovernorPatch = bytecodePatch(
     name = "Location access governor",
     description = "Gives TikTok no location when it asks, so it can't see where you are from " +
-        "your phone's location services. Starts off. Turn it on in Metra settings > App behavior.",
+        "your phone's location services. Starts off. Turn it on in NINE’tok settings > App behavior.",
 ) {
     category("Privacy")
     dependsOn(settingsPatch, sharedExtensionPatch)

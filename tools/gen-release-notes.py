@@ -164,8 +164,8 @@ def constant(language: str) -> str:
     return "NOTES_" + language.upper().replace("-", "_")
 
 
-def metra_notes(text: str) -> str:
-    """Normalize Metra's semantic-release headings, excluding prereleases and duplicate stubs."""
+def ninetok_notes(text: str) -> str:
+    """Normalize NINE’tok's semantic-release headings, excluding prereleases and duplicate stubs."""
     headings = list(re.finditer(r"(?m)^#{1,2} (.+)$", text))
     result = []
     seen = set()
@@ -184,17 +184,17 @@ def metra_notes(text: str) -> str:
         body = re.sub(r"\*\*tiktok:\*\*", "**TikTok:**", body, flags=re.I)
         result.append(f"## {release[1]} ({release[2]})\n\n{body}\n")
     if not result:
-        raise ValueError("Metra CHANGELOG has no published stable releases")
+        raise ValueError("NINE’tok CHANGELOG has no published stable releases")
     return "\n".join(result)
 
 
 def main() -> None:
     source = CHANGELOG.read_text(encoding="utf-8")
     if re.search(r"(?m)^#{1,2} \[\d+\.\d+\.\d+\]\(https://github\.com/icysymmetra/", source):
-        notes = metra_notes(source)
+        notes = ninetok_notes(source)
         (NOTES / "en.txt").write_text(notes, encoding="utf-8", newline="\n")
         # Upstream's translated release history describes different releases. Fall back to the
-        # actual Metra English notes until translations of those releases are supplied.
+        # actual NINE’tok English notes until translations of those releases are supplied.
         translated = {}
     else:
         notes = summaries(published(source))

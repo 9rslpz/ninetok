@@ -160,7 +160,7 @@ public class UnpersonalizedForYouFilterTest {
         assertEquals(null, reportLine(FeedItemsFilter.FOR_YOU_DISTRIBUTION_SOURCE));
     }
 
-    @Test public void metraRejectsAnEntireFillInBatchWithoutEndingPagination() {
+    @Test public void ninetokRejectsAnEntireFillInBatchWithoutEndingPagination() {
         FeedItemList page = new FeedItemList();
         page.items = new ArrayList<>(List.of(fill("a"), fill("b")));
         page.hasMore = 1;
@@ -171,20 +171,20 @@ public class UnpersonalizedForYouFilterTest {
         assertEquals(123, page.cursor);
     }
 
-    @Test public void metraRejectsFillInFromColdCache() {
+    @Test public void ninetokRejectsFillInFromColdCache() {
         FeedItemList page = new FeedItemList();
         page.items = new ArrayList<>(List.of(fill("cached")));
         assertEquals("an all-slop cache should be rejected", null, FeedItemsFilter.filterCachedFeedList(page));
     }
 
-    @Test public void metraRejectsFillInAtEverySingleCacheBoundary() {
+    @Test public void ninetokRejectsFillInAtEverySingleCacheBoundary() {
         assertFalse("normalizer let slop bypass the list filter", FeedItemsFilter.shouldKeepNormalizedCache(fill("normal")));
         assertFalse("play-lag cache bypassed Anti-slop", FeedItemsFilter.shouldKeepPlayLagCache(fill("lag")));
         assertFalse("reach-bottom cache bypassed Anti-slop", FeedItemsFilter.shouldKeepReachBottomCache(fill("bottom")));
         assertFalse("cache chain bypassed Anti-slop", FeedItemsFilter.shouldKeepChainedCache(fill("chain")));
     }
 
-    @Test public void metraRejectsFinalCachedInsertsOnlyInForYou() {
+    @Test public void ninetokRejectsFinalCachedInsertsOnlyInForYou() {
         com.ss.android.ugc.aweme.feed.panel.BaseListFragmentPanel forYou =
                 new com.ss.android.ugc.aweme.feed.panel.BaseListFragmentPanel() {
                     @Override public String getEventType() { return "homepage_hot"; }
@@ -201,7 +201,7 @@ public class UnpersonalizedForYouFilterTest {
                 following, 0, "golden_house", inserted));
     }
 
-    @Test public void metraCacheRuleKeepsPickedAndExceptedVideosAndRespectsItsSwitch() {
+    @Test public void ninetokCacheRuleKeepsPickedAndExceptedVideosAndRespectsItsSwitch() {
         assertTrue(FeedItemsFilter.shouldKeepNormalizedCache(new Item("picked", FILL_IN, new RecReasonsStruct())));
         assertTrue(FeedItemsFilter.shouldKeepNormalizedCache(new Item("personal", "for_you_page_1", null)));
         Settings.CREATOR_FILTER_EXCEPTIONS.save("friend");
@@ -212,7 +212,7 @@ public class UnpersonalizedForYouFilterTest {
         assertTrue(FeedItemsFilter.shouldKeepNormalizedCache(new Untouchable("off")));
     }
 
-    @Test public void metraQualityFallbackCannotRestoreAnAntiSlopRejection() {
+    @Test public void ninetokQualityFallbackCannotRestoreAnAntiSlopRejection() {
         Settings.MAX_VIDEO_SECONDS.save(1);
         try {
             Item longFill = fill("long-fill");

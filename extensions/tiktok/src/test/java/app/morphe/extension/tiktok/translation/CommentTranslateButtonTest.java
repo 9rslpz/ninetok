@@ -100,7 +100,7 @@ public class CommentTranslateButtonTest {
         assertFalse(CommentTranslateButton.toggleOn(false));
 
         PausedProcess.set(true);
-        assertFalse("paused, the toggle Metra turned on is off", CommentTranslateButton.toggleOn(true));
+        assertFalse("paused, the toggle NINE’tok turned on is off", CommentTranslateButton.toggleOn(true));
         PausedProcess.set(false);
         assertTrue(CommentTranslateButton.toggleOn(true));
 

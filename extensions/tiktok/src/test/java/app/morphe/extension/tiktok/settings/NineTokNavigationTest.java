@@ -24,7 +24,7 @@ import org.robolectric.annotation.Config;
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = 28)
 @SuppressWarnings("deprecation")
-public class MetraNavigationTest {
+public class NineTokNavigationTest {
     @Rule public final SettingsContextRule settings = new SettingsContextRule();
 
     @Test public void mergedPagesHaveNoDuplicateSettingKeysAndLegacyRoutesStillOpenThem() throws Exception {

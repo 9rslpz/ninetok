@@ -26,6 +26,16 @@ public final class LicenseNotice {
 
     /** The NOTICE file, verbatim. */
     public static final String TEXT =
+            "NINE’tok NOTICE\n" +
+            "=================\n" +
+            "\n" +
+            "NINE’tok is a modified version of tiktok-patches-for-morphe by icysymmetra\n" +
+            "(https://github.com/icysymmetra/tiktok-patches-for-morphe). It changes the name,\n" +
+            "the launcher icon and some default settings; the patch code comes from the\n" +
+            "projects named below. The notices that follow are reproduced from those projects\n" +
+            "and still apply to every copy of NINE’tok, source or built.\n" +
+            "\n" +
+            "\n" +
             "Hushfeed NOTICE\n" +
             "===============\n" +
             "\n" +

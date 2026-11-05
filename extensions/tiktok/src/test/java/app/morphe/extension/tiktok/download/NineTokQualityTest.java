@@ -5,7 +5,7 @@ import app.morphe.extension.tiktok.download.AdvancedDownloadsTest.Gear;
 import java.util.List;
 import org.junit.Test;
 
-public class MetraQualityTest {
+public class NineTokQualityTest {
     @Test public void balancedKeepsTheMedianMeaningWithoutChoosingAnUnplayableFile() {
         Gear small = new Gear("normal_360_0", 100, "https://example.com/360");
         Gear medium = new Gear("normal_720_0", 200, "https://example.com/720");

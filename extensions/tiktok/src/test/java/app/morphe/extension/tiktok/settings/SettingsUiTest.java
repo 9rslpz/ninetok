@@ -177,7 +177,7 @@ public class SettingsUiTest {
         assertTrue("the value control is shorter than a 48dp touch target",
                 spinner.getMinimumHeight() >= SettingsUi.dp(activity, 48));
         assertNotNull("the value popup kept the host background", spinner.getPopupBackground());
-        assertTrue("the value popup is not a Metra surface",
+        assertTrue("the value popup is not a NINE’tok surface",
                 spinner.getPopupBackground() instanceof android.graphics.drawable.GradientDrawable);
     }
 

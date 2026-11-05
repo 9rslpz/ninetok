@@ -2,9 +2,9 @@
  * Which host capture supplies each current product screenshot.
  *
  * <p>Captures stay under the configured directory until refreshScreenshots is explicitly run.
- * Metra merges Playback, Privacy and Screen time into App behavior, and Inbox into Interface.
+ * NINE’tok merges Playback, Privacy and Screen time into App behavior, and Inbox into Interface.
  * Their old reference pictures are retained but are no longer refresh destinations. The map
- * names the actual Metra page captures, including the device and player scroll positions.
+ * names the actual NINE’tok page captures, including the device and player scroll positions.
  */
 val trackedScreenshots = mapOf(
     "auto-advance-settings.png" to "auto-advance-settings.png",

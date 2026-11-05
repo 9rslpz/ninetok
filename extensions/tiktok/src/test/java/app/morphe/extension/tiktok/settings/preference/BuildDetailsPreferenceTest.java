@@ -199,7 +199,7 @@ public class BuildDetailsPreferenceTest {
                 .setup().visible();
         settle(owner.get());
         Preference about = page(owner.get()).findPreference("hub_about");
-        assertNotNull("the home menu has no About Metra route", about);
+        assertNotNull("the home menu has no About NINE’tok route", about);
         assertTrue(about.getOnPreferenceClickListener().onPreferenceClick(about));
         settle(owner.get());
         assertEquals("ABOUT", page(owner.get()).getArguments().getString("morphe_settings_hub"));

@@ -165,10 +165,10 @@ object BundleSource {
             && start.rawFingerprint.matches(Regex("[0-9A-Fa-f]{64}"))
             && start.rawFingerprint == end.rawFingerprint
         return mapOf(
-            "Metra-Source-Commit" to start.commit,
-            "Metra-Source-Clean" to clean.toString(),
-            "Metra-Source-Start" to start.fingerprint,
-            "Metra-Source-End" to end.fingerprint
+            "NineTok-Source-Commit" to start.commit,
+            "NineTok-Source-Clean" to clean.toString(),
+            "NineTok-Source-Start" to start.fingerprint,
+            "NineTok-Source-End" to end.fingerprint
         )
     }
 }
@@ -253,10 +253,10 @@ group = "app.morphe"
 
 patches {
     about {
-        name = "Metra"
-        description = "Metra patches for TikTok 47.4.3, built for Morphe. Fewer accidental taps, less noise, more control over the feed, inbox, comments and downloads."
+        name = "NINE’tok"
+        description = "NINE’tok for TikTok 47.4.3, built for Morphe. Fewer accidental taps, less noise, more control over the feed, inbox, comments and downloads."
         source = "https://github.com/icysymmetra/tiktok-patches-for-morphe"
-        author = "icysymmetra"
+        author = "NINE’tok, based on icysymmetra’s tiktok-patches-for-morphe"
         contact = "https://github.com/icysymmetra/tiktok-patches-for-morphe/issues"
         website = "https://github.com/icysymmetra/tiktok-patches-for-morphe"
         license = "GNU General Public License v3.0, with additional GPL section 7 requirements"
@@ -703,7 +703,7 @@ tasks {
                 if (BundleSource.manifestFacts(crlf, crlf) != BundleSource.manifestFacts(fresh, fresh)) {
                     sourceRegressions += "a fresh checkout changed the manifest source facts"
                 }
-                check(BundleSource.manifestFacts(crlf, fresh)["Metra-Source-Clean"] == "false") {
+                check(BundleSource.manifestFacts(crlf, fresh)["NineTok-Source-Clean"] == "false") {
                     "A byte change during one build must stay ineligible even when Git normalizes it"
                 }
                 check(sourceRegressions.isEmpty()) { sourceRegressions.joinToString("; ") }
@@ -738,12 +738,12 @@ tasks {
                             val manifest = zip.getInputStream(zip.getEntry("META-INF/MANIFEST.MF"))
                                 .use { Manifest(it).mainAttributes }
                             check(manifest.getValue("Timestamp") == "1700000000000")
-                            check(manifest.getValue("Metra-Source-Clean") == test.third.toString()) {
+                            check(manifest.getValue("NineTok-Source-Clean") == test.third.toString()) {
                                 "Source eligibility changed while stamping case $index"
                             }
-                            check(manifest.getValue("Metra-Source-Commit") == test.first.commit)
-                            check(manifest.getValue("Metra-Source-Start") == test.first.fingerprint)
-                            check(manifest.getValue("Metra-Source-End") == test.second.fingerprint)
+                            check(manifest.getValue("NineTok-Source-Commit") == test.first.commit)
+                            check(manifest.getValue("NineTok-Source-Start") == test.first.fingerprint)
+                            check(manifest.getValue("NineTok-Source-End") == test.second.fingerprint)
                         }
                     } finally { check(bundle.delete()) { "Could not remove source test bundle" } }
                 }

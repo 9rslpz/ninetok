@@ -30,7 +30,7 @@ val commentSortControlsPatch = bytecodePatch(
     name = "Comment sort controls",
     description = "Shows TikTok's full comment sort menu on every video, with hot, newest, " +
         "media and creator options, even when your account only got a cut-down version. Starts " +
-        "off. Turn it on in Metra settings > Comments and translation.",
+        "off. Turn it on in NINE’tok settings > Comments and translation.",
 ) {
     category("Comments")
     dependsOn(settingsPatch, sharedExtensionPatch)

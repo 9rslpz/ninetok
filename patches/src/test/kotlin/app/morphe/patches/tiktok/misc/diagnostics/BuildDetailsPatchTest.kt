@@ -134,7 +134,7 @@ class BuildDetailsPatchTest {
 
     @Test fun `provenance keeps exact hashes and distinguishes dirty and legacy bundles`() {
         val first = record("clean")
-        val dirty = manifest().apply { putValue("Metra-Source-Clean", "false"); putValue("Metra-Source-End", "D".repeat(64)) }
+        val dirty = manifest().apply { putValue("NineTok-Source-Clean", "false"); putValue("NineTok-Source-End", "D".repeat(64)) }
         val second = record("dirty", facts = dirty)
         assertNotEquals(first.readText(), second.readText())
         assertEquals("false", second.facts()["source_clean"])
@@ -144,8 +144,8 @@ class BuildDetailsPatchTest {
         assertEquals("1.14.2", second.facts()["patcher_applying_engine"])
         val invalid = manifest().apply {
             putValue("Version", "https://SOURCE_SENTINEL.invalid/")
-            putValue("Metra-Source-Commit", "account=SOURCE_SENTINEL")
-            putValue("Metra-Source-End", "bad")
+            putValue("NineTok-Source-Commit", "account=SOURCE_SENTINEL")
+            putValue("NineTok-Source-End", "bad")
         }
         val third = record("invalid", facts = invalid)
         assertEquals("unknown", third.facts()["source_clean"])
@@ -270,8 +270,8 @@ class BuildDetailsPatchTest {
 
     private fun manifest() = Attributes().apply {
         putValue("Version", "0.66.0"); putValue("Patcher-Version", "1.14.1")
-        putValue("Metra-Source-Commit", "a".repeat(40)); putValue("Metra-Source-Clean", "true")
-        putValue("Metra-Source-Start", fingerprint); putValue("Metra-Source-End", fingerprint)
+        putValue("NineTok-Source-Commit", "a".repeat(40)); putValue("NineTok-Source-Clean", "true")
+        putValue("NineTok-Source-Start", fingerprint); putValue("NineTok-Source-End", fingerprint)
     }
 
     private fun File.facts() = readLines().associate { it.substringBefore('=') to it.substringAfter('=') }
