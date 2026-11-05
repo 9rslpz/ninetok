@@ -1,3 +1,16 @@
+# [1.0.0-dev.8](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.7...v1.0.0-dev.8) (2026-11-05)
+
+
+### Bug Fixes
+
+* **settings:** write the name NINE’tok, never NINE’TOK ([ef15de2](https://github.com/9rslpz/ninetok/commit/ef15de299c992a96214339cc6db546dc3ee03abe))
+
+
+
+
+
+## 1.0.0-dev.8
+
 # [1.0.0-dev.7](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.6...v1.0.0-dev.7) (2026-11-05)
 
 
