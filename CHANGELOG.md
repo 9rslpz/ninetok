@@ -1,3 +1,16 @@
+# [1.0.0-dev.5](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.4...v1.0.0-dev.5) (2026-11-05)
+
+
+### Features
+
+* **settings:** a switch for the dot grid, on by default ([2641d36](https://github.com/9rslpz/ninetok/commit/2641d36dfcc4dfde0fdca57edd712dbf9299a355))
+
+
+
+
+
+## 1.0.0-dev.5
+
 # [1.0.0-dev.4](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.3...v1.0.0-dev.4) (2026-11-05)
 
 
