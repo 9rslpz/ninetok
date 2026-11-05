@@ -118,7 +118,7 @@ public final class CalmFeedPresetPreference extends Preference implements Immedi
         update(card);
 
         FrameLayout holder = new FrameLayout(context);
-        holder.setBackgroundColor(SettingsUi.background());
+        holder.setBackgroundColor(android.graphics.Color.TRANSPARENT);
         holder.setPadding(0, SettingsUi.dp(context, 4), 0, SettingsUi.dp(context, 8));
         holder.addView(card, new FrameLayout.LayoutParams(-1, -2));
         return holder;

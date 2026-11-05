@@ -35,7 +35,7 @@ public final class LicenseNotice {
             "projects named below. The notices that follow are reproduced from those projects\n" +
             "and still apply to every copy of NINE’tok, source or built.\n" +
             "\n" +
-            "The settings screen uses Manrope, Copyright 2018 The Manrope Project Authors,\n" +
+            "The settings screen uses Sora, Copyright 2019 The Sora Project Authors,\n" +
             "under the SIL Open Font License 1.1 (text in patches/src/main/resources/ninetok/fonts),\n" +
             "and the 9rslpz Hand handwriting by the NINE’tok author.\n" +
             "\n" +

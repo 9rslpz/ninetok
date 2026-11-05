@@ -72,7 +72,7 @@ public final class QuickSetupsPreference extends Preference {
         card.setOrientation(LinearLayout.VERTICAL);
         card.setPadding(SettingsUi.dp(context, 22), SettingsUi.dp(context, 12),
                 SettingsUi.dp(context, 22), SettingsUi.dp(context, 12));
-        card.setBackgroundColor(SettingsUi.background());
+        card.setBackgroundColor(android.graphics.Color.TRANSPARENT);
 
         TextView title = SettingsUi.text(context, String.valueOf(getTitle()), SettingsUi.TEXT_TITLE,
                 SettingsUi.textPrimary(), Typeface.BOLD);
@@ -120,7 +120,7 @@ public final class QuickSetupsPreference extends Preference {
         }
 
         FrameLayout holder = new FrameLayout(context);
-        holder.setBackgroundColor(SettingsUi.background());
+        holder.setBackgroundColor(android.graphics.Color.TRANSPARENT);
         holder.setPadding(0, SettingsUi.dp(context, 4), 0, SettingsUi.dp(context, 8));
         holder.addView(card, new FrameLayout.LayoutParams(-1, -2));
         return holder;

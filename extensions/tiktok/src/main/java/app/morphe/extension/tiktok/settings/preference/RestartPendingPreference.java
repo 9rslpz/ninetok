@@ -80,7 +80,7 @@ public final class RestartPendingPreference extends Preference {
         row.setOnClickListener(view -> restart(view.getContext()));
 
         FrameLayout holder = new FrameLayout(context);
-        holder.setBackgroundColor(SettingsUi.background());
+        holder.setBackgroundColor(android.graphics.Color.TRANSPARENT);
         int gutter = SettingsUi.dp(context, 8);
         holder.setPadding(gutter, gutter, gutter, 0);
         holder.addView(row, new FrameLayout.LayoutParams(

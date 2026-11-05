@@ -743,8 +743,8 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
         ListView list = view.findViewById(android.R.id.list);
         if (list != null) {
             SettingsUi.styleScrollableList(list);
-            list.setBackgroundColor(SettingsUi.background());
-            list.setCacheColorHint(SettingsUi.background());
+            list.setBackgroundColor(android.graphics.Color.TRANSPARENT);
+            list.setCacheColorHint(android.graphics.Color.TRANSPARENT);
             list.setDivider(null);
             list.setDividerHeight(0);
             int side = 0;
@@ -762,7 +762,7 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
         // setStatusBarColor and setNavigationBarColor were here. Both do nothing from target 35,
         // which TikTok is well past, so the bars are painted by the root view's own background
         // reaching behind them instead. The icon flags below still work.
-        view.setBackgroundColor(SettingsUi.background());
+        view.setBackground(new NineTokDots(view.getContext()));
 
         View decor = window.getDecorView();
         int visibility = decor.getSystemUiVisibility();

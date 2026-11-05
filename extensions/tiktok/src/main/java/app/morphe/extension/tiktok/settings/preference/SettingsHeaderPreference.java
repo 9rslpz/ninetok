@@ -168,7 +168,7 @@ public final class SettingsHeaderPreference extends Preference {
         header.setOrientation(LinearLayout.VERTICAL);
         header.setPaddingRelative(SettingsUi.dp(context, 8), SettingsUi.dp(context, compact ? 18 : 0),
                 SettingsUi.dp(context, compact ? 22 : 16), SettingsUi.dp(context, compact ? 10 : 0));
-        header.setBackgroundColor(SettingsUi.background());
+        header.setBackgroundColor(android.graphics.Color.TRANSPARENT);
         LinearLayout toolbar = new LinearLayout(context);
         toolbar.setTag("hushfeed_toolbar");
         toolbar.setGravity(Gravity.CENTER_VERTICAL);
@@ -221,7 +221,7 @@ public final class SettingsHeaderPreference extends Preference {
         TextView caption = SettingsUi.text(context, detail, 13.5f, SettingsUi.textSecondary(), 0);
         caption.setPadding(SettingsUi.dp(context, 22), SettingsUi.dp(context, 12),
                 SettingsUi.dp(context, 22), SettingsUi.dp(context, 8));
-        caption.setBackgroundColor(SettingsUi.background());
+        caption.setBackgroundColor(android.graphics.Color.TRANSPARENT);
         return caption;
     }
 

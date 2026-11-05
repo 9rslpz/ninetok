@@ -321,8 +321,8 @@ public final class SettingsMenuPreference extends Preference {
             this.icon = icon;
             this.compact = compact;
             density = context.getResources().getDisplayMetrics().density;
-            fill.setColor(SettingsUi.isDarkMode() ? Color.rgb(23, 23, 29) : Color.rgb(246, 246, 248));
-            border.setColor(SettingsUi.isDarkMode() ? Color.rgb(48, 48, 56) : Color.rgb(224, 224, 228));
+            fill.setColor(SettingsUi.background());
+            border.setColor(SettingsUi.border());
             border.setStyle(Paint.Style.STROKE);
             border.setStrokeWidth(SettingsUi.strokePx(context, 1f));
             line.setColor(icon == Icon.SEARCH ? SettingsUi.textSecondary() : SettingsUi.textPrimary());
@@ -339,8 +339,12 @@ public final class SettingsMenuPreference extends Preference {
                 // Existing glyphs occupy the middle of a tile. Expand their drawing coordinate
                 // space to retain a readable 20dp mark inside the compact 24dp image.
                 bounds.inset(-bounds.width() * 0.425f, -bounds.height() * 0.425f);
+            } else {
+                // The tile takes the page colour, so it reads as a clean square on the dot grid.
+                float radius = bounds.width() * 0.28f;
+                canvas.drawRoundRect(bounds, radius, radius, fill);
+                canvas.drawRoundRect(bounds, radius, radius, border);
             }
-            // NINE’tok draws the glyph on its own, with no tile behind it.
 
             float left = bounds.left + bounds.width() * 0.27f;
             float right = bounds.right - bounds.width() * 0.27f;

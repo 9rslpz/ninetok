@@ -19,14 +19,14 @@ import android.widget.TextView;
 import java.util.Locale;
 
 /**
- * The settings screen's type: Manrope for the text, and the 9rslpz Hand handwriting for the
+ * The settings screen's type: Sora for the text, and the 9rslpz Hand handwriting for the
  * letters NINE wherever the name appears. The fonts are assets the Settings patch copies into the
  * APK; a view keeps the system font when one of them can't be read.
  */
 public final class NineTokType {
     private static final String FONT_DIR = "ninetok/fonts/";
     private static final String BRAND = "NINE";
-    /** The handwriting is drawn small and wide beside Manrope; these even it out. */
+    /** The handwriting is drawn small and wide beside Sora; these even it out. */
     private static final float HAND_SCALE = 1.35f;
     private static final float HAND_LETTER_SPACING = -0.18f;
 
@@ -77,7 +77,7 @@ public final class NineTokType {
         }
     }
 
-    /** The Manrope weight nearest to what the view asked for; one of ours is kept as it is. */
+    /** The Sora weight nearest to what the view asked for; one of ours is kept as it is. */
     private static Typeface sansFor(Typeface current) {
         if (current != null && (current == regular || current == medium || current == semibold)) return current;
         if (current != null && current.isBold()) return semibold;
@@ -114,7 +114,7 @@ public final class NineTokType {
         return method != null && method.getClass().getName().contains("AllCaps");
     }
 
-    /** NINE in the handwriting, scaled up and drawn closer together to sit with Manrope. */
+    /** NINE in the handwriting, scaled up and drawn closer together to sit with Sora. */
     private static final class HandSpan extends MetricAffectingSpan {
         private final Typeface typeface;
 

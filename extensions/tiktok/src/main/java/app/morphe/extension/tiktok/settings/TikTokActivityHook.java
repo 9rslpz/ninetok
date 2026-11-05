@@ -72,7 +72,8 @@ public class TikTokActivityHook {
         // The background sits here rather than only on the fragment, so it reaches behind the
         // bars. fitsSystemWindows would pad this view too, but it consumes the insets on the way
         // past, and it has no answer for a display cutout on a side edge.
-        settingsSurface.setBackgroundColor(SettingsUi.background());
+        settingsSurface.setBackground(new app.morphe.extension.tiktok.settings.preference.NineTokDots(
+                settingsSurface.getContext()));
         SystemBarInsets.applyTo(settingsSurface);
         settingsSurface.setTransitionGroup(true);
 

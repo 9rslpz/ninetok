@@ -119,7 +119,7 @@ public final class SettingsStatusPreference extends Preference {
                 SettingsUi.dp(context, 12),
                 SettingsUi.dp(context, 12),
                 SettingsUi.dp(context, 12));
-        card.setBackgroundColor(SettingsUi.background());
+        card.setBackgroundColor(android.graphics.Color.TRANSPARENT);
 
         LinearLayout information = new LinearLayout(context);
         information.setOrientation(LinearLayout.HORIZONTAL);
@@ -199,7 +199,7 @@ public final class SettingsStatusPreference extends Preference {
         updateLabels(card);
 
         FrameLayout holder = new FrameLayout(context);
-        holder.setBackgroundColor(SettingsUi.background());
+        holder.setBackgroundColor(android.graphics.Color.TRANSPARENT);
         holder.setPadding(0, SettingsUi.dp(context, 4), 0, SettingsUi.dp(context, 8));
         holder.addView(card, new FrameLayout.LayoutParams(-1, -2));
         return holder;

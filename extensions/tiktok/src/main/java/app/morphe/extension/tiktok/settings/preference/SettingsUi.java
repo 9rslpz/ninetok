@@ -450,8 +450,7 @@ public final class SettingsUi {
             @Override public void draw(Canvas canvas) {
                 Rect bounds = getBounds();
                 brush.setStyle(Paint.Style.FILL);
-                brush.setColor(background());
-                canvas.drawRect(bounds, brush);
+                // No fill: the row lets the screen's dot grid show through.
                 if (activated) {
                     brush.setColor(activatedFill());
                     canvas.drawRect(bounds, brush);
