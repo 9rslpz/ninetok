@@ -16,7 +16,7 @@ class MarketingHeroTest {
         val readme = File(root, "README.md").readText()
         assertTrue(readme.trimStart().startsWith("<p align=\"center\">"))
         assertTrue(readme.contains("assets/readme-header.png"))
-        val expected = HexFormat.of().parseHex("292102929f6b65a94b9e1fbeba93545a0bced9faea3d41bf634eb916979d82d6")
+        val expected = HexFormat.of().parseHex("6ed491132d4f2066cfbe585227243b2877f27e195648718a9e46053555606687")
         for (name in listOf("patches-bundle.png", "assets/readme-header.png")) {
             assertArrayEquals(name, expected, MessageDigest.getInstance("SHA-256").digest(File(root, name).readBytes()))
         }
