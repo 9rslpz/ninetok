@@ -271,6 +271,8 @@ public class Settings extends BaseSettings {
     // and traffic hooks act on TikTok's startup tasks, so they need a restart. The animated image
     // cache is read as each sticker or GIF is built, so it reaches the next one without one.
     public static final BooleanSetting SKIP_SPLASH_AD = new BooleanSetting("skip_splash_ad", TRUE, true);
+    /** NINE’tok: the faint dot grid behind the settings screen. On by default. */
+    public static final BooleanSetting NINETOK_DOT_GRID = new BooleanSetting("ninetok_dot_grid", TRUE);
     public static final BooleanSetting SKIP_UPDATE_CHECKS = new BooleanSetting("skip_update_checks", FALSE, true);
     public static final BooleanSetting LIMIT_BACKGROUND_TRAFFIC =
             new BooleanSetting("limit_background_traffic", FALSE, true);

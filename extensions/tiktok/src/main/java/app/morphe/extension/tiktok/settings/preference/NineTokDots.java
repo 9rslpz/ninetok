@@ -11,6 +11,13 @@ import android.graphics.PixelFormat;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import app.morphe.extension.tiktok.settings.Settings;
+
 /**
  * The settings screen's background: the page colour with a fine grid of faint dots over it, in
  * the manner of Nothing OS. It sits on the screen's root, so the grid stays still while the
@@ -23,6 +30,9 @@ public final class NineTokDots extends Drawable {
     private static final int LIGHT_ALPHA = 0x17;
     private static final int DARK_ALPHA = 0x1C;
 
+    /** The backgrounds on screen, so turning the grid off repaints them at once. */
+    private static final List<WeakReference<NineTokDots>> LIVE = new ArrayList<>();
+
     private final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final float spacing;
     private final float radius;
@@ -31,6 +41,23 @@ public final class NineTokDots extends Drawable {
         float density = context.getResources().getDisplayMetrics().density;
         spacing = SPACING_DP * density;
         radius = Math.max(0.6f, RADIUS_DP * density);
+        synchronized (LIVE) {
+            LIVE.add(new WeakReference<>(this));
+        }
+    }
+
+    /** Repaints every grid still on screen, after the Dot grid switch changes. */
+    public static void refreshAll() {
+        synchronized (LIVE) {
+            for (Iterator<WeakReference<NineTokDots>> it = LIVE.iterator(); it.hasNext(); ) {
+                NineTokDots dots = it.next().get();
+                if (dots == null) {
+                    it.remove();
+                } else {
+                    dots.invalidateSelf();
+                }
+            }
+        }
     }
 
     @Override
@@ -38,6 +65,7 @@ public final class NineTokDots extends Drawable {
         Rect bounds = getBounds();
         paint.setColor(SettingsUi.background());
         canvas.drawRect(bounds, paint);
+        if (!Settings.NINETOK_DOT_GRID.get()) return;
 
         int alpha = SettingsUi.isDarkMode() ? DARK_ALPHA : LIGHT_ALPHA;
         paint.setColor((SettingsUi.textPrimary() & 0x00FFFFFF) | (alpha << 24));

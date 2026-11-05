@@ -80,6 +80,7 @@ public final class InterfacePreferenceCategory extends ConditionalPreferenceCate
 
     @Override
     public void addPreferences(Context context) {
+        addNineTokLook(context);
         addRightColumn(context);
         addButtonsOnVideos(context);
         addVideoInfo(context);
@@ -88,6 +89,12 @@ public final class InterfacePreferenceCategory extends ConditionalPreferenceCate
         addCaptions(context);
         addClearDisplay(context);
         addGestures(context);
+    }
+
+    /** NINE’tok's own look: the switch for the dot grid behind these pages. */
+    private void addNineTokLook(Context context) {
+        addPreference(new SectionHeadingPreference(context, "NINE’tok look"));
+        addPreference(new app.morphe.extension.tiktok.settings.preference.NineTokDotsTogglePreference(context));
     }
 
     private void addRightColumn(Context context) {
