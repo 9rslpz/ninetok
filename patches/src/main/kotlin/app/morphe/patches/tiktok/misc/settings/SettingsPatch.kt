@@ -348,7 +348,7 @@ val settingsPatch = bytecodePatch(
     default = true,
 ) {
     category("Settings")
-    dependsOn(sharedExtensionPatch)
+    dependsOn(sharedExtensionPatch, nineTokFontsPatch)
 
     compatibleWith(*AppCompatibilities.tiktokAndPineDrama())
 

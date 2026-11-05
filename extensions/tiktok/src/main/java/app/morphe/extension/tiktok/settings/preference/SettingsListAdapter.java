@@ -74,6 +74,12 @@ final class SettingsListAdapter extends BaseAdapter implements WrapperListAdapte
     }
 
     @Override public View getView(int position, View convertView, ViewGroup parent) {
+        View row = styledRow(position, convertView, parent);
+        NineTokType.applyTree(row);
+        return row;
+    }
+
+    private View styledRow(int position, View convertView, ViewGroup parent) {
         View row = delegate.getView(position, convertView, parent);
         if (isErrorMessage(getItem(position))) {
             SettingsUi.styleErrorHeading(row);

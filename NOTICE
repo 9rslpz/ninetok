@@ -7,6 +7,10 @@ the launcher icon and some default settings; the patch code comes from the
 projects named below. The notices that follow are reproduced from those projects
 and still apply to every copy of NINE’tok, source or built.
 
+The settings screen uses Manrope, Copyright 2018 The Manrope Project Authors,
+under the SIL Open Font License 1.1 (text in patches/src/main/resources/ninetok/fonts),
+and the Yaroslav Hand 14 handwriting by the NINE’tok author.
+
 
 Hushfeed NOTICE
 ===============

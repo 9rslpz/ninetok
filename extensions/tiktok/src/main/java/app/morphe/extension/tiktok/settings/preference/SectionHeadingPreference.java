@@ -45,11 +45,11 @@ public final class SectionHeadingPreference extends Preference {
 
         TextView title = new TextView(context);
         title.setId(android.R.id.title);
-        title.setTextColor(SettingsUi.accent());
-        title.setTextSize(13);
+        title.setTextColor(SettingsUi.textSecondary());
+        title.setTextSize(12);
         title.setTypeface(android.graphics.Typeface.create("sans-serif-medium", android.graphics.Typeface.NORMAL));
         title.setAllCaps(true);
-        title.setLetterSpacing(0);
+        title.setLetterSpacing(0.08f);
         title.setText(getTitle());
         SettingsUi.markHeading(title);
         layout.addView(title, new LinearLayout.LayoutParams(
@@ -62,8 +62,10 @@ public final class SectionHeadingPreference extends Preference {
         super.onBindView(view);
         TextView title = view.findViewById(android.R.id.title);
         if (title != null) {
+            // NineTokType writes the capitals into the text itself, so turn the caps back on first.
+            title.setAllCaps(true);
             title.setText(getTitle());
-            title.setTextColor(SettingsUi.accent());
+            title.setTextColor(SettingsUi.textSecondary());
         }
     }
 }

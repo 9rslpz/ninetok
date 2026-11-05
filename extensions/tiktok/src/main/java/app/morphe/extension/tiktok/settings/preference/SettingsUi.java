@@ -53,28 +53,31 @@ import app.morphe.extension.shared.Utils;
 import app.morphe.extension.tiktok.settings.L10n;
 
 public final class SettingsUi {
-    public static final @ColorInt int ACCENT = Color.argb(255, 240, 45, 99);
-    public static final @ColorInt int DARK_BACKGROUND = Color.argb(255, 13, 13, 16);
-    public static final @ColorInt int DARK_SURFACE = Color.argb(255, 21, 21, 26);
-    public static final @ColorInt int DARK_SURFACE_LIFTED = Color.argb(255, 32, 32, 39);
-    public static final @ColorInt int DARK_BORDER = Color.argb(255, 55, 55, 63);
-    public static final @ColorInt int DARK_DIVIDER = Color.argb(255, 29, 29, 34);
-    public static final @ColorInt int DARK_TEXT_PRIMARY = Color.argb(255, 242, 242, 245);
-    public static final @ColorInt int DARK_TEXT_SECONDARY = Color.argb(255, 151, 151, 159);
-    public static final @ColorInt int DARK_TEXT_DISABLED = Color.argb(255, 109, 109, 118);
+    // NINE’tok's palette: warm graphite and cream with one clay accent, quieter than TikTok's
+    // pink. Text is 15.8:1 (dark) and 17.5:1 (light), secondary text 6.6:1 and 6.3:1.
+    public static final @ColorInt int ACCENT = Color.argb(255, 217, 119, 87);
+    public static final @ColorInt int DARK_BACKGROUND = Color.argb(255, 31, 30, 29);
+    public static final @ColorInt int DARK_SURFACE = Color.argb(255, 38, 38, 36);
+    public static final @ColorInt int DARK_SURFACE_LIFTED = Color.argb(255, 48, 48, 46);
+    public static final @ColorInt int DARK_BORDER = Color.argb(255, 62, 62, 56);
+    public static final @ColorInt int DARK_DIVIDER = Color.argb(255, 46, 46, 43);
+    public static final @ColorInt int DARK_TEXT_PRIMARY = Color.argb(255, 250, 249, 245);
+    public static final @ColorInt int DARK_TEXT_SECONDARY = Color.argb(255, 166, 163, 154);
+    public static final @ColorInt int DARK_TEXT_DISABLED = Color.argb(255, 112, 110, 104);
     public static final @ColorInt int DARK_ERROR = Color.rgb(255, 138, 147);
 
-    public static final @ColorInt int LIGHT_BACKGROUND = Color.WHITE;
-    public static final @ColorInt int LIGHT_SURFACE = Color.WHITE;
-    public static final @ColorInt int LIGHT_SURFACE_LIFTED = Color.argb(255, 250, 250, 250);
-    public static final @ColorInt int LIGHT_BORDER = Color.argb(255, 210, 210, 210);
-    public static final @ColorInt int LIGHT_DIVIDER = Color.argb(255, 224, 224, 224);
-    public static final @ColorInt int LIGHT_TEXT_PRIMARY = Color.BLACK;
-    public static final @ColorInt int LIGHT_TEXT_SECONDARY = Color.argb(255, 80, 80, 80);
-    public static final @ColorInt int LIGHT_TEXT_DISABLED = Color.argb(255, 140, 140, 140);
+    public static final @ColorInt int LIGHT_BACKGROUND = Color.argb(255, 250, 249, 245);
+    public static final @ColorInt int LIGHT_SURFACE = Color.argb(255, 250, 249, 245);
+    public static final @ColorInt int LIGHT_SURFACE_LIFTED = Color.argb(255, 240, 238, 230);
+    public static final @ColorInt int LIGHT_BORDER = Color.argb(255, 222, 217, 204);
+    public static final @ColorInt int LIGHT_DIVIDER = Color.argb(255, 232, 229, 220);
+    public static final @ColorInt int LIGHT_TEXT_PRIMARY = Color.argb(255, 20, 20, 19);
+    public static final @ColorInt int LIGHT_TEXT_SECONDARY = Color.argb(255, 94, 93, 89);
+    public static final @ColorInt int LIGHT_TEXT_DISABLED = Color.argb(255, 146, 143, 135);
     public static final @ColorInt int LIGHT_ERROR = Color.rgb(180, 35, 61);
 
-    public static final int LIGHT_ACCENT = Color.rgb(184, 22, 77);
+    /** The clay accent dark enough for white text on it (5.0:1) and for text on cream (4.7:1). */
+    public static final int LIGHT_ACCENT = Color.rgb(180, 83, 47);
 
     static final @ColorInt int DARK_SWITCH_TRACK_OFF = Color.rgb(5, 5, 7);
     static final @ColorInt int LIGHT_SWITCH_TRACK_OFF = Color.rgb(180, 180, 186);
@@ -958,6 +961,7 @@ public final class SettingsUi {
         textView.setTextColor(enabledTextColors(color));
         textView.setTextSize(sizeSp);
         textView.setTypeface(textView.getTypeface(), style);
+        NineTokType.apply(textView);
         return textView;
     }
 
