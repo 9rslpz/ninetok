@@ -1,3 +1,16 @@
+# [1.0.0-dev.3](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2026-11-05)
+
+
+### Features
+
+* **settings:** plain line icons and the 9rslpz Hand font name ([d1e0b0e](https://github.com/9rslpz/ninetok/commit/d1e0b0e56cc6cb3942a4c63e9011e27007322328))
+
+
+
+
+
+## 1.0.0-dev.3
+
 # [1.0.0-dev.2](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2026-11-05)
 
 
