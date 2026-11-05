@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-11-05T21:03:54",
-  "description": "# [1.0.0-dev.6](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.5...v1.0.0-dev.6) (2026-11-05)\n\n\n### Features\n\n* **settings:** theme choice with dark gray and OLED black ([ab666be](https://github.com/9rslpz/ninetok/commit/ab666be4b0f7f7e7cf632d09aed9eba554885126))\n\n\n\n\n\n## 1.0.0-dev.6",
-  "download_url": "https://github.com/9rslpz/ninetok/releases/download/v1.0.0-dev.6/patches-1.0.0-dev.6.mpp",
+  "created_at": "2026-11-05T21:10:01",
+  "description": "# [1.0.0-dev.7](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.6...v1.0.0-dev.7) (2026-11-05)\n\n\n### Features\n\n* Sora across TikTok, filled icon tiles, OLED settings in black builds ([be87489](https://github.com/9rslpz/ninetok/commit/be87489615edd9530ad135b30c3e39800b053603))\n\n\n\n\n\n## 1.0.0-dev.7",
+  "download_url": "https://github.com/9rslpz/ninetok/releases/download/v1.0.0-dev.7/patches-1.0.0-dev.7.mpp",
   "signature_download_url": "",
-  "version": "1.0.0-dev.6"
+  "version": "1.0.0-dev.7"
 }

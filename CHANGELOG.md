@@ -1,3 +1,16 @@
+# [1.0.0-dev.7](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.6...v1.0.0-dev.7) (2026-11-05)
+
+
+### Features
+
+* Sora across TikTok, filled icon tiles, OLED settings in black builds ([be87489](https://github.com/9rslpz/ninetok/commit/be87489615edd9530ad135b30c3e39800b053603))
+
+
+
+
+
+## 1.0.0-dev.7
+
 # [1.0.0-dev.6](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.5...v1.0.0-dev.6) (2026-11-05)
 
 
