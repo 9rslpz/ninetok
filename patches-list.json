@@ -1,5 +1,5 @@
 {
-  "version": "v0.9.0-dev.7",
+  "version": "v1.0.0-dev.1",
   "appNames": {
     "com.zhiliaoapp.musically": "TikTok"
   },
@@ -709,7 +709,7 @@
           "description": "The name shown under the app icon, up to 50 characters.",
           "required": true,
           "type": "kotlin.String",
-          "default": "NINE’tok",
+          "default": "9’tok",
           "values": null
         }
       ]
