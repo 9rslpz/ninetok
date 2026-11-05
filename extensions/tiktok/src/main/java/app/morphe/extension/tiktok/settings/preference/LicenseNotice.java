@@ -37,7 +37,7 @@ public final class LicenseNotice {
             "\n" +
             "The settings screen uses Manrope, Copyright 2018 The Manrope Project Authors,\n" +
             "under the SIL Open Font License 1.1 (text in patches/src/main/resources/ninetok/fonts),\n" +
-            "and the Yaroslav Hand 14 handwriting by the NINE’tok author.\n" +
+            "and the 9rslpz Hand handwriting by the NINE’tok author.\n" +
             "\n" +
             "\n" +
             "Hushfeed NOTICE\n" +

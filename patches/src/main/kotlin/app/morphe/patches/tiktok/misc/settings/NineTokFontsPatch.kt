@@ -8,7 +8,7 @@ internal const val NINETOK_FONT_ASSETS = "assets/ninetok/fonts"
 
 /**
  * The settings screen's typefaces: Manrope (SIL Open Font License, see OFL-Manrope.txt) for the
- * text, and the Yaroslav Hand 14 handwriting for the letters NINE in the name.
+ * text, and the 9rslpz Hand handwriting for the letters NINE in the name.
  */
 internal val NINETOK_FONTS = listOf("sans-regular.ttf", "sans-medium.ttf", "sans-semibold.ttf", "hand.ttf", "OFL-Manrope.txt")
 

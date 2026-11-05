@@ -15,6 +15,7 @@
 What it changes compared with the project it comes from:
 
 - its own name and launcher icon (`9’tok` under the icon, `NINE’tok` in the settings menu);
+- its own settings look: Manrope type, a warm graphite and cream palette, plain line icons, and the name’s NINE in the 9rslpz Hand handwriting;
 - region spoof is on out of the box (SIM, locale and time zone, region fields in requests), so saved posts, reposts and shared videos stay visible where TikTok would hide foreign content;
 - the startup splash ad, comment pop-up ads and the floating coin and rewards promotions are hidden by default;
 - Duet and Stitch show on every video, and sign-in skips passkeys, by default.

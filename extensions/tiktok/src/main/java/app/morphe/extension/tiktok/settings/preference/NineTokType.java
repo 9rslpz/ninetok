@@ -19,7 +19,7 @@ import android.widget.TextView;
 import java.util.Locale;
 
 /**
- * The settings screen's type: Manrope for the text, and the Yaroslav Hand 14 handwriting for the
+ * The settings screen's type: Manrope for the text, and the 9rslpz Hand handwriting for the
  * letters NINE wherever the name appears. The fonts are assets the Settings patch copies into the
  * APK; a view keeps the system font when one of them can't be read.
  */

@@ -325,10 +325,9 @@ public final class SettingsMenuPreference extends Preference {
             border.setColor(SettingsUi.isDarkMode() ? Color.rgb(48, 48, 56) : Color.rgb(224, 224, 228));
             border.setStyle(Paint.Style.STROKE);
             border.setStrokeWidth(SettingsUi.strokePx(context, 1f));
-            line.setColor(icon == Icon.SEARCH ? SettingsUi.textSecondary()
-                    : SettingsUi.isDarkMode() ? Color.rgb(207, 207, 215) : Color.rgb(72, 72, 78));
+            line.setColor(icon == Icon.SEARCH ? SettingsUi.textSecondary() : SettingsUi.textPrimary());
             line.setStyle(Paint.Style.STROKE);
-            line.setStrokeWidth(SettingsUi.strokePx(context, 1.8f));
+            line.setStrokeWidth(SettingsUi.strokePx(context, 1.5f));
             line.setStrokeCap(Paint.Cap.ROUND);
             line.setStrokeJoin(Paint.Join.ROUND);
         }
@@ -336,18 +335,12 @@ public final class SettingsMenuPreference extends Preference {
         @Override
         public void draw(Canvas canvas) {
             RectF bounds = new RectF(getBounds());
-            // A fifth of the width made 10.4dp on a row's 52dp tile and 6.4dp on a quick route's
-            // 32dp one, neither on the scale. Row tiles take the card radius, small ones the
-            // control radius.
-            float radius = bounds.width() * 0.28f;
             if (compact) {
                 // Existing glyphs occupy the middle of a tile. Expand their drawing coordinate
                 // space to retain a readable 20dp mark inside the compact 24dp image.
                 bounds.inset(-bounds.width() * 0.425f, -bounds.height() * 0.425f);
-            } else {
-                canvas.drawRoundRect(bounds, radius, radius, fill);
-                canvas.drawRoundRect(bounds, radius, radius, border);
             }
+            // NINE’tok draws the glyph on its own, with no tile behind it.
 
             float left = bounds.left + bounds.width() * 0.27f;
             float right = bounds.right - bounds.width() * 0.27f;
