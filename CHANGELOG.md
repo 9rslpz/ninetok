@@ -1,3 +1,16 @@
+# [1.0.0-dev.6](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.5...v1.0.0-dev.6) (2026-11-05)
+
+
+### Features
+
+* **settings:** theme choice with dark gray and OLED black ([ab666be](https://github.com/9rslpz/ninetok/commit/ab666be4b0f7f7e7cf632d09aed9eba554885126))
+
+
+
+
+
+## 1.0.0-dev.6
+
 # [1.0.0-dev.5](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.4...v1.0.0-dev.5) (2026-11-05)
 
 
