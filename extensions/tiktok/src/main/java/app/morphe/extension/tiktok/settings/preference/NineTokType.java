@@ -118,6 +118,8 @@ public final class NineTokType {
         if (!allCaps && text instanceof Spanned
                 && ((Spanned) text).getSpans(0, text.length(), HandSpan.class).length > 0) return;
 
+        // The name keeps its lower-case tok in capitals headings too: NINE’TOK reads as a Russian word.
+        if (allCaps) shown = shown.replace("NINE’TOK", "NINE’tok");
         SpannableString branded = new SpannableString(allCaps ? shown : text);
         for (int i = shown.indexOf(BRAND); i >= 0; i = shown.indexOf(BRAND, i + BRAND.length())) {
             branded.setSpan(new HandSpan(hand), i, i + BRAND.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);

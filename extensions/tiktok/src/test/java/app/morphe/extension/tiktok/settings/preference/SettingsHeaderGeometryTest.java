@@ -92,7 +92,7 @@ public class SettingsHeaderGeometryTest {
                     View.MeasureSpec.makeMeasureSpec(SettingsUi.dp(activity, 800), View.MeasureSpec.EXACTLY));
             root.layout(0, 0, root.getMeasuredWidth(), root.getMeasuredHeight());
 
-            TextView brand = textViewWithText(header, "NINE’TOK");
+            TextView brand = textViewWithText(header, "NINE’tok");
             TextView status = header.findViewWithTag("hushfeed_compact_status");
             assertNotNull(brand);
             assertNotNull(status);

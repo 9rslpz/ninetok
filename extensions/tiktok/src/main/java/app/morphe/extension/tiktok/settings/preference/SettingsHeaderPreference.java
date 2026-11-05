@@ -25,7 +25,7 @@ import app.morphe.extension.shared.settings.preference.AbstractPreferenceFragmen
 @SuppressWarnings("deprecation")
 public final class SettingsHeaderPreference extends Preference {
     /** The product name, which reads the same in every language and is not translated. */
-    private static final String BRAND_MARK = "NINE’TOK";
+    private static final String BRAND_MARK = "NINE’tok";
 
     private enum Kind {
         MASTER,
