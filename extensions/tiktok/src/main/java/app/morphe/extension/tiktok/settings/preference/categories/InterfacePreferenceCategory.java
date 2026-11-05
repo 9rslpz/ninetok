@@ -91,9 +91,10 @@ public final class InterfacePreferenceCategory extends ConditionalPreferenceCate
         addGestures(context);
     }
 
-    /** NINE’tok's own look: the switch for the dot grid behind these pages. */
+    /** NINE’tok's own look: the settings theme and the dot grid behind these pages. */
     private void addNineTokLook(Context context) {
         addPreference(new SectionHeadingPreference(context, "NINE’tok look"));
+        addPreference(new app.morphe.extension.tiktok.settings.preference.NineTokThemePreference(context));
         addPreference(new app.morphe.extension.tiktok.settings.preference.NineTokDotsTogglePreference(context));
     }
 

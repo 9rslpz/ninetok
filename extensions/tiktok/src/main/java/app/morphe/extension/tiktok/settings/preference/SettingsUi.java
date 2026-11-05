@@ -189,8 +189,31 @@ public final class SettingsUi {
     public static void syncDarkMode(Context context) {
         int nightMode = context.getResources().getConfiguration().uiMode
                 & Configuration.UI_MODE_NIGHT_MASK;
-        Utils.setIsDarkModeEnabled(nightMode == Configuration.UI_MODE_NIGHT_YES);
+        String theme = nineTokTheme();
+        boolean dark = "dark".equals(theme) || "oled".equals(theme)
+                || (!"light".equals(theme) && nightMode == Configuration.UI_MODE_NIGHT_YES);
+        Utils.setIsDarkModeEnabled(dark);
     }
+
+    /** NINE’tok's theme choice: tiktok, light, dark or oled. Follows TikTok if it can't be read. */
+    static String nineTokTheme() {
+        try {
+            return app.morphe.extension.tiktok.settings.Settings.NINETOK_THEME.get();
+        } catch (RuntimeException e) {
+            return "tiktok";
+        }
+    }
+
+    /** Pure black surfaces for OLED screens, picked over the graphite ones in the dark theme. */
+    private static boolean oled() {
+        return "oled".equals(nineTokTheme());
+    }
+
+    public static final @ColorInt int OLED_BACKGROUND = Color.BLACK;
+    public static final @ColorInt int OLED_SURFACE = Color.argb(255, 12, 12, 11);
+    public static final @ColorInt int OLED_SURFACE_LIFTED = Color.argb(255, 24, 24, 22);
+    public static final @ColorInt int OLED_BORDER = Color.argb(255, 46, 46, 42);
+    public static final @ColorInt int OLED_DIVIDER = Color.argb(255, 28, 28, 26);
 
     public static boolean isDarkMode() {
         return isDarkModeEnabled();
@@ -845,7 +868,7 @@ public final class SettingsUi {
     }
 
     public static @ColorInt int backgroundOn(boolean dark) {
-        return dark ? DARK_BACKGROUND : LIGHT_BACKGROUND;
+        return dark ? (oled() ? OLED_BACKGROUND : DARK_BACKGROUND) : LIGHT_BACKGROUND;
     }
 
     public static @ColorInt int surface() {
@@ -853,7 +876,7 @@ public final class SettingsUi {
     }
 
     public static @ColorInt int surfaceOn(boolean dark) {
-        return dark ? DARK_SURFACE : LIGHT_SURFACE;
+        return dark ? (oled() ? OLED_SURFACE : DARK_SURFACE) : LIGHT_SURFACE;
     }
 
     public static @ColorInt int liftedSurface() {
@@ -861,7 +884,7 @@ public final class SettingsUi {
     }
 
     public static @ColorInt int liftedSurfaceOn(boolean dark) {
-        return dark ? DARK_SURFACE_LIFTED : LIGHT_SURFACE_LIFTED;
+        return dark ? (oled() ? OLED_SURFACE_LIFTED : DARK_SURFACE_LIFTED) : LIGHT_SURFACE_LIFTED;
     }
 
     public static @ColorInt int border() {
@@ -869,7 +892,7 @@ public final class SettingsUi {
     }
 
     public static @ColorInt int borderOn(boolean dark) {
-        return dark ? DARK_BORDER : LIGHT_BORDER;
+        return dark ? (oled() ? OLED_BORDER : DARK_BORDER) : LIGHT_BORDER;
     }
 
     public static @ColorInt int divider() {
@@ -877,7 +900,7 @@ public final class SettingsUi {
     }
 
     public static @ColorInt int dividerOn(boolean dark) {
-        return dark ? DARK_DIVIDER : LIGHT_DIVIDER;
+        return dark ? (oled() ? OLED_DIVIDER : DARK_DIVIDER) : LIGHT_DIVIDER;
     }
 
     public static @ColorInt int textPrimary() {

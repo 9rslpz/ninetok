@@ -273,6 +273,8 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting SKIP_SPLASH_AD = new BooleanSetting("skip_splash_ad", TRUE, true);
     /** NINE’tok: the faint dot grid behind the settings screen. On by default. */
     public static final BooleanSetting NINETOK_DOT_GRID = new BooleanSetting("ninetok_dot_grid", TRUE);
+    /** NINE’tok: the settings theme. tiktok follows TikTok's own theme; light, dark or oled pick one. */
+    public static final StringSetting NINETOK_THEME = new StringSetting("ninetok_theme", "tiktok");
     public static final BooleanSetting SKIP_UPDATE_CHECKS = new BooleanSetting("skip_update_checks", FALSE, true);
     public static final BooleanSetting LIMIT_BACKGROUND_TRAFFIC =
             new BooleanSetting("limit_background_traffic", FALSE, true);
