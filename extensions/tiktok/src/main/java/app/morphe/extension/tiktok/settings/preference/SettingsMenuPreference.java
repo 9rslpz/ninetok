@@ -321,7 +321,8 @@ public final class SettingsMenuPreference extends Preference {
             this.icon = icon;
             this.compact = compact;
             density = context.getResources().getDisplayMetrics().density;
-            fill.setColor(SettingsUi.background());
+            // A cream tile one step off the page (lighter graphite in the dark themes).
+            fill.setColor(SettingsUi.liftedSurface());
             border.setColor(SettingsUi.border());
             border.setStyle(Paint.Style.STROKE);
             border.setStrokeWidth(SettingsUi.strokePx(context, 1f));

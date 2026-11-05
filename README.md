@@ -15,7 +15,8 @@
 What it changes compared with the project it comes from:
 
 - its own name and launcher icon (`9’tok` under the icon, `NINE’tok` in the settings menu);
-- its own settings look: Sora type, a warm graphite and cream palette for light and dark mode, a faint Nothing-style dot grid behind the page, and the name’s NINE in the 9rslpz Hand handwriting;
+- Sora across all of TikTok (through Use system font) and its own settings look: Sora type, a warm graphite and cream palette for light and dark mode, a faint Nothing-style dot grid behind the page, and the name’s NINE in the 9rslpz Hand handwriting;
+- builds with the clay accent `#D97757` (Accent color) and a warm dark gray `#1F1E1D` or OLED black `#000000` dark theme (AMOLED dark theme); the settings follow along, or pick Light, Dark gray or OLED black in NINE’tok look;
 - region spoof is on out of the box (SIM, locale and time zone, region fields in requests), so saved posts, reposts and shared videos stay visible where TikTok would hide foreign content;
 - the startup splash ad, comment pop-up ads and the floating coin and rewards promotions are hidden by default;
 - Duet and Stitch show on every video, and sign-in skips passkeys, by default.

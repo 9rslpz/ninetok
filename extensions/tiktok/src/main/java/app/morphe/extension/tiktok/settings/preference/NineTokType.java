@@ -33,6 +33,7 @@ public final class NineTokType {
     private static Typeface regular;
     private static Typeface medium;
     private static Typeface semibold;
+    private static Typeface bold;
     private static Typeface hand;
     private static boolean loaded;
 
@@ -66,7 +67,24 @@ public final class NineTokType {
         regular = font(context, "sans-regular.ttf");
         medium = font(context, "sans-medium.ttf");
         semibold = font(context, "sans-semibold.ttf");
+        bold = font(context, "sans-bold.ttf");
         hand = font(context, "hand.ttf");
+    }
+
+    /**
+     * TikTok's own text in Sora, for Use system font's hook: the bundled weight nearest to the one
+     * TikTok built, still italic where it was. Null when the fonts can't be read yet, so TikTok
+     * keeps its own.
+     */
+    public static Typeface appFace(Typeface original) {
+        if (original == null) return null;
+        Context context = app.morphe.extension.shared.Utils.getContext();
+        if (context == null) return null;
+        load(context);
+        int weight = Build.VERSION.SDK_INT >= 28 ? original.getWeight() : (original.isBold() ? 700 : 400);
+        Typeface face = weight >= 650 ? bold : weight >= 550 ? semibold : weight >= 450 ? medium : regular;
+        if (face == null) return null;
+        return original.isItalic() ? Typeface.create(face, Typeface.ITALIC) : face;
     }
 
     private static Typeface font(Context context, String name) {
@@ -79,7 +97,8 @@ public final class NineTokType {
 
     /** The Sora weight nearest to what the view asked for; one of ours is kept as it is. */
     private static Typeface sansFor(Typeface current) {
-        if (current != null && (current == regular || current == medium || current == semibold)) return current;
+        if (current != null && (current == regular || current == medium || current == semibold
+                || current == bold)) return current;
         if (current != null && current.isBold()) return semibold;
         if (current != null && Build.VERSION.SDK_INT >= 28) {
             int weight = current.getWeight();

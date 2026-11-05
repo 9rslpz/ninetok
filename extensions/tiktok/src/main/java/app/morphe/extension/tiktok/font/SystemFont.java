@@ -41,9 +41,14 @@ public final class SystemFont {
      */
     public static Typeface systemize(Typeface original) {
         Typeface family = replacementFamily();
+        // NINE’tok: with neither switch above on, TikTok's text is drawn in the bundled Sora.
+        Typeface nineTok = family == null && Settings.NINETOK_APP_FONT.get()
+                ? app.morphe.extension.tiktok.settings.preference.NineTokType.appFace(original) : null;
         // Reported whichever way the switches are set, so an export separates "patch not present"
         // from "present and off" from "present and swapping", and says which font it swaps in.
-        HookStatus.bound(HOOK_FAMILY, family == null ? "tiktok" : family == Typeface.DEFAULT ? "system" : "imported");
+        HookStatus.bound(HOOK_FAMILY, nineTok != null ? "ninetok" : family == null ? "tiktok"
+                : family == Typeface.DEFAULT ? "system" : "imported");
+        if (nineTok != null) return nineTok;
         if (family == null || original == null) return original;
         try {
             if (Build.VERSION.SDK_INT >= 28) {

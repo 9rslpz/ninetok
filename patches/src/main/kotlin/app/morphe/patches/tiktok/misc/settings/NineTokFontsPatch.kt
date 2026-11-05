@@ -7,10 +7,13 @@ import app.morphe.patcher.patch.rawResourcePatch
 internal const val NINETOK_FONT_ASSETS = "assets/ninetok/fonts"
 
 /**
- * The settings screen's typefaces: Sora (SIL Open Font License, see OFL-Sora.txt) for the
- * text, and the 9rslpz Hand handwriting for the letters NINE in the name.
+ * NINE’tok's typefaces: Sora (SIL Open Font License, see OFL-Sora.txt) for the settings and,
+ * through Use system font, for TikTok's own text, and the 9rslpz Hand handwriting for the letters
+ * NINE in the name.
  */
-internal val NINETOK_FONTS = listOf("sans-regular.ttf", "sans-medium.ttf", "sans-semibold.ttf", "hand.ttf", "OFL-Sora.txt")
+internal val NINETOK_FONTS = listOf(
+    "sans-regular.ttf", "sans-medium.ttf", "sans-semibold.ttf", "sans-bold.ttf", "hand.ttf", "OFL-Sora.txt",
+)
 
 /** A class of this bundle, so the lookup goes through the class loader that holds the fonts. */
 private object NineTokFontResources

@@ -96,6 +96,9 @@ public final class InterfacePreferenceCategory extends ConditionalPreferenceCate
         addPreference(new SectionHeadingPreference(context, "NINE’tok look"));
         addPreference(new app.morphe.extension.tiktok.settings.preference.NineTokThemePreference(context));
         addPreference(new app.morphe.extension.tiktok.settings.preference.NineTokDotsTogglePreference(context));
+        addPreference(new TogglePreference(context, "Sora across TikTok",
+                "Draw TikTok's own text in Sora too. Use system font and imported fonts take over while on.",
+                Settings.NINETOK_APP_FONT));
     }
 
     private void addRightColumn(Context context) {

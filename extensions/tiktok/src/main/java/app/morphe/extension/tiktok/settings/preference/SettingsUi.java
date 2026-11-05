@@ -204,9 +204,34 @@ public final class SettingsUi {
         }
     }
 
-    /** Pure black surfaces for OLED screens, picked over the graphite ones in the dark theme. */
+    /**
+     * Pure black surfaces for OLED screens, picked over the graphite ones in the dark theme: when
+     * chosen, or when following TikTok in an APK whose dark theme was patched to pure black.
+     */
     private static boolean oled() {
-        return "oled".equals(nineTokTheme());
+        String theme = nineTokTheme();
+        return "oled".equals(theme) || ("tiktok".equals(theme) && blackTikTokBuild());
+    }
+
+    private static Boolean blackTikTokBuild;
+
+    /** Whether AMOLED dark theme painted this APK's TikTok black, read once from its build details. */
+    private static boolean blackTikTokBuild() {
+        if (blackTikTokBuild == null) {
+            boolean black = false;
+            try {
+                String metadata = Utils.getBuildMetadata();
+                if (metadata != null) {
+                    for (String line : metadata.split("\n")) {
+                        if (line.trim().equalsIgnoreCase("amoled_color=#000000")) black = true;
+                    }
+                }
+            } catch (RuntimeException e) {
+                // No build details: treat it as TikTok's own dark gray.
+            }
+            blackTikTokBuild = black;
+        }
+        return blackTikTokBuild;
     }
 
     public static final @ColorInt int OLED_BACKGROUND = Color.BLACK;
