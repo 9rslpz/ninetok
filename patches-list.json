@@ -1,5 +1,5 @@
 {
-  "version": "v1.0.0-dev.1",
+  "version": "v1.0.0-dev.2",
   "appNames": {
     "com.zhiliaoapp.musically": "TikTok"
   },
@@ -4231,7 +4231,8 @@
       "category": "Settings",
       "use": true,
       "dependencies": [
-        "BytecodePatch"
+        "BytecodePatch",
+        "RawResourcePatch"
       ],
       "compatiblePackages": {
         "com.zhiliaoapp.musically": [

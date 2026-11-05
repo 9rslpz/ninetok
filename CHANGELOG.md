@@ -1,3 +1,16 @@
+# [1.0.0-dev.2](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2026-11-05)
+
+
+### Features
+
+* **settings:** give the settings screen its own NINE’tok look ([4338a8c](https://github.com/9rslpz/ninetok/commit/4338a8ce21ca30a7e8102f908c0e8150eb42da31))
+
+
+
+
+
+## 1.0.0-dev.2
+
 # 1.0.0-dev.1 (2026-11-05)
 
 
