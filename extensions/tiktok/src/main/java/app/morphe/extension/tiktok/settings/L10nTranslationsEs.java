@@ -3603,12 +3603,6 @@ final class L10nTranslationsEs {
                 "Subtítulos");
         table.put("Subtitles: %1$s",
                 "Subtítulos: %1$s");
-        table.put("Support",
-                "Support");
-        table.put("Support NINE’tok",
-                "Apoya NINE’tok");
-        table.put("Support the original patch author",
-                "Support the original patch author");
         table.put("Swap the website in shared links",
                 "Cambiar el sitio web en los enlaces compartidos");
         table.put("Swipe for brightness and volume",

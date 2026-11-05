@@ -19,7 +19,7 @@ public final class MorpheTikTokAboutPreference extends Preference
      * "version" found nothing even though the row carries it.
      */
     public static final String KEY = "action_about";
-    public static final String SOURCE_URL = "https://github.com/icysymmetra/tiktok-patches-for-morphe";
+    public static final String SOURCE_URL = "https://github.com/9rslpz/ninetok";
 
     public MorpheTikTokAboutPreference(Context context) {
         this(context, Utils.getPatchesReleaseVersion(), Utils.getAppVersionName());

@@ -162,7 +162,7 @@ class ReadmePatchNamesTest {
         val version = index.get("version").asString
         val download = index.get("download_url").asString
         assertTrue(download.endsWith("/v$version/patches-$version.mpp"))
-        assertTrue(download.startsWith("https://github.com/icysymmetra/tiktok-patches-for-morphe/"))
+        assertTrue(download.startsWith("https://github.com/9rslpz/ninetok/"))
         assertTrue(readme.contains("global TikTok " + Fixtures.declaredVersions().single()))
         assertTrue(readme.contains("The stable release still targets 46.2.3."))
         assertTrue(readme.contains("Android runtime testing is pending."))

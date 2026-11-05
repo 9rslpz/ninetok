@@ -44,13 +44,13 @@ public class SettingsPagesTest {
             "Diagnostics", "Backup and restore"};
     /**
      * The home page under search and Quick setups: each heading and the rows under it, with the
-     * two rows that leave settings, the report and Ko-fi, last.
+     * row that leaves settings, the report, last.
      */
     private static final String[] HOME_LAYOUT = {
             "Feed controls", "Feed navigation", "Interface", "Comments and translation", "Downloads",
             "Region spoof", "Share sheet", "App behavior",
             "# NINE’tok", "[status card]", "[Pause NINE’tok]", "Diagnostics", "Backup and restore", "About NINE’tok",
-            "Report a problem", "Support NINE’tok"};
+            "Report a problem"};
     private final Map<Field, Boolean> statuses = new LinkedHashMap<>();
 
     public static class PageActivity extends Activity {
@@ -428,7 +428,7 @@ public class SettingsPagesTest {
 
     /**
      * Every page is a row on the home page itself, under the heading it belongs with, and
-     * Hushfeed's own rows come last with the Ko-fi row at the very end. No row opens another
+     * Hushfeed's own rows come last with Report a problem at the very end. No row opens another
      * menu: the Hush standard allows one level below the home page (Matt, 2026-10-12), and the
      * four groups that sat between it and Feed filter, Comments, Downloads or Region were a
      * second one.
@@ -627,7 +627,7 @@ public class SettingsPagesTest {
             Shadows.shadowOf(Looper.getMainLooper()).idle();
             UiCapture.save(home.getView(), "pages/" + theme + "/settings.png");
             // The rest of the home page: the headings further down, the Hushfeed group with the
-            // status card and Pause, and the report and Ko-fi rows at the end.
+            // status card and Pause, and the report row at the end.
             ListView homeList = home.getView().findViewById(android.R.id.list);
             homeList.setSelection(homeList.getCount() - 1);
             Shadows.shadowOf(Looper.getMainLooper()).idle();

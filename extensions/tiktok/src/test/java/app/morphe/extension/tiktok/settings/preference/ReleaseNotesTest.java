@@ -322,7 +322,7 @@ public class ReleaseNotesTest {
                     .getNextStartedActivity();
             assertNotNull(opened);
             assertEquals(Intent.ACTION_VIEW, opened.getAction());
-            assertEquals("https://github.com/icysymmetra/tiktok-patches-for-morphe/blob/main/CHANGELOG.md", opened.getDataString());
+            assertEquals("https://github.com/9rslpz/ninetok/blob/dev/CHANGELOG.md", opened.getDataString());
             assertTrue(ReleaseNotes.pending(activity, "0.8.0"));
             assertFalse(rowRemoved.get());
             assertEquals(null, activity.getSharedPreferences(ReleaseNotes.PREFS_NAME, Context.MODE_PRIVATE)

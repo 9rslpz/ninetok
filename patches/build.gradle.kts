@@ -255,10 +255,10 @@ patches {
     about {
         name = "NINE’tok"
         description = "NINE’tok for TikTok 47.4.3, built for Morphe. Fewer accidental taps, less noise, more control over the feed, inbox, comments and downloads."
-        source = "https://github.com/icysymmetra/tiktok-patches-for-morphe"
+        source = "https://github.com/9rslpz/ninetok"
         author = "NINE’tok, based on icysymmetra’s tiktok-patches-for-morphe"
-        contact = "https://github.com/icysymmetra/tiktok-patches-for-morphe/issues"
-        website = "https://github.com/icysymmetra/tiktok-patches-for-morphe"
+        contact = "https://github.com/9rslpz/ninetok/issues"
+        website = "https://github.com/9rslpz/ninetok"
         license = "GNU General Public License v3.0, with additional GPL section 7 requirements"
     }
 }

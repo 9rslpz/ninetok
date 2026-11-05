@@ -27,7 +27,7 @@ import app.morphe.extension.shared.Utils;
  * serial or a file path: titles, versions and the model only.
  */
 public final class ProblemReport {
-    static final String NEW_ISSUE_URL = "https://github.com/icysymmetra/tiktok-patches-for-morphe/issues/new";
+    static final String NEW_ISSUE_URL = "https://github.com/9rslpz/ninetok/issues/new";
     /** The bug form in .github/ISSUE_TEMPLATE, whose field ids the link fills. */
     static final String TEMPLATE = "bug_report.yml";
     /** The form's own title prefix; the reporter adds the rest. */

@@ -175,7 +175,7 @@ public class SettingsActionFlowTest {
         Intent opened = Shadows.shadowOf(RuntimeEnvironment.getApplication()).getNextStartedActivity();
         assertNotNull("clicking the about row launched nothing", opened);
         assertEquals(Intent.ACTION_VIEW, opened.getAction());
-        assertEquals("https://github.com/icysymmetra/tiktok-patches-for-morphe", opened.getDataString());
+        assertEquals("https://github.com/9rslpz/ninetok", opened.getDataString());
         assertTrue((opened.getFlags() & Intent.FLAG_ACTIVITY_NEW_TASK) != 0);
     }
 

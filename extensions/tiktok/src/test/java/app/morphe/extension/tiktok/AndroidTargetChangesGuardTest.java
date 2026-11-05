@@ -125,13 +125,13 @@ public class AndroidTargetChangesGuardTest {
         REVIEWED_ADDRESSES.put("https://music.youtube.com/search?q=",
                 "not fetched: built for an ACTION_VIEW intent handed to the installed YouTube "
                         + "Music app, which opens it as its own search");
-        REVIEWED_ADDRESSES.put("https://github.com/icysymmetra/tiktok-patches-for-morphe",
+        REVIEWED_ADDRESSES.put("https://github.com/9rslpz/ninetok",
                 "not fetched: the source link on the About row, opened in the reader's browser");
         REVIEWED_ADDRESSES.put("https://",
                 "not a host: the scheme itself, put in front of an address that arrived without "
                         + "one before a browser is asked to open it, and asked about before a "
                         + "share link is reused");
-        REVIEWED_ADDRESSES.put("https://github.com/icysymmetra/tiktok-patches-for-morphe/blob/main/CHANGELOG.md",
+        REVIEWED_ADDRESSES.put("https://github.com/9rslpz/ninetok/blob/dev/CHANGELOG.md",
                 "not fetched: the full release history link, opened in the reader's browser");
         REVIEWED_ADDRESSES.put("https://github.com/SysAdminDoc/hushfeed/blob/main/LICENSE",
                 "not fetched: the button beside the notice, opened in the reader's browser");
@@ -141,14 +141,12 @@ public class AndroidTargetChangesGuardTest {
                 "not fetched: printed inside the notice the Licenses row shows");
         REVIEWED_ADDRESSES.put("https://www.gnu.org/licenses/gpl-3.0.html",
                 "not fetched: printed inside the notice the Licenses row shows");
-        REVIEWED_ADDRESSES.put("https://github.com/icysymmetra/tiktok-patches-for-morphe/issues/new",
+        REVIEWED_ADDRESSES.put("https://github.com/9rslpz/ninetok/issues/new",
                 "not fetched: the bug form Report a problem fills in, opened in the reader's "
                         + "browser");
         REVIEWED_ADDRESSES.put("https://github.com/login?return_to=",
                 "not fetched or opened: only its length is counted, so Report a problem's link "
                         + "still fits once GitHub's sign-in page wraps it");
-        REVIEWED_ADDRESSES.put("https://ko-fi.com/P5P5YOUU7",
-                "not fetched: the Support NINE’tok row, opened in the reader's browser");
         REVIEWED_ADDRESSES.put("https://(?:(?:vm|vt)\\\\.tiktok\\\\.com/[A-Za-z0-9]+|(?:www\\\\.|m\\\\.)?"
                         + "tiktok\\\\.com/t/[A-Za-z0-9]{4,20})/?",
                 "not a host: the pattern that finds a TikTok short link in copied text. The "

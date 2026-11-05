@@ -91,8 +91,6 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
     /** The page names a restart's return marker carries ({@link #pageKey}). */
     public static final String PAGE_HOME = "home";
     static final String REPORT_PROBLEM_KEY = "action_report_problem";
-    static final String SUPPORT_KEY = "action_support_hushfeed";
-    static final String SUPPORT_URL = "https://ko-fi.com/P5P5YOUU7";
     static final String PAGE_SEARCH = "search";
     private static final String PAGE_HUB = "hub:";
     private static final String PAGE_SECTION = "section:";
@@ -1503,7 +1501,6 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
         addMenu(screen, Section.BACKUP);
         addAbout(screen);
         addReportProblem(screen);
-        addSupport(screen);
     }
 
     /** The long press on the Quick setups card: it leaves the home page now, and the banner says where it comes back. */
@@ -1540,7 +1537,7 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
         }
     }
 
-    /** Report a problem, just above the Ko-fi row: a GitHub bug report with the facts filled in. */
+    /** Report a problem, the last row of the home page: a GitHub bug report with the facts filled in. */
     private void addReportProblem(PreferenceScreen screen) {
         SettingsMenuPreference row = new SettingsMenuPreference(getActivity(), "Report a problem",
                 "Opens a GitHub report with your versions and settings filled in. Add what happened.",
@@ -1549,18 +1546,6 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
                     return true;
                 });
         row.setKey(REPORT_PROBLEM_KEY);
-        row.setCompact(true);
-        screen.addPreference(row);
-    }
-
-    /** The last row of the home page: the Ko-fi page, under its title alone. */
-    private void addSupport(PreferenceScreen screen) {
-        SettingsMenuPreference row = new SettingsMenuPreference(getActivity(), "Support NINE’tok",
-                "", SettingsMenuPreference.Icon.SUPPORT, preference -> {
-                    openWebPage(getActivity(), SUPPORT_URL);
-                    return true;
-                });
-        row.setKey(SUPPORT_KEY);
         row.setCompact(true);
         screen.addPreference(row);
     }

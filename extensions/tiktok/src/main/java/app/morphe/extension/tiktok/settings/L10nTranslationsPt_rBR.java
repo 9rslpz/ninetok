@@ -3603,12 +3603,6 @@ final class L10nTranslationsPt_rBR {
                 "Legendas");
         table.put("Subtitles: %1$s",
                 "Legendas: %1$s");
-        table.put("Support",
-                "Support");
-        table.put("Support NINE’tok",
-                "Apoie o NINE’tok");
-        table.put("Support the original patch author",
-                "Support the original patch author");
         table.put("Swap the website in shared links",
                 "Trocar o site nos links compartilhados");
         table.put("Swipe for brightness and volume",

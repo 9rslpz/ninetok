@@ -3933,12 +3933,6 @@ final class L10nTranslationsRu {
                 "Субтитры");
         table.put("Subtitles: %1$s",
                 "Субтитры: %1$s");
-        table.put("Support",
-                "Support");
-        table.put("Support NINE’tok",
-                "Поддержать NINE’tok");
-        table.put("Support the original patch author",
-                "Support the original patch author");
         table.put("Swap the website in shared links",
                 "Подменять сайт в отправляемых ссылках");
         table.put("Swipe for brightness and volume",

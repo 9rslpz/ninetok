@@ -3603,12 +3603,6 @@ final class L10nTranslationsDe {
                 "Untertitel");
         table.put("Subtitles: %1$s",
                 "Untertitel: %1$s");
-        table.put("Support",
-                "Support");
-        table.put("Support NINE’tok",
-                "NINE’tok unterstützen");
-        table.put("Support the original patch author",
-                "Support the original patch author");
         table.put("Swap the website in shared links",
                 "Website in geteilten Links austauschen");
         table.put("Swipe for brightness and volume",

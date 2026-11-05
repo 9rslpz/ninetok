@@ -197,16 +197,7 @@ public final class SettingsHeaderPreference extends Preference {
         } else {
             toolbar.addView(heading, new LinearLayout.LayoutParams(0, -2, 1));
         }
-        View support = SupportUi.createPill(context);
-        boolean stackSupport = context.getResources().getConfiguration().fontScale >= 1.3f
-                || context.getResources().getConfiguration().screenWidthDp < 360;
-        if (!stackSupport) toolbar.addView(support, new LinearLayout.LayoutParams(-2, -2));
         header.addView(toolbar, new LinearLayout.LayoutParams(-1, -2));
-        if (stackSupport) {
-            LinearLayout.LayoutParams supportParams = new LinearLayout.LayoutParams(-2, -2);
-            supportParams.gravity = Gravity.END;
-            header.addView(support, supportParams);
-        }
         if (compact) {
             LinearLayout titleRow = new LinearLayout(context);
             titleRow.setTag("ninetok_home_title_row");

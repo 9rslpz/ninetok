@@ -29,36 +29,24 @@ import org.robolectric.Shadows;
 import org.robolectric.android.controller.ActivityController;
 import org.robolectric.annotation.Config;
 
-/** The home page ends with Report a problem, then the Ko-fi row, and both open the browser. */
+/** The home page ends with Report a problem, which opens the browser. */
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = 28)
 @SuppressWarnings("deprecation")
 public class SettingsFooterRowsTest {
-    private static final String ISSUE_FORM = "https://github.com/icysymmetra/tiktok-patches-for-morphe/issues/new?template=bug_report.yml&";
+    private static final String ISSUE_FORM = "https://github.com/9rslpz/ninetok/issues/new?template=bug_report.yml&";
 
     @Rule public final SettingsContextRule settingsContext = new SettingsContextRule();
 
-    @Test public void reportAProblemSitsAboveTheKoFiRowWhichIsLast() throws Exception {
+    @Test public void reportAProblemIsTheLastRow() throws Exception {
         try (ActivityController<Activity> owner = Robolectric.buildActivity(Activity.class).setup().visible()) {
             Activity activity = owner.get();
             PreferenceScreen screen = homePage(activity);
-            int count = screen.getPreferenceCount();
-            Preference support = screen.getPreference(count - 1);
-            Preference report = screen.getPreference(count - 2);
-            assertEquals(TikTokPreferenceFragment.SUPPORT_KEY, support.getKey());
-            assertEquals("Support NINE’tok", String.valueOf(support.getTitle()));
-            assertEquals("the Support row carries its title and nothing under it",
-                    "", String.valueOf(support.getSummary()));
+            Preference report = screen.getPreference(screen.getPreferenceCount() - 1);
             assertEquals(TikTokPreferenceFragment.REPORT_PROBLEM_KEY, report.getKey());
             assertEquals("Report a problem", String.valueOf(report.getTitle()));
             assertEquals("Opens a GitHub report with your versions and settings filled in. Add what happened.",
                     String.valueOf(report.getSummary()));
-
-            assertTrue(support.getOnPreferenceClickListener().onPreferenceClick(support));
-            Intent kofi = Shadows.shadowOf(activity).getNextStartedActivity();
-            assertNotNull("the Ko-fi row opened nothing", kofi);
-            assertEquals(Intent.ACTION_VIEW, kofi.getAction());
-            assertEquals("https://ko-fi.com/P5P5YOUU7", String.valueOf(kofi.getData()));
 
             assertTrue(report.getOnPreferenceClickListener().onPreferenceClick(report));
             Intent issue = Shadows.shadowOf(activity).getNextStartedActivity();
@@ -75,9 +63,7 @@ public class SettingsFooterRowsTest {
             Activity activity = owner.get();
             answersWebLinks(activity, "com.example.browser");
             PreferenceScreen screen = homePage(activity);
-            int count = screen.getPreferenceCount();
-            Preference support = screen.getPreference(count - 1);
-            Preference report = screen.getPreference(count - 2);
+            Preference report = screen.getPreference(screen.getPreferenceCount() - 1);
 
             assertTrue(report.getOnPreferenceClickListener().onPreferenceClick(report));
             Intent issue = Shadows.shadowOf(activity).getNextStartedActivity();
@@ -86,11 +72,6 @@ public class SettingsFooterRowsTest {
             assertTrue(String.valueOf(issue.getData()), String.valueOf(issue.getData()).startsWith(ISSUE_FORM));
             assertTrue("the report left TikTok's task",
                     (issue.getFlags() & Intent.FLAG_ACTIVITY_NEW_TASK) != 0);
-
-            assertTrue(support.getOnPreferenceClickListener().onPreferenceClick(support));
-            Intent kofi = Shadows.shadowOf(activity).getNextStartedActivity();
-            assertNotNull("the Ko-fi row opened nothing", kofi);
-            assertNull("the Ko-fi page has no form to lose, so it opens like any other link", kofi.getPackage());
         }
     }
 

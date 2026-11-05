@@ -25,7 +25,6 @@ class MarketingHeroTest {
     @Test fun `the README credits the upstream patches and their author`() {
         val readme = File(root, "README.md").readText()
         assertTrue(readme.contains("https://github.com/icysymmetra/tiktok-patches-for-morphe"))
-        assertTrue(readme.contains("https://ko-fi.com/P5P5YOUU7"))
         assertTrue(readme.contains("[NOTICE](NOTICE)"))
         val index = JsonParser.parseString(File(root, "patches-bundle.json").readText()).asJsonObject
         assertTrue(index.get("download_url").asString.startsWith("https://github.com/"))

@@ -8,7 +8,6 @@ $preferenceRoot = Join-Path $RepositoryRoot 'extensions\tiktok\src\main\java\app
 $settingsUiPath = Join-Path $preferenceRoot 'SettingsUi.java'
 $qualityPath = Join-Path $preferenceRoot 'DownloadQualityPreference.java'
 $headerPath = Join-Path $preferenceRoot 'SettingsHeaderPreference.java'
-$supportUiPath = Join-Path $preferenceRoot 'SupportUi.java'
 $categoryRoot = Join-Path $preferenceRoot 'categories'
 
 $failures = [System.Collections.Generic.List[string]]::new()
@@ -55,10 +54,7 @@ foreach ($selectorFile in $selectorFiles) {
         "Selector popup $($selectorFile.Name) must not add a second check-mark drawable."
 }
 
-Require-Match $headerPath 'createSupportPill\s*\(' `
-    'NINE’tok settings headers must expose the shared Support pill.'
-Require-Match $supportUiPath 'SUPPORT_URL\s*=\s*"https://ko-fi\.com/P5P5YOUU7"' `
-    'The Support pill and support row must share the canonical support destination.'
+Reject-Match $headerPath 'SupportUi|ko-fi' 'NINE’tok settings headers carry no donation button.'
 
 $expectedGroups = [ordered]@{
     'DownloadsPreferenceCategory.java' = @('Video downloads', 'Save locations', 'File names', 'Offline viewing')

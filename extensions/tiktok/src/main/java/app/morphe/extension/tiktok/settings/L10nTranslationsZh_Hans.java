@@ -3603,12 +3603,6 @@ final class L10nTranslationsZh_Hans {
                 "字幕");
         table.put("Subtitles: %1$s",
                 "字幕：%1$s");
-        table.put("Support",
-                "Support");
-        table.put("Support NINE’tok",
-                "支持Hushfeed");
-        table.put("Support the original patch author",
-                "Support the original patch author");
         table.put("Swap the website in shared links",
                 "交换共享链接中的网站");
         table.put("Swipe for brightness and volume",

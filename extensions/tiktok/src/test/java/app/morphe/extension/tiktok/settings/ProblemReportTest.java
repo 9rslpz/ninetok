@@ -34,7 +34,7 @@ public class ProblemReportTest {
     @Test public void theLinkOpensTheBugFormWithItsFieldsFilledAndEncoded() throws Exception {
         String url = ProblemReport.url(facts(Arrays.asList("Hide ads", "Comments: Hide likes & replies")));
 
-        assertTrue(url, url.startsWith("https://github.com/icysymmetra/tiktok-patches-for-morphe/issues/new?template=bug_report.yml&title=bug%3A%20&"));
+        assertTrue(url, url.startsWith("https://github.com/9rslpz/ninetok/issues/new?template=bug_report.yml&title=bug%3A%20&"));
         assertTrue(url, url.contains("&versions=Version%200.72.0%20for%20TikTok%2047.1.4%20%28version%20code%202024701040%29&"));
         assertTrue(url, url.contains("&device=samsung%20SM-S901U%2C%20Android%2015%20%28SDK%2035%29&"));
         // #197, #201: a filled What went wrong box came back untouched every time.
