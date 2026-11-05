@@ -1,3 +1,16 @@
+# [1.0.0-dev.4](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.3...v1.0.0-dev.4) (2026-11-05)
+
+
+### Features
+
+* **settings:** Sora type, cream icon tiles and a Nothing-style dot grid ([704682a](https://github.com/9rslpz/ninetok/commit/704682acf3ebd47f8168035254fcd6f0eb934532))
+
+
+
+
+
+## 1.0.0-dev.4
+
 # [1.0.0-dev.3](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2026-11-05)
 
 
