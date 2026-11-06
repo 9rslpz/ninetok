@@ -27,8 +27,13 @@ public final class Motion {
 
     /** How long a switch between the main tabs takes, in milliseconds. */
     public static final long TAB_SWITCH_MS = 300;
-    /** How far a tab page travels as it swaps, as a share of the page's width. */
-    public static final float TAB_TRAVEL = 0.12f;
+    /** How far the tab page going slides as it fades, as a share of the page's width. */
+    public static final float TAB_TRAVEL = 0.10f;
+    /**
+     * How much the tab page coming overflows each side as the swap starts, as a share of its
+     * width. It is scaled up by twice this and shifted by this toward the side it comes from.
+     */
+    public static final float TAB_SETTLE = 0.02f;
 
     private Motion() {
     }

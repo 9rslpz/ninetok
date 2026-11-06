@@ -9,6 +9,7 @@ import android.animation.LayoutTransition;
 import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Context;
+import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.LinearInterpolator;
@@ -17,6 +18,8 @@ import android.widget.TabHost;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
 
 import app.morphe.extension.shared.GlobalLayoutHook;
 import app.morphe.extension.shared.Logger;
@@ -189,6 +192,12 @@ public final class MainTabMotion {
         private final WeakReference<ViewGroup> parent;
         private final View going;
         private View coming;
+        /**
+         * Video surfaces of the page going that this hid for the swap. A surface view clears a
+         * hole through the window for its video, and once its page is hidden there is no video
+         * behind the hole: drawn while the page fades, it shows as a black block.
+         */
+        private final List<View> hiddenSurfaces = new ArrayList<>();
         /** The copy of the animator the transition runs, so a newer switch can end it. */
         private ValueAnimator live;
         private int side; // +1: the new tab is to the right, -1: to the left
@@ -227,15 +236,37 @@ public final class MainTabMotion {
                     going.setAlpha(0f);
                     return;
                 }
+                hideSurfaces(going);
             }
+            // The page going is drawn over the one coming. It slides off and fades, and the new
+            // page stays opaque underneath, so nothing behind the two (black under TikTok's tabs)
+            // ever shows through. The new page settles from a little larger, moving with the
+            // swap: it is shifted by exactly the part it overflows, so its edge never comes in.
             float width = Math.max(going.getWidth(), coming.getWidth());
-            float travel = width * Motion.TAB_TRAVEL;
-            float leave = Motion.part(t, 0f, 0.55f, Motion.LEAVE);
-            going.setTranslationX(-side * travel * leave);
-            going.setAlpha(1f - Motion.part(t, 0f, 0.4f, Motion.STANDARD));
-            float arrive = Motion.part(t, 0.08f, 1f, Motion.ARRIVE);
-            coming.setTranslationX(side * travel * (1f - arrive));
-            coming.setAlpha(Motion.part(t, 0.12f, 0.7f, Motion.STANDARD));
+            float leave = Motion.part(t, 0f, 0.7f, Motion.LEAVE);
+            going.setTranslationX(-side * width * Motion.TAB_TRAVEL * leave);
+            going.setAlpha(1f - Motion.part(t, 0f, 0.6f, Motion.STANDARD));
+            float rest = 1f - Motion.part(t, 0f, 1f, Motion.ARRIVE);
+            coming.setAlpha(1f);
+            coming.setScaleX(1f + 2f * Motion.TAB_SETTLE * rest);
+            coming.setScaleY(1f + 2f * Motion.TAB_SETTLE * rest);
+            coming.setTranslationX(side * width * Motion.TAB_SETTLE * rest);
+        }
+
+        private void hideSurfaces(View view) {
+            if (view instanceof SurfaceView) {
+                if (view.getVisibility() == View.VISIBLE) {
+                    view.setVisibility(View.INVISIBLE);
+                    hiddenSurfaces.add(view);
+                }
+                return;
+            }
+            if (!(view instanceof ViewGroup)) return;
+            ViewGroup group = (ViewGroup) view;
+            for (int i = 0; i < group.getChildCount(); i++) {
+                View child = group.getChildAt(i);
+                if (child.getVisibility() == View.VISIBLE) hideSurfaces(child);
+            }
         }
 
         private View comingPage() {
@@ -262,8 +293,14 @@ public final class MainTabMotion {
             done = true;
             going.setTranslationX(0f);
             going.setAlpha(1f);
+            for (View surface : hiddenSurfaces) {
+                if (surface.getVisibility() == View.INVISIBLE) surface.setVisibility(View.VISIBLE);
+            }
+            hiddenSurfaces.clear();
             if (coming != null) {
                 coming.setTranslationX(0f);
+                coming.setScaleX(1f);
+                coming.setScaleY(1f);
                 coming.setAlpha(1f);
             }
             if (running == this) running = null;
