@@ -1,3 +1,16 @@
+# [1.0.0-dev.11](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.10...v1.0.0-dev.11) (2026-11-06)
+
+
+### Features
+
+* **motion:** main tabs slide and fade into each other ([049ff97](https://github.com/9rslpz/ninetok/commit/049ff974265b1b95109752b04387d7876984436b))
+
+
+
+
+
+## 1.0.0-dev.11
+
 # [1.0.0-dev.10](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.9...v1.0.0-dev.10) (2026-11-06)
 
 
