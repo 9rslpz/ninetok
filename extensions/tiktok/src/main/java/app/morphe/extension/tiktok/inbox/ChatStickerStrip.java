@@ -4,14 +4,16 @@
 package app.morphe.extension.tiktok.inbox;
 
 import android.app.Activity;
+import android.app.Application;
+import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 
 import java.util.Map;
 import java.util.WeakHashMap;
 
 import app.morphe.extension.shared.GlobalLayoutHook;
+import app.morphe.extension.shared.Logger;
 import app.morphe.extension.tiktok.settings.Settings;
 
 /**
@@ -32,27 +34,69 @@ public final class ChatStickerStrip {
 
     private static final Map<Activity, GlobalLayoutHook> HOOKS = new WeakHashMap<>();
     private static int stripId = -1;
+    private static Application watching;
+
+    private static final Application.ActivityLifecycleCallbacks WINDOWS = new Application.ActivityLifecycleCallbacks() {
+        @Override public void onActivityResumed(Activity activity) {
+            watch(activity);
+        }
+
+        @Override public void onActivityDestroyed(Activity activity) {
+            GlobalLayoutHook hook = HOOKS.remove(activity);
+            if (hook != null) hook.detach();
+        }
+
+        @Override public void onActivityCreated(Activity activity, Bundle state) { }
+        @Override public void onActivityStarted(Activity activity) { }
+        @Override public void onActivityPaused(Activity activity) { }
+        @Override public void onActivityStopped(Activity activity) { }
+        @Override public void onActivitySaveInstanceState(Activity activity, Bundle state) { }
+    };
 
     private ChatStickerStrip() {
     }
 
-    /** Watches an activity's window for the strip. Called for every activity TikTok opens. */
+    /**
+     * From the patched main activity's onCreate, before TikTok has set its window up, so this
+     * touches no view: it watches each activity of the app as it resumes, the main one and any
+     * a chat opens in.
+     */
     public static void install(Activity activity) {
-        Window window = activity.getWindow();
-        if (window == null || !(window.getDecorView() instanceof ViewGroup)) return;
-        ViewGroup root = (ViewGroup) window.getDecorView();
-        GlobalLayoutHook hook;
-        synchronized (HOOKS) {
-            hook = HOOKS.get(activity);
+        try {
+            Application application = activity.getApplication();
+            if (application == null || application == watching) return;
+            if (watching != null) watching.unregisterActivityLifecycleCallbacks(WINDOWS);
+            watching = application;
+            application.registerActivityLifecycleCallbacks(WINDOWS);
+        } catch (Throwable error) {
+            Logger.printException(() -> "Could not watch for the chat stickers", error);
+        }
+    }
+
+    private static void watch(Activity activity) {
+        try {
+            ViewGroup root = activity.findViewById(android.R.id.content);
+            if (root == null) return;
+            GlobalLayoutHook hook = HOOKS.get(activity);
             if (hook == null) {
                 hook = new GlobalLayoutHook();
                 HOOKS.put(activity, hook);
             }
+            hook.install(root, () -> apply(root));
+        } catch (Throwable error) {
+            Logger.printException(() -> "Could not watch a window for the chat stickers", error);
         }
-        hook.install(root, () -> apply(root));
     }
 
     private static void apply(ViewGroup root) {
+        try {
+            resizeStrip(root);
+        } catch (Throwable error) {
+            Logger.printException(() -> "Could not size the chat stickers", error);
+        }
+    }
+
+    private static void resizeStrip(ViewGroup root) {
         if (stripId == -1) {
             stripId = root.getResources().getIdentifier(STRIP_ID, "id", root.getContext().getPackageName());
         }

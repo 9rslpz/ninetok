@@ -81,6 +81,7 @@ public final class InterfacePreferenceCategory extends ConditionalPreferenceCate
     @Override
     public void addPreferences(Context context) {
         addNineTokLook(context);
+        addNineTokMotion(context);
         addNineTokChats(context);
         addRightColumn(context);
         addButtonsOnVideos(context);
@@ -100,6 +101,15 @@ public final class InterfacePreferenceCategory extends ConditionalPreferenceCate
         addPreference(new TogglePreference(context, "Sora across TikTok",
                 "Draw TikTok's own text in Sora too. Use system font and imported fonts take over while on.",
                 Settings.NINETOK_APP_FONT));
+    }
+
+    /** NINE’tok's animations. */
+    private void addNineTokMotion(Context context) {
+        addPreference(new SectionHeadingPreference(context, "Motion"));
+        addPreference(new TogglePreference(context, "Tab animations",
+                "Home, Friends, Inbox and Profile slide and fade into each other instead of cutting "
+                        + "over. Off, they switch at once, as TikTok does.",
+                Settings.MAIN_TAB_ANIMATIONS));
     }
 
     /** NINE’tok's chat fixes. */

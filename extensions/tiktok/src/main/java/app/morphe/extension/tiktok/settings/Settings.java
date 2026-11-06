@@ -281,6 +281,8 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting ALLOW_GROUP_CHATS = new BooleanSetting("allow_group_chats", FALSE);
     /** NINE’tok: chat sticker suggestions at TikTok's own size; off draws them at 30%. */
     public static final BooleanSetting FULL_SIZE_CHAT_STICKERS = new BooleanSetting("full_size_chat_stickers", FALSE);
+    /** Home, Friends, Inbox and Profile slide and fade into each other (NINE’tok motion). */
+    public static final BooleanSetting MAIN_TAB_ANIMATIONS = new BooleanSetting("main_tab_animations", TRUE);
     public static final BooleanSetting SKIP_UPDATE_CHECKS = new BooleanSetting("skip_update_checks", FALSE, true);
     public static final BooleanSetting LIMIT_BACKGROUND_TRAFFIC =
             new BooleanSetting("limit_background_traffic", FALSE, true);
