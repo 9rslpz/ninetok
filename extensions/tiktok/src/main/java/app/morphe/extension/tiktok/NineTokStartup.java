@@ -22,5 +22,6 @@ public final class NineTokStartup {
         NineTokLegacySettings.migrate(context);
         HomeTabSettingsShortcut.install(context);
         if (context instanceof Activity) BenchmarkRuns.onAppOpened((Activity) context);
+        if (context instanceof Activity) app.morphe.extension.tiktok.inbox.ChatStickerStrip.install((Activity) context);
     }
 }

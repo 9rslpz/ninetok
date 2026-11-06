@@ -34,7 +34,7 @@ val allowGroupChatsPatch = bytecodePatch(
     name = "Allow group chats",
     description = "Offers group chats, including making a new group, when TikTok's restriction " +
         "for your account hides them. TikTok's servers can still refuse a group they do not " +
-        "allow. On by default. Turn it off in NINE’tok settings > Interface.",
+        "allow, and they do for some accounts. Starts off. Turn it on in NINE’tok settings > Interface.",
 ) {
     category("Interaction")
     dependsOn(settingsPatch, sharedExtensionPatch)

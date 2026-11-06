@@ -104,11 +104,15 @@ public final class InterfacePreferenceCategory extends ConditionalPreferenceCate
 
     /** NINE’tok's chat fixes. */
     private void addNineTokChats(Context context) {
-        if (!SettingsStatus.groupChatsEnabled) return;
         addPreference(new SectionHeadingPreference(context, "Chats"));
+        addPreference(new TogglePreference(context, "Full-size sticker suggestions",
+                "Show the stickers TikTok suggests above the chat box as you type at their own size. "
+                        + "Off, they are 30% as big.",
+                Settings.FULL_SIZE_CHAT_STICKERS));
+        if (!SettingsStatus.groupChatsEnabled) return;
         addPreference(new TogglePreference(context, "Allow group chats",
-                "Offer group chats, including making a new group, when TikTok hides them for your account. "
-                        + "TikTok can still refuse a group it doesn't allow.",
+                "Show group chats and the button to make one when TikTok hides them for your account. "
+                        + "TikTok's servers still refuse to make a group for an account they restrict.",
                 Settings.ALLOW_GROUP_CHATS));
     }
 
