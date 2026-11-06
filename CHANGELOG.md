@@ -1,3 +1,16 @@
+# [1.0.0-dev.12](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.11...v1.0.0-dev.12) (2026-11-06)
+
+
+### Bug Fixes
+
+* **motion:** no black between tabs; group chats on by default again ([cdf4383](https://github.com/9rslpz/ninetok/commit/cdf438382ff79a031b066a15ea9969de43c8b92d))
+
+
+
+
+
+## 1.0.0-dev.12
+
 # [1.0.0-dev.11](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.10...v1.0.0-dev.11) (2026-11-06)
 
 
