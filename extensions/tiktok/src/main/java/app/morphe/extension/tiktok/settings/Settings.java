@@ -277,6 +277,8 @@ public class Settings extends BaseSettings {
     public static final StringSetting NINETOK_THEME = new StringSetting("ninetok_theme", "tiktok");
     /** NINE’tok: TikTok's own text in Sora, through Use system font. On by default; TikTok reads it at start. */
     public static final BooleanSetting NINETOK_APP_FONT = new BooleanSetting("ninetok_app_font", TRUE, true);
+    /** NINE’tok: offer group chats when TikTok's restriction for the account hides them. */
+    public static final BooleanSetting ALLOW_GROUP_CHATS = new BooleanSetting("allow_group_chats", TRUE);
     public static final BooleanSetting SKIP_UPDATE_CHECKS = new BooleanSetting("skip_update_checks", FALSE, true);
     public static final BooleanSetting LIMIT_BACKGROUND_TRAFFIC =
             new BooleanSetting("limit_background_traffic", FALSE, true);

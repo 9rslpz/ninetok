@@ -122,6 +122,7 @@ public class SettingsStatus {
     public static boolean launcherShortcutsEnabled = false;
     public static boolean firstLaunchSetupEnabled = false;
     public static boolean duetStitchEnabled = false;
+    public static boolean groupChatsEnabled = false;
     public static boolean notificationControlsEnabled = false;
     public static boolean suggestedVideoPushBlockEnabled = false;
     public static boolean autoStreakEnabled = false;
@@ -472,6 +473,10 @@ public class SettingsStatus {
 
     public static void enableDuetStitch() {
         duetStitchEnabled = true;
+    }
+
+    public static void enableGroupChats() {
+        groupChatsEnabled = true;
     }
 
     public static void enableRefreshRate() {

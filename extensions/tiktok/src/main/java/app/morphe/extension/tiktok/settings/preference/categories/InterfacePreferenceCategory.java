@@ -81,6 +81,7 @@ public final class InterfacePreferenceCategory extends ConditionalPreferenceCate
     @Override
     public void addPreferences(Context context) {
         addNineTokLook(context);
+        addNineTokChats(context);
         addRightColumn(context);
         addButtonsOnVideos(context);
         addVideoInfo(context);
@@ -99,6 +100,16 @@ public final class InterfacePreferenceCategory extends ConditionalPreferenceCate
         addPreference(new TogglePreference(context, "Sora across TikTok",
                 "Draw TikTok's own text in Sora too. Use system font and imported fonts take over while on.",
                 Settings.NINETOK_APP_FONT));
+    }
+
+    /** NINE’tok's chat fixes. */
+    private void addNineTokChats(Context context) {
+        if (!SettingsStatus.groupChatsEnabled) return;
+        addPreference(new SectionHeadingPreference(context, "Chats"));
+        addPreference(new TogglePreference(context, "Allow group chats",
+                "Offer group chats, including making a new group, when TikTok hides them for your account. "
+                        + "TikTok can still refuse a group it doesn't allow.",
+                Settings.ALLOW_GROUP_CHATS));
     }
 
     private void addRightColumn(Context context) {
