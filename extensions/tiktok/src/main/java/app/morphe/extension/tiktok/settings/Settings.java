@@ -285,6 +285,8 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting MAIN_TAB_ANIMATIONS = new BooleanSetting("main_tab_animations", TRUE);
     /** A streak going up fades the flame in softly instead of TikTok's burst and rolling number. */
     public static final BooleanSetting CALM_STREAK_FLAME = new BooleanSetting("calm_streak_flame", TRUE);
+    /** A small Repost button next to the author's name once a video is liked. */
+    public static final BooleanSetting REPOST_AFTER_LIKE = new BooleanSetting("repost_after_like", TRUE);
     public static final BooleanSetting SKIP_UPDATE_CHECKS = new BooleanSetting("skip_update_checks", FALSE, true);
     public static final BooleanSetting LIMIT_BACKGROUND_TRAFFIC =
             new BooleanSetting("limit_background_traffic", FALSE, true);

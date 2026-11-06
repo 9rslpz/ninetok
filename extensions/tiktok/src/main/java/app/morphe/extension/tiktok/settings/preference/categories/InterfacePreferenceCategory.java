@@ -82,6 +82,7 @@ public final class InterfacePreferenceCategory extends ConditionalPreferenceCate
     public void addPreferences(Context context) {
         addNineTokLook(context);
         addNineTokMotion(context);
+        addNineTokFeed(context);
         addNineTokChats(context);
         addRightColumn(context);
         addButtonsOnVideos(context);
@@ -116,6 +117,16 @@ public final class InterfacePreferenceCategory extends ConditionalPreferenceCate
                             + "plays its flame burst and rolls the number.",
                     Settings.CALM_STREAK_FLAME));
         }
+    }
+
+    /** NINE’tok's feed additions. */
+    private void addNineTokFeed(Context context) {
+        if (!SettingsStatus.repostAfterLikeEnabled) return;
+        addPreference(new SectionHeadingPreference(context, "Feed"));
+        addPreference(new TogglePreference(context, "Repost button after a like",
+                "A small Repost button comes up next to the author's name when you like a video. "
+                        + "Tap it to repost, and again to take the repost back.",
+                Settings.REPOST_AFTER_LIKE));
     }
 
     /** NINE’tok's chat fixes. */

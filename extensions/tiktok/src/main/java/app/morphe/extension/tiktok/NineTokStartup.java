@@ -24,5 +24,6 @@ public final class NineTokStartup {
         if (context instanceof Activity) BenchmarkRuns.onAppOpened((Activity) context);
         if (context instanceof Activity) app.morphe.extension.tiktok.inbox.ChatStickerStrip.install((Activity) context);
         app.morphe.extension.tiktok.motion.MainTabMotion.install(context);
+        app.morphe.extension.tiktok.repost.RepostPill.install(context);
     }
 }
