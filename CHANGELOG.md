@@ -1,3 +1,16 @@
+# [1.0.0-dev.9](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.8...v1.0.0-dev.9) (2026-11-06)
+
+
+### Features
+
+* allow group chats when TikTok's account restriction hides them ([4f621c3](https://github.com/9rslpz/ninetok/commit/4f621c3086f560867e4d2837f6cc68257df0ddd7))
+
+
+
+
+
+## 1.0.0-dev.9
+
 # [1.0.0-dev.8](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.7...v1.0.0-dev.8) (2026-11-05)
 
 

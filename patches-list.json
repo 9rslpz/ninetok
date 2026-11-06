@@ -1,5 +1,5 @@
 {
-  "version": "v1.0.0-dev.8",
+  "version": "v1.0.0-dev.9",
   "appNames": {
     "com.zhiliaoapp.musically": "TikTok"
   },
@@ -164,6 +164,45 @@
       "name": "Allow Duet and Stitch",
       "description": "Shows the Duet and Stitch buttons on videos whose creator turned them off, so you can still make one. TikTok may still refuse some videos or the upload. Starts off. Turn it on in NINE’tok settings > Share sheet.",
       "category": "Downloads",
+      "use": true,
+      "dependencies": [
+        "BytecodePatch",
+        "Settings"
+      ],
+      "compatiblePackages": {
+        "com.zhiliaoapp.musically": [
+          "47.4.3"
+        ]
+      },
+      "compatibility": [
+        {
+          "name": "TikTok",
+          "packageName": "com.zhiliaoapp.musically",
+          "description": null,
+          "appIconColor": 16657493,
+          "signatures": [
+            "9041803e91bcb814b4b4399fb5c85a91640b755e5e8ba76813814bf4cf2ab5ba"
+          ],
+          "targets": [
+            {
+              "version": "47.4.3",
+              "experimental": false,
+              "versionCodes": {
+                "ARM64_V8A": 2024704030,
+                "ARMEABI_V7A": 2024704030,
+                "X86": 2024704030,
+                "X86_64": 2024704030
+              }
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Allow group chats",
+      "description": "Offers group chats, including making a new group, when TikTok's restriction for your account hides them. TikTok's servers can still refuse a group they do not allow. On by default. Turn it off in NINE’tok settings > Interface.",
+      "category": "Interaction",
       "use": true,
       "dependencies": [
         "BytecodePatch",
