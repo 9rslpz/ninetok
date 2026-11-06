@@ -35,6 +35,12 @@ public final class Motion {
      */
     public static final float TAB_SETTLE = 0.02f;
 
+    /** How long the streak flame takes to fade in when a streak goes up, in milliseconds. */
+    public static final long FLAME_MS = 420;
+    /** Where the streak flame starts as it fades in. */
+    public static final float FLAME_FROM_ALPHA = 0.35f;
+    public static final float FLAME_FROM_SCALE = 0.86f;
+
     private Motion() {
     }
 

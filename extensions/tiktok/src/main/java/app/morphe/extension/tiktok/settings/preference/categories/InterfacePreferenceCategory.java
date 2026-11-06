@@ -110,6 +110,12 @@ public final class InterfacePreferenceCategory extends ConditionalPreferenceCate
                 "Home, Friends, Inbox and Profile slide and fade into each other instead of cutting "
                         + "over. Off, they switch at once, as TikTok does.",
                 Settings.MAIN_TAB_ANIMATIONS));
+        if (SettingsStatus.calmStreakFlameEnabled) {
+            addPreference(new TogglePreference(context, "Calm streak flame",
+                    "When a chat streak goes up, the flame by the name fades in softly. Off, TikTok "
+                            + "plays its flame burst and rolls the number.",
+                    Settings.CALM_STREAK_FLAME));
+        }
     }
 
     /** NINE’tok's chat fixes. */
