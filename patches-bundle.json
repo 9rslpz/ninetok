@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-11-06T20:17:17",
-  "description": "# [1.0.0-dev.9](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.8...v1.0.0-dev.9) (2026-11-06)\n\n\n### Features\n\n* allow group chats when TikTok's account restriction hides them ([4f621c3](https://github.com/9rslpz/ninetok/commit/4f621c3086f560867e4d2837f6cc68257df0ddd7))\n\n\n\n\n\n## 1.0.0-dev.9",
-  "download_url": "https://github.com/9rslpz/ninetok/releases/download/v1.0.0-dev.9/patches-1.0.0-dev.9.mpp",
+  "created_at": "2026-11-06T20:32:18",
+  "description": "# [1.0.0-dev.10](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.9...v1.0.0-dev.10) (2026-11-06)\n\n\n### Features\n\n* **chats:** sticker suggestions at 30%, group chats off by default ([3a7fca0](https://github.com/9rslpz/ninetok/commit/3a7fca05da4e5fea92bf655ffeadc0d33f880868))\n\n\n\n\n\n## 1.0.0-dev.10",
+  "download_url": "https://github.com/9rslpz/ninetok/releases/download/v1.0.0-dev.10/patches-1.0.0-dev.10.mpp",
   "signature_download_url": "",
-  "version": "1.0.0-dev.9"
+  "version": "1.0.0-dev.10"
 }

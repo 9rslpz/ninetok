@@ -1,3 +1,16 @@
+# [1.0.0-dev.10](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.9...v1.0.0-dev.10) (2026-11-06)
+
+
+### Features
+
+* **chats:** sticker suggestions at 30%, group chats off by default ([3a7fca0](https://github.com/9rslpz/ninetok/commit/3a7fca05da4e5fea92bf655ffeadc0d33f880868))
+
+
+
+
+
+## 1.0.0-dev.10
+
 # [1.0.0-dev.9](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.8...v1.0.0-dev.9) (2026-11-06)
 
 
