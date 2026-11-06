@@ -1,3 +1,16 @@
+# [1.0.0-dev.13](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.12...v1.0.0-dev.13) (2026-11-06)
+
+
+### Features
+
+* **chats:** calm streak flame ([2a46469](https://github.com/9rslpz/ninetok/commit/2a46469658eeab66176d67145fa662d4a831d605))
+
+
+
+
+
+## 1.0.0-dev.13
+
 # [1.0.0-dev.12](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.11...v1.0.0-dev.12) (2026-11-06)
 
 
