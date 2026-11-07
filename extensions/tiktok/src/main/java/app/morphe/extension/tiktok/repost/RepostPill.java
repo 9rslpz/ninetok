@@ -55,7 +55,7 @@ import app.morphe.extension.tiktok.settings.preference.NineTokType;
  */
 public final class RepostPill {
     /** Space between the button and the name under it. */
-    private static final int GAP_DP = 6;
+    private static final int GAP_DP = 8;
     /** How often the button checks the repost is still there while it is on screen. */
     private static final long RECHECK_MS = 1500;
     /** A view tag marking the pill, so a layout pass can tell it from TikTok's views. */
@@ -261,11 +261,69 @@ public final class RepostPill {
             textStart += label.getLayout().getLineLeft(0);
         }
         float x = at[0] - hostAt[0] + textStart;
-        float y = at[1] - hostAt[1] + label.getPaddingTop() - height - dp(label.getContext(), GAP_DP);
+        int gap = dp(label.getContext(), GAP_DP);
+        float y = at[1] - hostAt[1] + label.getPaddingTop() - height - gap;
+        // Anything TikTok shows there goes first, the button above it: the "Say something" box
+        // after a repost, a place or a tag over the name.
+        int width = button.getWidth() > 0 ? button.getWidth() : button.getMeasuredWidth();
+        if (host instanceof ViewGroup) {
+            Rect spot = new Rect();
+            for (int pass = 0; pass < 4; pass++) {
+                int left = hostAt[0] + Math.round(x);
+                int top = hostAt[1] + Math.round(y);
+                spot.set(left, top, left + width, top + height);
+                int blockerTop = blockerTop((ViewGroup) host, spot, button, label);
+                if (blockerTop == Integer.MAX_VALUE) break;
+                y = blockerTop - hostAt[1] - height - gap;
+            }
+        }
         button.setPivotX(0f);
         button.setPivotY(height);
         if (button.getTranslationX() != x) button.setTranslationX(x);
         if (button.getTranslationY() != y) button.setTranslationY(y);
+    }
+
+    /**
+     * The window top of the highest thing TikTok draws in {@code spot} on the page, or
+     * MAX_VALUE when it is clear. Only views that draw something and are smaller than a quarter
+     * of the page count, and the name with everything around it is left out.
+     */
+    private static int blockerTop(ViewGroup page, Rect spot, View button, View label) {
+        int best = Integer.MAX_VALUE;
+        int limit = page.getHeight() / 4;
+        Rect rect = new Rect();
+        int[] at = new int[2];
+        ArrayDeque<View> queue = new ArrayDeque<>();
+        for (int i = 0; i < page.getChildCount(); i++) queue.add(page.getChildAt(i));
+        while (!queue.isEmpty()) {
+            View view = queue.poll();
+            if (view == button || view == label || view.getVisibility() != View.VISIBLE
+                    || view.getAlpha() < 0.05f || view.getWidth() == 0 || view.getHeight() == 0) continue;
+            view.getLocationInWindow(at);
+            rect.set(at[0], at[1], at[0] + view.getWidth(), at[1] + view.getHeight());
+            if (!Rect.intersects(rect, spot)) continue;
+            boolean around = isAncestor(view, label);
+            boolean draws = view.getBackground() != null
+                    || (view instanceof TextView && ((TextView) view).getText() != null
+                        && ((TextView) view).getText().length() > 0)
+                    || (view instanceof android.widget.ImageView && ((android.widget.ImageView) view).getDrawable() != null);
+            if (!around && draws && view.getHeight() < limit && view.isShown()) {
+                best = Math.min(best, at[1]);
+                continue;
+            }
+            if (view instanceof ViewGroup) {
+                ViewGroup group = (ViewGroup) view;
+                for (int i = 0; i < group.getChildCount(); i++) queue.add(group.getChildAt(i));
+            }
+        }
+        return best;
+    }
+
+    private static boolean isAncestor(View view, View child) {
+        for (Object parent = child.getParent(); parent instanceof View; parent = ((View) parent).getParent()) {
+            if (parent == view) return true;
+        }
+        return false;
     }
 
     private static TextView makePill(Context context) {
@@ -283,6 +341,10 @@ public final class RepostPill {
         button.setTextColor(0xFFFFFFFF);
         button.setShadowLayer(dp(context, 2), 0, dp(context, 1), 0x40000000);
         button.setOnClickListener(view -> toggle());
+        // A press held on the button is not a tap: without this, lifting the finger after
+        // TikTok's long press reposted the video.
+        button.setLongClickable(true);
+        button.setOnLongClickListener(view -> true);
         return button;
     }
 
