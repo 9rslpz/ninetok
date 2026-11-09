@@ -1,0 +1,32 @@
+9rslpz Hand
+Copyright (c) 2026 9rslpz (https://github.com/9rslpz). All rights reserved.
+
+9rslpz Hand is the handwriting of 9rslpz, made into a font. It is not free software. Neither
+the GNU General Public License that covers NINE’tok's code nor the SIL Open Font License that
+covers the Sora typeface applies to it.
+
+PERMISSION
+
+You may copy and distribute the font file, unmodified, only:
+
+  1. as part of NINE’tok (https://github.com/9rslpz/ninetok): its source code, its patch
+     bundles, and apps patched with them; or
+  2. as part of a fork of NINE’tok that keeps the name NINE’tok,
+
+and only for drawing NINE’tok's own name and headings in those apps.
+
+Everything else needs prior written permission from 9rslpz, including:
+
+  - using the font, or images of text set in it, in any other app, website, document, print,
+    video, logo or product;
+  - installing it as a font on a device or in a design program for other use;
+  - modifying, converting, extracting or tracing the glyphs, or making another font from them;
+  - selling, licensing or giving away the font on its own or bundled with anything else.
+
+A fork that drops the name NINE’tok must remove the font file.
+
+NO WARRANTY
+
+THE FONT IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. IN NO EVENT
+SHALL 9RSLPZ BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM THE USE OF THE
+FONT OR FROM OTHER DEALINGS IN IT.

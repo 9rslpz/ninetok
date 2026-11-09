@@ -36,8 +36,14 @@ public final class LicenseNotice {
             "and still apply to every copy of NINE’tok, source or built.\n" +
             "\n" +
             "The settings screen uses Sora, Copyright 2019 The Sora Project Authors,\n" +
-            "under the SIL Open Font License 1.1 (text in patches/src/main/resources/ninetok/fonts),\n" +
-            "and the 9rslpz Hand handwriting by the NINE’tok author.\n" +
+            "under the SIL Open Font License 1.1 (text in patches/src/main/resources/ninetok/fonts).\n" +
+            "\n" +
+            "The 9rslpz Hand font (hand.ttf), in which NINE’tok's name is written, is\n" +
+            "Copyright (c) 2026 9rslpz. All rights reserved. It is not covered by the GPL or\n" +
+            "the OFL: it may be copied and distributed, unmodified, only as part of NINE’tok\n" +
+            "or of a fork that keeps the name NINE’tok, to draw NINE’tok's own name and\n" +
+            "headings. Any other use needs prior written permission from 9rslpz. Full terms in\n" +
+            "patches/src/main/resources/ninetok/fonts/LICENSE-9rslpz-Hand.txt.\n" +
             "\n" +
             "\n" +
             "Hushfeed NOTICE\n" +

@@ -9,10 +9,12 @@ internal const val NINETOK_FONT_ASSETS = "assets/ninetok/fonts"
 /**
  * NINE’tok's typefaces: Sora (SIL Open Font License, see OFL-Sora.txt) for the settings and,
  * through Use system font, for TikTok's own text, and the 9rslpz Hand handwriting for the letters
- * NINE in the name.
+ * NINE in the name (© 9rslpz, all rights reserved, licensed only for NINE’tok: see
+ * LICENSE-9rslpz-Hand.txt, which ships beside it).
  */
 internal val NINETOK_FONTS = listOf(
     "sans-regular.ttf", "sans-medium.ttf", "sans-semibold.ttf", "sans-bold.ttf", "hand.ttf", "OFL-Sora.txt",
+    "LICENSE-9rslpz-Hand.txt",
 )
 
 /** A class of this bundle, so the lookup goes through the class loader that holds the fonts. */

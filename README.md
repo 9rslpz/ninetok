@@ -27,6 +27,8 @@ Every switch can still be changed in **Settings and privacy → NINE’tok**. Th
 
 NINE’tok is a modified version of [**tiktok-patches-for-morphe**](https://github.com/icysymmetra/tiktok-patches-for-morphe) by **icysymmetra**, which is built on [Hushfeed](https://github.com/SysAdminDoc/hushfeed), [Morphe](https://github.com/MorpheApp/morphe-patches) and [ReVanced](https://gitlab.com/ReVanced/revanced-patches). Almost all of the patch code is theirs. GPLv3 with the additional section 7 terms in [NOTICE](NOTICE); NOTICE stays with every copy and is reachable in the app under Settings → About → Licenses.
 
+Fonts: [Sora](https://github.com/sora-xor/sora-font) by The Sora Project Authors, under the SIL Open Font License 1.1. **9rslpz Hand**, the handwriting NINE’tok's name is written in, is © 2026 9rslpz, all rights reserved: it ships only as part of NINE’tok (and forks that keep the NINE’tok name), and any other use needs permission. See [LICENSE-9rslpz-Hand.txt](patches/src/main/resources/ninetok/fonts/LICENSE-9rslpz-Hand.txt).
+
 ## Development target
 
 The expanded NINE’tok feature set is adapted from Hushfeed v0.76.0, commit `b68741ca02898c2003751da75df34b44b8943daa`, to global TikTok 47.4.3 (version code 2024704030). It keeps the upstream style and navigation, including the Anti-slop and Feature Gate Lab repairs. The table below describes this dev prerelease. The stable release still targets 46.2.3.
