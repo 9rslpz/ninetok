@@ -187,30 +187,17 @@ public final class SettingsUi {
 
     /** Sync before painting any surface, since TikTok's theme can differ from the system's. */
     public static void syncDarkMode(Context context) {
-        int nightMode = context.getResources().getConfiguration().uiMode
-                & Configuration.UI_MODE_NIGHT_MASK;
-        String theme = nineTokTheme();
-        boolean dark = "dark".equals(theme) || "oled".equals(theme)
-                || (!"light".equals(theme) && nightMode == Configuration.UI_MODE_NIGHT_YES);
-        Utils.setIsDarkModeEnabled(dark);
+        // TikTok's light or dark is its theme, not the phone's night mode.
+        Utils.setIsDarkModeEnabled(app.morphe.extension.tiktok.design.TikTokTheme.isDark(context));
     }
 
-    /** NINE’tok's theme choice: tiktok, light, dark or oled. Follows TikTok if it can't be read. */
-    static String nineTokTheme() {
-        try {
-            return app.morphe.extension.tiktok.settings.Settings.NINETOK_THEME.get();
-        } catch (RuntimeException e) {
-            return "tiktok";
-        }
-    }
 
     /**
-     * Pure black surfaces for OLED screens, picked over the graphite ones in the dark theme: when
-     * chosen, or when following TikTok in an APK whose dark theme was patched to pure black.
+     * Pure black surfaces, picked over the graphite ones in the dark theme: when Black is chosen
+     * on TikTok's Display page, or in an APK whose dark theme was patched to pure black.
      */
     private static boolean oled() {
-        String theme = nineTokTheme();
-        return "oled".equals(theme) || ("tiktok".equals(theme) && blackTikTokBuild());
+        return app.morphe.extension.tiktok.design.ThemeSwitch.oled() || blackTikTokBuild();
     }
 
     private static Boolean blackTikTokBuild;

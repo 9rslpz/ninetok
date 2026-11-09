@@ -17,13 +17,17 @@ public final class NineTokStartup {
     public static void onContextReady(Context context) {
         NineTokLegacySettings.migrate(context);
         MediaCache.reconcileAsync(context);
+        app.morphe.extension.tiktok.design.ThemeSwitch.apply(context);
     }
     public static void onActivity(Context context) {
         NineTokLegacySettings.migrate(context);
+        if (context instanceof Activity) app.morphe.extension.tiktok.design.ThemeSwitch.install((Activity) context);
         HomeTabSettingsShortcut.install(context);
         if (context instanceof Activity) BenchmarkRuns.onAppOpened((Activity) context);
         if (context instanceof Activity) app.morphe.extension.tiktok.inbox.ChatStickerStrip.install((Activity) context);
         app.morphe.extension.tiktok.motion.MainTabMotion.install(context);
         app.morphe.extension.tiktok.repost.RepostPill.install(context);
+        if (context instanceof Activity) app.morphe.extension.tiktok.design.PageDots.install((Activity) context);
+        if (context instanceof Activity) app.morphe.extension.tiktok.design.DisplayThemes.install((Activity) context);
     }
 }

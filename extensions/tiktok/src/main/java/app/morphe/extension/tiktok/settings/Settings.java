@@ -273,8 +273,15 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting SKIP_SPLASH_AD = new BooleanSetting("skip_splash_ad", TRUE, true);
     /** NINE’tok: the faint dot grid behind the settings screen. On by default. */
     public static final BooleanSetting NINETOK_DOT_GRID = new BooleanSetting("ninetok_dot_grid", TRUE);
+    /** The dot grid behind TikTok's own pages too (Inbox, Profile, chats...), not only these. */
+    public static final BooleanSetting NINETOK_PAGE_DOTS = new BooleanSetting("ninetok_page_dots", TRUE);
     /** NINE’tok: the settings theme. tiktok follows TikTok's own theme; light, dark or oled pick one. */
     public static final StringSetting NINETOK_THEME = new StringSetting("ninetok_theme", "tiktok");
+    /**
+     * Which dark theme TikTok's dark mode shows, "gray" (Grey) or "oled" (Black). Chosen on
+     * TikTok's own Settings and privacy > Display page, beside Light.
+     */
+    public static final StringSetting NINETOK_DARK_STYLE = new StringSetting("ninetok_dark_style", "gray");
     /** NINE’tok: TikTok's own text in Sora, through Use system font. On by default; TikTok reads it at start. */
     public static final BooleanSetting NINETOK_APP_FONT = new BooleanSetting("ninetok_app_font", TRUE, true);
     /** NINE’tok: offer group chats when TikTok's restriction for the account hides them. */
@@ -480,7 +487,7 @@ public class Settings extends BaseSettings {
     public static final StringSetting START_PAGE = new StringSetting("start_page", "tiktok");
     /** TikTok's previous, pause and next buttons on the feed, shown without a screen reader. Off by default. */
     public static final BooleanSetting SHOW_FEED_BUTTONS = new BooleanSetting("show_feed_buttons", FALSE);
-    public static final BooleanSetting HIDE_TAKO_AI = new BooleanSetting("hide_tako_ai", FALSE, true);
+    public static final BooleanSetting HIDE_TAKO_AI = new BooleanSetting("hide_tako_ai", TRUE, true);
     public static final BooleanSetting HIDE_BOTTOM_SEARCH_BAR = new BooleanSetting("hide_bottom_search_bar", FALSE, true);
     public static final BooleanSetting COMMENT_BATCH_TRANSLATION = new BooleanSetting("comment_batch_translation", FALSE);
     public static final BooleanSetting DM_TRANSLATION_PREVIEW = new BooleanSetting("dm_translation_preview", FALSE);
@@ -918,7 +925,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting HIDE_INBOX_NEW_FOLLOWERS = new BooleanSetting("hide_inbox_new_followers", FALSE);
     public static final BooleanSetting HIDE_INBOX_ACTIVITY = new BooleanSetting("hide_inbox_activity", FALSE);
     public static final BooleanSetting HIDE_INBOX_ARCHIVE = new BooleanSetting("hide_inbox_archive", FALSE);
-    public static final BooleanSetting HIDE_INBOX_TAKO = new BooleanSetting("hide_inbox_tako", FALSE);
+    public static final BooleanSetting HIDE_INBOX_TAKO = new BooleanSetting("hide_inbox_tako", TRUE);
     public static final BooleanSetting HIDE_INBOX_SHOP = new BooleanSetting("hide_inbox_shop", FALSE);
     public static final BooleanSetting HIDE_INBOX_BULLETIN_BOARDS =
             new BooleanSetting("hide_inbox_bulletin_boards", FALSE);
@@ -1083,7 +1090,8 @@ public class Settings extends BaseSettings {
     /** The profile views button and Add friends at the top of your Profile tab (#158). Read on each layout. */
     public static final BooleanSetting HIDE_PROFILE_VIEWS_BUTTON = new BooleanSetting("hide_profile_views_button", FALSE);
     public static final BooleanSetting HIDE_PROFILE_ADD_FRIENDS = new BooleanSetting("hide_profile_add_friends", FALSE);
-    public static final BooleanSetting HIDE_VISUAL_SEARCH = new BooleanSetting("hide_visual_search", FALSE);
+    /** TikTok's AI object search over videos: "Search this image", and "Find hats" and the like. */
+    public static final BooleanSetting HIDE_VISUAL_SEARCH = new BooleanSetting("hide_visual_search", TRUE);
     public static final BooleanSetting HIDE_FULLSCREEN_BUTTON = new BooleanSetting("hide_fullscreen_button", FALSE, true);
     // Read each time TikTok asks, so it doesn't need a restart.
     public static final BooleanSetting HIDE_FEED_REPORT_BUTTON = new BooleanSetting("hide_feed_report_button", FALSE);

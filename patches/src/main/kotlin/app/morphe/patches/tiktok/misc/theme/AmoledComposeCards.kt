@@ -139,6 +139,8 @@ internal fun MutableMethod.paintCards(field: FieldReference, argb: Long) {
             write.index,
             """
                 const-wide v$register, 0x${argb.toString(16)}L
+                invoke-static/range {v$register .. v${register + 1}}, Lapp/morphe/extension/tiktok/design/ThemeSwitch;->card(J)J
+                move-result-wide v$register
                 invoke-static/range {v$register .. v${register + 1}}, ${conversion.definingClass}->${conversion.name}(J)J
                 move-result-wide v$register
             """,
@@ -177,8 +179,61 @@ internal fun amoledComposeCardsPatch(color: () -> String?) = bytecodePatch {
         val builder = mutableClassDefBy(owner).methods.single {
             it.name == name && it.parameterTypes.isEmpty() && it.returnType == field.definingClass
         }
-        builder.paintCards(field, composeArgb(chosen))
+        // Every neutral dark the dark palette sets (the page's black, the cards' gray, the lines)
+        // goes through NINE’tok's Grey or Black scale at runtime, as the resource side's do.
+        if (builder.paintNeutralDarks(field.definingClass) == 0) {
+            throw PatchException("AMOLED dark theme: the dark palette sets no neutral dark colors.")
+        }
     }
+}
+
+/**
+ * Every write of a [palette] colour field in this builder whose literal is a neutral dark
+ * (opaque, red = green = blue under 0x40) is routed through ThemeSwitch.composeDark before the
+ * builder's own conversion packs it. Returns how many were. Writes shaped otherwise are left.
+ */
+internal fun MutableMethod.paintNeutralDarks(palette: String): Int {
+    val instructions = implementation?.instructions?.toList() ?: return 0
+    val writes = mutableListOf<CardWrite>()
+    instructions.forEachIndexed { index, instruction ->
+        if (instruction.opcode != Opcode.IPUT_WIDE || index < 2) return@forEachIndexed
+        val target = instruction.getReference<FieldReference>() ?: return@forEachIndexed
+        if (target.definingClass != palette || target.type != "J") return@forEachIndexed
+        val register = (instruction as OneRegisterInstruction).registerA
+        val move = instructions[index - 1]
+        if (move.opcode != Opcode.MOVE_RESULT_WIDE || (move as OneRegisterInstruction).registerA != register) return@forEachIndexed
+        val call = instructions[index - 2]
+        val conversion = call.getReference<MethodReference>() ?: return@forEachIndexed
+        if (conversion.returnType != "J" || conversion.parameterTypes.map { it.toString() } != listOf("J")) return@forEachIndexed
+        val argument = when (call.opcode) {
+            Opcode.INVOKE_STATIC -> (call as FiveRegisterInstruction).registerC
+            Opcode.INVOKE_STATIC_RANGE -> (call as RegisterRangeInstruction).startRegister
+            else -> return@forEachIndexed
+        }
+        writes += CardWrite(index, register, conversion, argument)
+    }
+    val dark = writes.mapNotNull { write ->
+        val literal = cardLiteral(write) ?: return@mapNotNull null
+        val argb = literal and 0xffffffffL
+        val alpha = (argb shr 24) and 0xff
+        val red = (argb shr 16) and 0xff
+        val green = (argb shr 8) and 0xff
+        val blue = argb and 0xff
+        if (alpha != 0xffL || red != green || green != blue || red >= 0x40) null else write to argb
+    }
+    dark.asReversed().forEach { (write, argb) ->
+        addInstructions(
+            write.index,
+            """
+                const-wide v${write.register}, 0x${argb.toString(16)}L
+                invoke-static/range {v${write.register} .. v${write.register + 1}}, Lapp/morphe/extension/tiktok/design/ThemeSwitch;->composeDark(J)J
+                move-result-wide v${write.register}
+                invoke-static/range {v${write.register} .. v${write.register + 1}}, ${write.conversion.definingClass}->${write.conversion.name}(J)J
+                move-result-wide v${write.register}
+            """,
+        )
+    }
+    return dark.size
 }
 
 /** The patch's color option, held to an opaque `#RRGGBB` or `#FFRRGGBB`. */

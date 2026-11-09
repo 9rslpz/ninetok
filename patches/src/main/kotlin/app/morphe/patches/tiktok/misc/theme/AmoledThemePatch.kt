@@ -32,7 +32,7 @@ val amoledThemePatch = resourcePatch(
     dependsOn(buildChoicePatch(BuildChoice.AMOLED))
     val background by colorOption(
         key = "backgroundColor",
-        default = "#000000",
+        default = "#1F1E1D",
         title = "Dark background color",
         description = "Pick a color, or type a solid color code like #000000. Black lets " +
             "OLED screens turn those pixels off completely.",
@@ -59,6 +59,8 @@ val amoledThemePatch = resourcePatch(
         val backgrounds = darkBackgroundColors(packageMetadata.versionName)
         val surfaces = surfaceStyleItems(packageMetadata.versionName)
         val found = mutableSetOf<String>()
+        val roundColors = mutableListOf<String>()
+        val roundStyles = mutableListOf<String>()
         val styleItemsFound = mutableSetOf<String>()
         val valuesDirectories = get("res").listFiles().orEmpty()
             .filter { it.isDirectory && it.name.startsWith("values") }
@@ -71,6 +73,7 @@ val amoledThemePatch = resourcePatch(
                     if (name in backgrounds) {
                         entry.textContent = color
                         found.add(name)
+                        roundColors += "    <color name=\"$name\">$OLED_BLACK</color>"
                     }
                 }
             }
@@ -81,9 +84,15 @@ val amoledThemePatch = resourcePatch(
         // stays white.
         valuesDirectories.map { it.resolve("styles.xml") }.filter { it.exists() }.forEach { file ->
             document(file.relativeTo(get(".")).invariantSeparatorsPath).use { xml ->
+                roundStyles += blackStyleCopies(xml, surfaces)
                 styleItemsFound += rewriteDarkStyleItems(xml, surfaces, color)
             }
         }
+        // OLED black lives beside the gray in resource folders marked "round", which nothing in
+        // TikTok uses. The extension reports a round screen while OLED black is chosen.
+        val roundDir = get("res").resolve("values-round").also { it.mkdirs() }
+        roundDir.resolve("colors.xml").writeText(resourcesFile(roundColors))
+        roundDir.resolve("styles.xml").writeText(resourcesFile(roundStyles))
         if (found != backgrounds) throw PatchException("Dark background palette is incomplete: $found")
         // The palette check above refuses every build whose names weren't read, so this is a
         // build whose surface names are known, and one missing means an identity is wrong.
@@ -220,6 +229,39 @@ internal fun rewriteDarkStyleItems(styles: Document, names: Set<String>, color: 
     return changed
 }
 
+internal const val OLED_BLACK = "#ff000000"
+
+/**
+ * Whole copies of every `<style>` holding a dark surface literal, with those literals black. A
+ * style is replaced as a whole in another folder, so the copy keeps all its other items.
+ */
+internal fun blackStyleCopies(styles: Document, names: Set<String>): List<String> {
+    val copies = mutableListOf<String>()
+    val all = styles.getElementsByTagName("style")
+    for (index in 0 until all.length) {
+        val style = all.item(index) as Element
+        val items = style.getElementsByTagName("item")
+        var any = false
+        for (i in 0 until items.length) {
+            val item = items.item(i) as Element
+            if (item.getAttribute("name") in names && isDarkOpaqueLiteral(item.textContent)) any = true
+        }
+        if (!any) continue
+        val copy = style.cloneNode(true) as Element
+        val copied = copy.getElementsByTagName("item")
+        for (i in 0 until copied.length) {
+            val item = copied.item(i) as Element
+            if (item.getAttribute("name") in names && isDarkOpaqueLiteral(item.textContent)) item.textContent = OLED_BLACK
+        }
+        val out = java.io.StringWriter()
+        val transformer = javax.xml.transform.TransformerFactory.newInstance().newTransformer()
+        transformer.setOutputProperty(javax.xml.transform.OutputKeys.OMIT_XML_DECLARATION, "yes")
+        transformer.transform(javax.xml.transform.dom.DOMSource(copy), javax.xml.transform.stream.StreamResult(out))
+        copies += out.toString()
+    }
+    return copies
+}
+
 /** `#RRGGBB` or `#FFRRGGBB`, every channel under 0x40: a surface colour, not a text or an overlay. */
 internal fun isDarkOpaqueLiteral(value: String): Boolean {
     val hex = value.trim().removePrefix("#")
@@ -230,4 +272,10 @@ internal fun isDarkOpaqueLiteral(value: String): Boolean {
     }
     if (!rgb.all { it.isDigit() || it.lowercaseChar() in 'a'..'f' }) return false
     return rgb.chunked(2).all { it.toInt(16) < 0x40 }
+}
+
+internal fun resourcesFile(entries: List<String>): String {
+    val nl = "\n"
+    return "<?xml version=\"1.0\" encoding=\"utf-8\"?>" + nl + "<resources>" + nl +
+        entries.joinToString(nl) + nl + "</resources>" + nl
 }

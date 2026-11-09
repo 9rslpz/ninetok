@@ -125,6 +125,7 @@ public class SettingsStatus {
     public static boolean groupChatsEnabled = false;
     public static boolean calmStreakFlameEnabled = false;
     public static boolean repostAfterLikeEnabled = false;
+    public static boolean hideVisualSearchEnabled = false;
     public static boolean notificationControlsEnabled = false;
     public static boolean suggestedVideoPushBlockEnabled = false;
     public static boolean autoStreakEnabled = false;
@@ -487,6 +488,10 @@ public class SettingsStatus {
 
     public static void enableRepostAfterLike() {
         repostAfterLikeEnabled = true;
+    }
+
+    public static void enableHideVisualSearch() {
+        hideVisualSearchEnabled = true;
     }
 
     public static void enableRefreshRate() {

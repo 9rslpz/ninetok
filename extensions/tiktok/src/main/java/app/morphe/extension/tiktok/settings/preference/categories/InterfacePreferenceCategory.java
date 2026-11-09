@@ -97,8 +97,11 @@ public final class InterfacePreferenceCategory extends ConditionalPreferenceCate
     /** NINE’tok's own look: the settings theme and the dot grid behind these pages. */
     private void addNineTokLook(Context context) {
         addPreference(new SectionHeadingPreference(context, "NINE’tok look"));
-        addPreference(new app.morphe.extension.tiktok.settings.preference.NineTokThemePreference(context));
         addPreference(new app.morphe.extension.tiktok.settings.preference.NineTokDotsTogglePreference(context));
+        addPreference(new TogglePreference(context, "Dots across TikTok",
+                "Lay the dot grid behind TikTok's own pages too: Inbox, Profile, Friends, chats "
+                        + "and the rest. The video feed stays as it is.",
+                Settings.NINETOK_PAGE_DOTS));
         addPreference(new TogglePreference(context, "Sora across TikTok",
                 "Draw TikTok's own text in Sora too. Use system font and imported fonts take over while on.",
                 Settings.NINETOK_APP_FONT));
@@ -123,10 +126,12 @@ public final class InterfacePreferenceCategory extends ConditionalPreferenceCate
     private void addNineTokFeed(Context context) {
         if (!SettingsStatus.repostAfterLikeEnabled) return;
         addPreference(new SectionHeadingPreference(context, "Feed"));
-        addPreference(new TogglePreference(context, "Repost button after a like",
-                "A small Repost button comes up next to the author's name when you like a video. "
-                        + "Tap it to repost, and again to take the repost back.",
-                Settings.REPOST_AFTER_LIKE));
+        if (SettingsStatus.repostAfterLikeEnabled) {
+            addPreference(new TogglePreference(context, "Repost button after a like",
+                    "A small Repost button comes up next to the author's name when you like a video. "
+                            + "Tap it to repost, and again to take the repost back.",
+                    Settings.REPOST_AFTER_LIKE));
+        }
     }
 
     /** NINE’tok's chat fixes. */
@@ -475,8 +480,8 @@ public final class InterfacePreferenceCategory extends ConditionalPreferenceCate
             }
             addPreference(new TogglePreference(
                     context,
-                    "Hide Search this image prompts",
-                    "Hide the \"Search this image\" prompt shown over videos. The feed search button and suggestions above comments are separate settings.",
+                    "Hide AI object search",
+                    "Hide TikTok's AI search over videos: the \"Search this image\" prompt and the \"Find hats\", \"Find electronics\" tags on things it spots (those after a restart). The feed search button and suggestions above comments are separate settings.",
                     Settings.HIDE_VISUAL_SEARCH
             ));
             addPreference(new TogglePreference(
