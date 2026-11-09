@@ -1,3 +1,16 @@
+# [1.0.0-dev.16](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.15...v1.0.0-dev.16) (2026-11-09)
+
+
+### Features
+
+* **design:** Light, Grey and Black on TikTok's Display page, dots everywhere ([90cd4cb](https://github.com/9rslpz/ninetok/commit/90cd4cbdf83abe580ff72f6b0dd38d898195acda)), closes [#1F1E1](https://github.com/9rslpz/ninetok/issues/1F1E1)
+
+
+
+
+
+## 1.0.0-dev.16
+
 # [1.0.0-dev.15](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.14...v1.0.0-dev.15) (2026-11-07)
 
 

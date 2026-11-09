@@ -1,5 +1,5 @@
 {
-  "version": "v1.0.0-dev.15",
+  "version": "v1.0.0-dev.16",
   "appNames": {
     "com.zhiliaoapp.musically": "TikTok"
   },
@@ -48,7 +48,7 @@
           "description": "Pick a color, or type a solid color code like #000000. Black lets OLED screens turn those pixels off completely.",
           "required": false,
           "type": "kotlin.String",
-          "default": "#000000",
+          "default": "#1F1E1D",
           "values": {
             "Black": "#000000",
             "Mocha": "#181825",
@@ -2025,6 +2025,45 @@
       "name": "Ghost mode",
       "description": "Stops TikTok telling people you viewed their story or profile, or that you're typing. What TikTok already recorded stays. A separate switch hides your online status. Starts off. Turn it on in NINE’tok settings > App behavior.",
       "category": "Privacy",
+      "use": true,
+      "dependencies": [
+        "BytecodePatch",
+        "Settings"
+      ],
+      "compatiblePackages": {
+        "com.zhiliaoapp.musically": [
+          "47.4.3"
+        ]
+      },
+      "compatibility": [
+        {
+          "name": "TikTok",
+          "packageName": "com.zhiliaoapp.musically",
+          "description": null,
+          "appIconColor": 16657493,
+          "signatures": [
+            "9041803e91bcb814b4b4399fb5c85a91640b755e5e8ba76813814bf4cf2ab5ba"
+          ],
+          "targets": [
+            {
+              "version": "47.4.3",
+              "experimental": false,
+              "versionCodes": {
+                "ARM64_V8A": 2024704030,
+                "ARMEABI_V7A": 2024704030,
+                "X86": 2024704030,
+                "X86_64": 2024704030
+              }
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Hide AI object search",
+      "description": "Takes away the \"Find hats\", \"Find electronics\" and other tags TikTok's AI puts on things it spots in a video, and the bubble offering them. Switch in NINE’tok settings > Interface > Feed.",
+      "category": "Interface",
       "use": true,
       "dependencies": [
         "BytecodePatch",
@@ -5482,6 +5521,44 @@
       "dependencies": [
         "BytecodePatch",
         "Settings"
+      ],
+      "compatiblePackages": {
+        "com.zhiliaoapp.musically": [
+          "47.4.3"
+        ]
+      },
+      "compatibility": [
+        {
+          "name": "TikTok",
+          "packageName": "com.zhiliaoapp.musically",
+          "description": null,
+          "appIconColor": 16657493,
+          "signatures": [
+            "9041803e91bcb814b4b4399fb5c85a91640b755e5e8ba76813814bf4cf2ab5ba"
+          ],
+          "targets": [
+            {
+              "version": "47.4.3",
+              "experimental": false,
+              "versionCodes": {
+                "ARM64_V8A": 2024704030,
+                "ARMEABI_V7A": 2024704030,
+                "X86": 2024704030,
+                "X86_64": 2024704030
+              }
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Warm graphite",
+      "description": "NINE’tok's Grey and Black dark themes over all of TikTok's dark mode. Grey: every neutral dark of TikTok's dark themes, pure black included, moves onto a warm graphite scale from #1F1E1D up, so the whole screen is gray with its tiers kept. Black (chosen on TikTok's Display page): the same tiers drawn down to pure black. Needs AMOLED dark theme set to #1F1E1D, which this builds on.",
+      "category": "Interface",
+      "use": false,
+      "dependencies": [
+        "AMOLED dark theme"
       ],
       "compatiblePackages": {
         "com.zhiliaoapp.musically": [
