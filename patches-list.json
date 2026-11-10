@@ -1,5 +1,5 @@
 {
-  "version": "v1.0.0-dev.16",
+  "version": "v1.0.0-dev.17",
   "appNames": {
     "com.zhiliaoapp.musically": "TikTok"
   },
@@ -2029,6 +2029,44 @@
       "dependencies": [
         "BytecodePatch",
         "Settings"
+      ],
+      "compatiblePackages": {
+        "com.zhiliaoapp.musically": [
+          "47.4.3"
+        ]
+      },
+      "compatibility": [
+        {
+          "name": "TikTok",
+          "packageName": "com.zhiliaoapp.musically",
+          "description": null,
+          "appIconColor": 16657493,
+          "signatures": [
+            "9041803e91bcb814b4b4399fb5c85a91640b755e5e8ba76813814bf4cf2ab5ba"
+          ],
+          "targets": [
+            {
+              "version": "47.4.3",
+              "experimental": false,
+              "versionCodes": {
+                "ARM64_V8A": 2024704030,
+                "ARMEABI_V7A": 2024704030,
+                "X86": 2024704030,
+                "X86_64": 2024704030
+              }
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Group creation log",
+      "description": "Writes what TikTok's servers answered when making a group chat fails (status, code, check code and message) to logcat under \"ninetok-group\". For finding out why groups are refused. Not for builds you hand to others.",
+      "category": "Diagnostics",
+      "use": false,
+      "dependencies": [
+        "BytecodePatch"
       ],
       "compatiblePackages": {
         "com.zhiliaoapp.musically": [

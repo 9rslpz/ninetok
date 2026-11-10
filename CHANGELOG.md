@@ -1,3 +1,16 @@
+# [1.0.0-dev.17](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.16...v1.0.0-dev.17) (2026-11-10)
+
+
+### Features
+
+* **diagnostics:** Group creation log ([ea06a1a](https://github.com/9rslpz/ninetok/commit/ea06a1a1477a504128fb120a7be7971834537bfa))
+
+
+
+
+
+## 1.0.0-dev.17
+
 # [1.0.0-dev.16](https://github.com/9rslpz/ninetok/compare/v1.0.0-dev.15...v1.0.0-dev.16) (2026-11-09)
 
 
